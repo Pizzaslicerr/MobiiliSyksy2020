@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float bridgeGrowthRate;
     public GameObject Stick;
     public Rigidbody2D StickRB;
     private bool StickGrown;
@@ -20,7 +21,7 @@ public class Player : MonoBehaviour
         if (!StickGrown && Input.GetMouseButton(0))
         {
             Vector3 v = Stick.transform.localScale;
-            v.y = v.y + 0.05f;
+            v.y = v.y + bridgeGrowthRate;
             Stick.transform.localScale = v;
         }
         if (Input.GetMouseButtonUp(0))
