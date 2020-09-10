@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 7769264093261230426}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1491663478226316847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7245199016488671453}
+  m_Layer: 10
+  m_Name: FoxFallTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7245199016488671453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491663478226316847}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7769264093261230426}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3380184437037892509
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,6 +126,7 @@ Transform:
   - {fileID: 7769264094443506113}
   - {fileID: 7287037661858089906}
   - {fileID: 3365465327146316875}
+  - {fileID: 7245199016488671453}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -182,6 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7769264093343799564}
   - component: {fileID: 7769264093343799567}
+  - component: {fileID: 716612565629439471}
   m_Layer: 10
   m_Name: CorrectBridgeLengthDetector
   m_TagString: Untagged
@@ -229,6 +261,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.40683603, y: 0.022670925}
   m_EdgeRadius: 0
+--- !u!114 &716612565629439471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7769264093343799565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34c4ce19f7dbc64083f7ebe8b0511db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7769264094068491624
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7769264094068491627}
   - component: {fileID: 7769264094068491626}
+  - component: {fileID: 2161145665606679824}
   m_Layer: 10
   m_Name: LongBridgeDetector
   m_TagString: Untagged
@@ -286,6 +331,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.055982232, y: 0.031921327}
   m_EdgeRadius: 0
+--- !u!114 &2161145665606679824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7769264094068491624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6df4ff6c20e2b0489507b7ed2599d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BridgeCorrectLengthDetector: {fileID: 0}
 --- !u!1 &7769264094443506118
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7769264094443506113}
   - component: {fileID: 7769264094443506112}
+  - component: {fileID: 4646520462386950403}
   m_Layer: 10
   m_Name: FoxDetector
   m_TagString: Untagged
@@ -343,6 +402,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.19764578, y: 0.13844848}
   m_EdgeRadius: 0
+--- !u!114 &4646520462386950403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7769264094443506118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bridge: {fileID: 0}
+  NewBridgeSpawnPoint: {fileID: 0}
 --- !u!1 &8203657618452708154
 GameObject:
   m_ObjectHideFlags: 0

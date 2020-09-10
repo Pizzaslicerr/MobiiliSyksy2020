@@ -5,29 +5,68 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float bridgeGrowthRate;
-    public GameObject Stick;
-    public Rigidbody2D StickRB;
-    private bool StickGrown;
-    // Start is called before the first frame update
+    private GameObject BridgeO;
+    private Rigidbody2D BridgeRB;
+
+    private Rigidbody2D FoxRB;
+
+    public static bool BridgeTooLong;
+    public static bool FoxMoving;
+
+    public float Speed;
+    public Transform FoxMovementTarget;
+    public Transform FoxFallTarget;
+    private Vector2 Direction;
+
     void Start()
     {
-        StickRB.simulated = false;
-        StickGrown = false;
+
+        BridgeRB.drag = 2;
+        BridgeRB.mass = 3;
+        BridgeRB.gravityScale = 2;
+        FoxRB = gameObject.GetComponent<Rigidbody2D>();
+        BridgeRB.simulated = false;
+        Bridge.BridgeGrown = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (!StickGrown && Input.GetMouseButton(0))
+        BridgeO = GameObject.FindWithTag("Bridge");
+        BridgeRB = GameObject.FindWithTag("Bridge").GetComponent<Rigidbody2D>();
+        if (!Bridge.BridgeGrown && Input.GetMouseButton(0))
         {
-            Vector3 v = Stick.transform.localScale;
+            Vector3 v = BridgeO.transform.localScale;
             v.y = v.y + bridgeGrowthRate;
-            Stick.transform.localScale = v;
+            BridgeO.transform.localScale = v;
         }
         if (Input.GetMouseButtonUp(0))
         {
-            StickRB.simulated = true;
-            StickGrown = true;
+            BridgeRB.simulated = true;
+            Bridge.BridgeGrown = true;
         }
+
+
+        if (FoxMoving)
+        {
+            MoveFoxCorrect();
+        }
+        if (BridgeTooLong)
+        {
+            MoveFoxTooFar();
+        }
+    }
+    void MoveFoxCorrect()
+    {
+        BridgeRB.drag = 1000;
+        BridgeRB.mass = 100;
+        BridgeRB.gravityScale = 100;
+        transform.position = Vector2.MoveTowards(transform.position, FoxMovementTarget.position, Speed * Time.deltaTime);
+    }
+    void MoveFoxTooFar()
+    {
+        BridgeRB.drag = 1000;
+        BridgeRB.mass = 100;
+        BridgeRB.gravityScale = 100;
+        transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.position, Speed * Time.deltaTime);
     }
 }
