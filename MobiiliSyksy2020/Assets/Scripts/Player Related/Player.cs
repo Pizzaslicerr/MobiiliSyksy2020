@@ -1,9 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public GameObject paw1;
+    public GameObject paw2;
+    public GameObject paw3;
+    public GameObject paw4;
+    public GameObject paw5;
+    public GameObject paw6;
+    public GameObject paw7;
+    public GameObject paw8;
+    public GameObject paw9;
+    public GameObject paw10;
+
+    public int Paws;
+
     public float bridgeGrowthRate;
     private GameObject BridgeO;
     private Rigidbody2D BridgeRB;
@@ -16,10 +30,10 @@ public class Player : MonoBehaviour
     public float Speed;
     private GameObject FoxMovementTarget;
     public Transform FoxFallTarget;
-    private Vector2 Direction;
 
     void Start()
     {
+        Paws = 10;
         BridgeRB.drag = 2;
         BridgeRB.mass = 3;
         BridgeRB.gravityScale = 2;
@@ -41,8 +55,52 @@ public class Player : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
+            Paws = Paws - 1;
             BridgeRB.simulated = true;
             Bridge.BridgeGrown = true;
+        }
+
+        if (Paws == 9)
+        {
+            paw10.SetActive(false);
+        }
+        if (Paws == 8)
+        {
+            paw9.SetActive(false);
+        }
+        if (Paws == 7)
+        {
+            paw8.SetActive(false);
+        }
+        if (Paws == 6)
+        {
+            paw7.SetActive(false);
+        }
+        if (Paws == 5)
+        {
+            paw6.SetActive(false);
+        }
+        if (Paws == 4)
+        {
+            paw5.SetActive(false);
+        }
+        if (Paws == 3)
+        {
+            paw4.SetActive(false);
+        }
+        if (Paws == 2)
+        {
+            paw3.SetActive(false);
+        }
+        if (Paws == 1)
+        {
+            paw2.SetActive(false);
+        }
+        if (Paws == 0)
+        {
+            paw1.SetActive(false);
+
+            SceneManager.LoadScene("Teemu");
         }
 
 
