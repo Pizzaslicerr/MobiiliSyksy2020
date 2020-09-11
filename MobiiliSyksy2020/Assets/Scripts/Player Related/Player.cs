@@ -14,13 +14,12 @@ public class Player : MonoBehaviour
     public static bool FoxMoving;
 
     public float Speed;
-    public Transform FoxMovementTarget;
+    private GameObject FoxMovementTarget;
     public Transform FoxFallTarget;
     private Vector2 Direction;
 
     void Start()
     {
-
         BridgeRB.drag = 2;
         BridgeRB.mass = 3;
         BridgeRB.gravityScale = 2;
@@ -31,6 +30,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        FoxMovementTarget = GameObject.FindWithTag("MovementTarget");
         BridgeO = GameObject.FindWithTag("Bridge");
         BridgeRB = GameObject.FindWithTag("Bridge").GetComponent<Rigidbody2D>();
         if (!Bridge.BridgeGrown && Input.GetMouseButton(0))
@@ -60,13 +60,13 @@ public class Player : MonoBehaviour
         BridgeRB.drag = 1000;
         BridgeRB.mass = 100;
         BridgeRB.gravityScale = 100;
-        transform.position = Vector2.MoveTowards(transform.position, FoxMovementTarget.position, Speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, FoxMovementTarget.transform.position, Speed * Time.deltaTime);
     }
     void MoveFoxTooFar()
     {
         BridgeRB.drag = 1000;
         BridgeRB.mass = 100;
         BridgeRB.gravityScale = 100;
-        transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.position, Speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
     }
 }

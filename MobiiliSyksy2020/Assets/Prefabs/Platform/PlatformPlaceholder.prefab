@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3365465327146316875}
   m_Layer: 10
   m_Name: FoxMovementTarget
-  m_TagString: Untagged
+  m_TagString: MovementTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120875282309117484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.595, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7769264093261230426}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491663478226316847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 8.83, y: 0.547, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7769264093261230426}
@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 7769264093261230427}
   - component: {fileID: 7769264093261230424}
   - component: {fileID: 7769264093261230425}
+  - component: {fileID: 9032915094703273973}
   m_Layer: 10
   m_Name: PlatformPlaceholder
   m_TagString: Platform
@@ -203,6 +204,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.9946897}
   m_EdgeRadius: 0
+--- !u!60 &9032915094703273973
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7769264093261230430}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.30429995, y: 0.5000002}
+      - {x: 0.14629385, y: 0.49837333}
+      - {x: 0.30409065, y: 0.5351488}
 --- !u!1 &7769264093343799565
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,10 +274,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.29001558, y: 0.49510244}
+  m_Offset: {x: -0.28669995, y: 0.49860162}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -259,7 +288,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.40683603, y: 0.022670925}
+  m_Size: {x: 0.40020478, y: 0.029669166}
   m_EdgeRadius: 0
 --- !u!114 &716612565629439471
 MonoBehaviour:
@@ -315,10 +344,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.53943866, y: 0.498463}
+  m_Offset: {x: 0.53943866, y: 0.56794256}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -329,7 +358,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.055982232, y: 0.031921327}
+  m_Size: {x: 0.055982232, y: 0.17087948}
   m_EdgeRadius: 0
 --- !u!114 &2161145665606679824
 MonoBehaviour:
@@ -344,6 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BridgeCorrectLengthDetector: {fileID: 0}
+  FoxDetector: {fileID: 0}
 --- !u!1 &7769264094443506118
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,10 +416,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.14041203, y: 0.6094514}
+  m_Offset: {x: 0.21254003, y: 0.64767516}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -400,7 +430,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19764578, y: 0.13844848}
+  m_Size: {x: 0.053389788, y: 0.2148959}
   m_EdgeRadius: 0
 --- !u!114 &4646520462386950403
 MonoBehaviour:
@@ -414,8 +444,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bridge: {fileID: 0}
-  NewBridgeSpawnPoint: {fileID: 0}
+  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
+    type: 3}
+  LongBridgeDetector: {fileID: 7769264094068491624}
+  NewBridgeSpawnPoint: {fileID: 7287037661858089906}
+  FoxMovementTargetOld: {fileID: 120875282309117484}
+  FoxMovementTargetNew: {fileID: 120875282309117484}
 --- !u!1 &8203657618452708154
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ TagManager:
   - Fox
   - Platform
   - Collectibles
+  - MovementTarget
   layers:
   - Default
   - TransparentFX
