@@ -54,12 +54,71 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491663478226316847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.83, y: 0.547, z: 0}
+  m_LocalPosition: {x: 8.83, y: 0.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7769264093261230426}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1494249212324913367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2856226819541983469}
+  - component: {fileID: 2409021232009122542}
+  m_Layer: 10
+  m_Name: Ramp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2856226819541983469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494249212324913367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7769264093261230426}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &2409021232009122542
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494249212324913367}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.26871258, y: 0.5219168}
+      - {x: 0.12688237, y: 0.49978662}
+      - {x: 0.26865226, y: 0.5003945}
 --- !u!1 &3380184437037892509
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +161,6 @@ GameObject:
   - component: {fileID: 7769264093261230427}
   - component: {fileID: 7769264093261230424}
   - component: {fileID: 7769264093261230425}
-  - component: {fileID: 9032915094703273973}
   m_Layer: 10
   m_Name: PlatformPlaceholder
   m_TagString: Platform
@@ -128,6 +186,7 @@ Transform:
   - {fileID: 7287037661858089906}
   - {fileID: 3365465327146316875}
   - {fileID: 7245199016488671453}
+  - {fileID: 2856226819541983469}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -204,34 +263,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.9946897}
   m_EdgeRadius: 0
---- !u!60 &9032915094703273973
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264093261230430}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.30429995, y: 0.5000002}
-      - {x: 0.14629385, y: 0.49837333}
-      - {x: 0.30409065, y: 0.5351488}
 --- !u!1 &7769264093343799565
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ramp: {fileID: 0}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
   LongBridgeDetector: {fileID: 7769264094068491624}
@@ -460,6 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8790552331261655179}
   - component: {fileID: 7227490175723570845}
+  - component: {fileID: 4754841883704487717}
   m_Layer: 10
   m_Name: BridgeFallDetector
   m_TagString: Untagged
@@ -475,7 +508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8203657618452708154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.82, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7769264093261230426}
@@ -507,3 +540,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8346419, y: 0.18641415}
   m_EdgeRadius: 0
+--- !u!114 &4754841883704487717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8203657618452708154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db6f110a55475e4f869ad6ce47ab2a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BridgeSpawnPoint: {fileID: 0}
+  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
+    type: 3}

@@ -17,6 +17,7 @@ public class LongBridgeDetector : MonoBehaviour
     {
         if (collision.tag == "Bridge")
         {
+            Bridge.BridgeDown = true;
             Player.BridgeTooLong = true;
             Player.FoxMoving = false;
             BridgeCorrectLengthDetector.SetActive(false);

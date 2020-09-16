@@ -94,9 +94,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78de016de57db15469db130a02b365f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bridgeGrowthRate: 0.05
-  Stick: {fileID: 0}
-  StickRB: {fileID: 0}
+  paw1: {fileID: 0}
+  paw2: {fileID: 0}
+  paw3: {fileID: 0}
+  paw4: {fileID: 0}
+  paw5: {fileID: 0}
+  paw6: {fileID: 0}
+  paw7: {fileID: 0}
+  paw8: {fileID: 0}
+  paw9: {fileID: 0}
+  paw10: {fileID: 0}
+  Paws: 0
+  bridgeGrowthRate: 2
+  Speed: 1
+  FoxFallTarget: {fileID: 0}
 --- !u!50 &2961019305504276007
 Rigidbody2D:
   serializedVersion: 4

@@ -55,7 +55,10 @@ public class Player : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
-            Paws = Paws - 1;
+            if (!Bridge.BridgeDown && !Bridge.BridgeGrown)
+            {
+                Paws = Paws - 1;
+            }
             BridgeRB.simulated = true;
             Bridge.BridgeGrown = true;
         }
@@ -115,16 +118,14 @@ public class Player : MonoBehaviour
     }
     void MoveFoxCorrect()
     {
-        BridgeRB.drag = 1000;
-        BridgeRB.mass = 100;
-        BridgeRB.gravityScale = 100;
+        BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
+        BridgeRB.freezeRotation = true;
         transform.position = Vector2.MoveTowards(transform.position, FoxMovementTarget.transform.position, Speed * Time.deltaTime);
     }
     void MoveFoxTooFar()
     {
-        BridgeRB.drag = 1000;
-        BridgeRB.mass = 100;
-        BridgeRB.gravityScale = 100;
+        BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
+        BridgeRB.freezeRotation = true;
         transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
     }
 }

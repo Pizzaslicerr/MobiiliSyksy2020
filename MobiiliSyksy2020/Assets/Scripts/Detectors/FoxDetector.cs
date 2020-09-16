@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FoxDetector : MonoBehaviour
 {
+    public GameObject Ramp;
     public GameObject BridgePrefab;
     public GameObject LongBridgeDetector;
     public Transform NewBridgeSpawnPoint;
@@ -13,6 +14,7 @@ public class FoxDetector : MonoBehaviour
     {
         FoxMovementTargetNew.SetActive(false);
         FoxMovementTargetOld.SetActive(true);
+        Ramp.SetActive(false);
     }
 
     void Update()
@@ -22,6 +24,7 @@ public class FoxDetector : MonoBehaviour
     {
         if (collision.tag == "Fox")
         {
+            Ramp.SetActive(true);
             FoxMovementTargetNew.SetActive(true);
             FoxMovementTargetOld.SetActive(false);
             Player.FoxMoving = false;
