@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class InitializeSceneSwitch : MonoBehaviour
 {
+    [SerializeField] private LoadingScreens loadScreenType = LoadingScreens.Leaves;
     public void ChangeScenes(int sceneToLoad)
     {
-        SceneHandler.instance.SceneLoad(sceneToLoad, this.gameObject.scene.buildIndex);
+        SceneHandler.instance.SceneLoad(sceneToLoad, this.gameObject.scene.buildIndex, loadScreenType);
     }
 }

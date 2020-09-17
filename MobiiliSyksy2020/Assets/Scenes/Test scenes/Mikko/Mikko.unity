@@ -603,4 +603,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c4e75fa24069141ac6a4ff544d9267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 0
+  loadScreenType: 0

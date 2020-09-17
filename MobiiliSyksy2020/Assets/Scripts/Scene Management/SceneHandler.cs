@@ -23,7 +23,7 @@ public class SceneHandler : MonoBehaviour
     //scene load operations are added to this list; this is required for loading bars and especially to make sure scenes have been loaded
     //two voids for method overloads, having a scene to unload is not necessary
     List<AsyncOperation> operations = new List<AsyncOperation>();
-    public void SceneLoad(int sceneToLoad)
+    public void SceneLoad(int sceneToLoad, LoadingScreens LoadingScreen)
     {
         operations.Add(SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive));
 
@@ -31,13 +31,13 @@ public class SceneHandler : MonoBehaviour
     }
 
 
-    public void SceneLoad(int sceneToLoad, int sceneToUnload)
+    public void SceneLoad(int sceneToLoad, int sceneToUnload, LoadingScreens LoadScreenType)
     {
-        loadingScreenManager.Activate((int)LOAD_SCREENS.LEAVES);    //This is temporary, as a selector should be added later
+        loadingScreenManager.Activate((int)LoadScreenType);    //This is temporary, as a selector should be added later
         operations.Add(SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive));
         operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));
 
-        StartCoroutine(GetSceneLoadProgress((int)LOAD_SCREENS.LEAVES));
+        StartCoroutine(GetSceneLoadProgress((int)LoadScreenType));
     }
 
 

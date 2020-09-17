@@ -4,11 +4,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum LOAD_SCREENS
+public enum LoadingScreens
 {
-    LEAVES = 0,
-    LOG = 1,
-    WATER_STREAM = 2,
+    Leaves = 0,
+    Log = 1,
+    WaterStream = 2,
 }
 
 public class LoadingScreenManager : MonoBehaviour
