@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CorrectBridgeLength : MonoBehaviour
 {
+
     void Start()
     {
         Player.FoxMoving = false;
@@ -18,8 +19,8 @@ public class CorrectBridgeLength : MonoBehaviour
     {
         if (collision.tag == "Bridge")
         {
+            Bridge.BridgeDown = true;
             Player.FoxMoving = true;
-            Debug.Log(Player.FoxMoving);
         }
     }
 }

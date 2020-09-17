@@ -34,9 +34,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         Paws = 10;
-        BridgeRB.drag = 2;
-        BridgeRB.mass = 3;
-        BridgeRB.gravityScale = 2;
         FoxRB = gameObject.GetComponent<Rigidbody2D>();
         BridgeRB.simulated = false;
         Bridge.BridgeGrown = false;
@@ -55,7 +52,10 @@ public class Player : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
-            Paws = Paws - 1;
+            if (!Bridge.BridgeDown && !Bridge.BridgeGrown)
+            {
+                Paws = Paws - 1;
+            }
             BridgeRB.simulated = true;
             Bridge.BridgeGrown = true;
         }
@@ -99,7 +99,6 @@ public class Player : MonoBehaviour
         if (Paws == 0)
         {
             paw1.SetActive(false);
-
             SceneManager.LoadScene("Teemu");
         }
 
@@ -112,19 +111,19 @@ public class Player : MonoBehaviour
         {
             MoveFoxTooFar();
         }
+
+        Debug.DrawLine(gameObject.transform.position, FoxFallTarget.transform.position, Color.red);
     }
     void MoveFoxCorrect()
     {
-        BridgeRB.drag = 1000;
-        BridgeRB.mass = 100;
-        BridgeRB.gravityScale = 100;
+        BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
+        BridgeRB.freezeRotation = true;
         transform.position = Vector2.MoveTowards(transform.position, FoxMovementTarget.transform.position, Speed * Time.deltaTime);
     }
     void MoveFoxTooFar()
     {
-        BridgeRB.drag = 1000;
-        BridgeRB.mass = 100;
-        BridgeRB.gravityScale = 100;
+        BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
+        BridgeRB.freezeRotation = true;
         transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
     }
 }
