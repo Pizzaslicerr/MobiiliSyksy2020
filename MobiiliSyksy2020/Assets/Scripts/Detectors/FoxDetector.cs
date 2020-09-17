@@ -7,6 +7,7 @@ public class FoxDetector : MonoBehaviour
     public GameObject Ramp;
     public GameObject BridgePrefab;
     public GameObject LongBridgeDetector;
+    public GameObject CorrectBridgeDetector;
     public Transform NewBridgeSpawnPoint;
     public GameObject FoxMovementTargetOld;
     public GameObject FoxMovementTargetNew;
@@ -31,6 +32,7 @@ public class FoxDetector : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("Bridge"));
             Instantiate(BridgePrefab, NewBridgeSpawnPoint.position, transform.rotation);
             LongBridgeDetector.SetActive(false);
+            CorrectBridgeDetector.SetActive(false);
             gameObject.SetActive(false);
         }
     }
