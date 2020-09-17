@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &120875282309117484
+--- !u!1 &490244505523245381
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,73 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3365465327146316875}
+  - component: {fileID: 1074914594991182580}
+  - component: {fileID: 1394349939015888098}
+  - component: {fileID: 3956441289902966106}
   m_Layer: 10
-  m_Name: FoxMovementTarget
-  m_TagString: MovementTarget
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3365465327146316875
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120875282309117484}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.213, y: 0.595, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7769264093261230426}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1494249212324913367
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2856226819541983469}
-  - component: {fileID: 2409021232009122542}
-  m_Layer: 10
-  m_Name: Ramp
+  m_Name: BridgeFallDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2856226819541983469
+--- !u!4 &1074914594991182580
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494249212324913367}
+  m_GameObject: {fileID: 490244505523245381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 0, z: 0}
+  m_LocalPosition: {x: 2.82, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7769264093261230426}
-  m_RootOrder: 6
+  m_Father: {fileID: 2073192275143842597}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &2409021232009122542
-PolygonCollider2D:
+--- !u!61 &1394349939015888098
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494249212324913367}
+  m_GameObject: {fileID: 490244505523245381}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.0396736, y: -0.40679294}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -84,12 +55,25 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.26871258, y: 0.5219168}
-      - {x: 0.12688237, y: 0.49978662}
-      - {x: 0.26865226, y: 0.5003945}
---- !u!1 &3380184437037892509
+  serializedVersion: 2
+  m_Size: {x: 2.6092334, y: 0.18641412}
+  m_EdgeRadius: 0
+--- !u!114 &3956441289902966106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490244505523245381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db6f110a55475e4f869ad6ce47ab2a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BridgeSpawnPoint: {fileID: 1311761083864834509}
+  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
+    type: 3}
+--- !u!1 &2073192273843102649
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,29 +81,76 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7287037661858089906}
+  - component: {fileID: 2073192273843102654}
+  - component: {fileID: 2073192273843102655}
+  - component: {fileID: 3994495345410726780}
   m_Layer: 10
-  m_Name: NewBridgeSpawnPoint
+  m_Name: FoxDetector
   m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7287037661858089906
+  m_IsActive: 0
+--- !u!4 &2073192273843102654
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3380184437037892509}
+  m_GameObject: {fileID: 2073192273843102649}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.367, y: 0.542, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7769264093261230426}
-  m_RootOrder: 4
+  m_Father: {fileID: 2073192275143842597}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7769264093261230430
+--- !u!61 &2073192273843102655
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073192273843102649}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.21254003, y: 0.64767516}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.053389788, y: 0.2148959}
+  m_EdgeRadius: 0
+--- !u!114 &3994495345410726780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073192273843102649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ramp: {fileID: 7181040568725179048}
+  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
+    type: 3}
+  LongBridgeDetector: {fileID: 2073192275414249239}
+  NewBridgeSpawnPoint: {fileID: 1311761083864834509}
+  FoxMovementTargetOld: {fileID: 8555118047657516115}
+  FoxMovementTargetNew: {fileID: 8555118047657516115}
+--- !u!1 &2073192274957988722
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,53 +158,123 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7769264093261230426}
-  - component: {fileID: 7769264093261230427}
-  - component: {fileID: 7769264093261230424}
-  - component: {fileID: 7769264093261230425}
+  - component: {fileID: 2073192274957988723}
+  - component: {fileID: 2073192274957988720}
+  - component: {fileID: 9143827527732340624}
   m_Layer: 10
-  m_Name: PlatformPlaceholder
+  m_Name: CorrectBridgeLengthDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2073192274957988723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073192274957988722}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2073192275143842597}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2073192274957988720
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073192274957988722}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.28669995, y: 0.49335098}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.40020478, y: 0.0191679}
+  m_EdgeRadius: 0
+--- !u!114 &9143827527732340624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073192274957988722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34c4ce19f7dbc64083f7ebe8b0511db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2073192275143842593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2073192275143842597}
+  - component: {fileID: 2073192275143842596}
+  - component: {fileID: 2073192275143842599}
+  - component: {fileID: 2073192275143842598}
+  m_Layer: 10
+  m_Name: PlatformPlaceholder (2)
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7769264093261230426
+--- !u!4 &2073192275143842597
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264093261230430}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.111, y: -3.99, z: -0.64404297}
+  m_GameObject: {fileID: 2073192275143842593}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.21, y: -5.23, z: 3.365}
   m_LocalScale: {x: 2.171618, y: 3.691751, z: 2.171618}
   m_Children:
-  - {fileID: 7769264094068491627}
-  - {fileID: 7769264093343799564}
-  - {fileID: 8790552331261655179}
-  - {fileID: 7769264094443506113}
-  - {fileID: 7287037661858089906}
-  - {fileID: 3365465327146316875}
-  - {fileID: 2856226819541983469}
+  - {fileID: 2073192275414249236}
+  - {fileID: 2073192274957988723}
+  - {fileID: 1074914594991182580}
+  - {fileID: 2073192273843102654}
+  - {fileID: 1311761083864834509}
+  - {fileID: 6458167389152550452}
+  - {fileID: 5816353617761684114}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7769264093261230427
+--- !u!33 &2073192275143842596
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264093261230430}
+  m_GameObject: {fileID: 2073192275143842593}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7769264093261230424
+--- !u!23 &2073192275143842599
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264093261230430}
+  m_GameObject: {fileID: 2073192275143842593}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -206,13 +307,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!61 &7769264093261230425
+--- !u!61 &2073192275143842598
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264093261230430}
+  m_GameObject: {fileID: 2073192275143842593}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -232,7 +333,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.9946897}
   m_EdgeRadius: 0
---- !u!1 &7769264093343799565
+--- !u!1 &2073192275414249239
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,107 +341,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7769264093343799564}
-  - component: {fileID: 7769264093343799567}
-  - component: {fileID: 716612565629439471}
-  m_Layer: 10
-  m_Name: CorrectBridgeLengthDetector
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7769264093343799564
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264093343799565}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7769264093261230426}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &7769264093343799567
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264093343799565}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.28669995, y: 0.49335098}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.40020478, y: 0.0191679}
-  m_EdgeRadius: 0
---- !u!114 &716612565629439471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264093343799565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c34c4ce19f7dbc64083f7ebe8b0511db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &7769264094068491624
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7769264094068491627}
-  - component: {fileID: 7769264094068491626}
-  - component: {fileID: 2161145665606679824}
+  - component: {fileID: 2073192275414249236}
+  - component: {fileID: 2073192275414249237}
+  - component: {fileID: 7703797953107613551}
   m_Layer: 10
   m_Name: LongBridgeDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7769264094068491627
+  m_IsActive: 0
+--- !u!4 &2073192275414249236
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264094068491624}
+  m_GameObject: {fileID: 2073192275414249239}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7769264093261230426}
+  m_Father: {fileID: 2073192275143842597}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &7769264094068491626
+--- !u!61 &2073192275414249237
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264094068491624}
+  m_GameObject: {fileID: 2073192275414249239}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -360,21 +391,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.055982232, y: 0.05883175}
   m_EdgeRadius: 0
---- !u!114 &2161145665606679824
+--- !u!114 &7703797953107613551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264094068491624}
+  m_GameObject: {fileID: 2073192275414249239}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6df4ff6c20e2b0489507b7ed2599d30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BridgeCorrectLengthDetector: {fileID: 7769264093343799565}
-  FoxDetector: {fileID: 7769264094443506118}
---- !u!1 &7769264094443506118
+  BridgeCorrectLengthDetector: {fileID: 2073192274957988722}
+  FoxDetector: {fileID: 2073192273843102649}
+--- !u!1 &6484161134477879778
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -382,44 +413,73 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7769264094443506113}
-  - component: {fileID: 7769264094443506112}
-  - component: {fileID: 4646520462386950403}
+  - component: {fileID: 1311761083864834509}
   m_Layer: 10
-  m_Name: FoxDetector
+  m_Name: NewBridgeSpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7769264094443506113
+--- !u!4 &1311761083864834509
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264094443506118}
+  m_GameObject: {fileID: 6484161134477879778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.367, y: 0.542, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7769264093261230426}
-  m_RootOrder: 3
+  m_Father: {fileID: 2073192275143842597}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &7769264094443506112
-BoxCollider2D:
+--- !u!1 &7181040568725179048
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264094443506118}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5816353617761684114}
+  - component: {fileID: 6231325918238292113}
+  m_Layer: 10
+  m_Name: Ramp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5816353617761684114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7181040568725179048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.04, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2073192275143842597}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &6231325918238292113
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7181040568725179048}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.21254003, y: 0.64767516}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -429,29 +489,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.053389788, y: 0.2148959}
-  m_EdgeRadius: 0
---- !u!114 &4646520462386950403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769264094443506118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ramp: {fileID: 1494249212324913367}
-  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
-    type: 3}
-  LongBridgeDetector: {fileID: 7769264094068491624}
-  NewBridgeSpawnPoint: {fileID: 7287037661858089906}
-  FoxMovementTargetOld: {fileID: 120875282309117484}
-  FoxMovementTargetNew: {fileID: 120875282309117484}
---- !u!1 &8203657618452708154
+  m_Points:
+    m_Paths:
+    - - {x: 0.26871258, y: 0.5219168}
+      - {x: 0.12688237, y: 0.49978662}
+      - {x: 0.26865226, y: 0.5003945}
+--- !u!1 &8555118047657516115
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -459,68 +502,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8790552331261655179}
-  - component: {fileID: 7227490175723570845}
-  - component: {fileID: 4754841883704487717}
+  - component: {fileID: 6458167389152550452}
   m_Layer: 10
-  m_Name: BridgeFallDetector
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Name: FoxMovementTarget
+  m_TagString: MovementTarget
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8790552331261655179
+  m_IsActive: 0
+--- !u!4 &6458167389152550452
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8203657618452708154}
+  m_GameObject: {fileID: 8555118047657516115}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.82, y: 0, z: 0}
+  m_LocalPosition: {x: 0.213, y: 0.595, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7769264093261230426}
-  m_RootOrder: 2
+  m_Father: {fileID: 2073192275143842597}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &7227490175723570845
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8203657618452708154}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.81762445, y: -0.40679294}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.0533316, y: 0.18641412}
-  m_EdgeRadius: 0
---- !u!114 &4754841883704487717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8203657618452708154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db6f110a55475e4f869ad6ce47ab2a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BridgeSpawnPoint: {fileID: 7287037661858089906}
-  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
-    type: 3}
