@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278998243185750337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.004, y: 0.00795, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.01610657, z: 1}
+  m_LocalPosition: {x: 0.004, y: 0.0108, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.021955013, z: 1}
   m_Children: []
   m_Father: {fileID: 278998243554724194}
   m_RootOrder: 0
@@ -105,21 +105,22 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.5062321, y: 0.50422406}
-      - {x: -0.50022227, y: 0.5029973}
+    - - {x: 0.49724847, y: 0.4994703}
+      - {x: -0.49483162, y: 0.49929988}
       - {x: -0.50014806, y: -0.48319364}
       - {x: -0.49910855, y: -0.50020313}
       - {x: -0.45449114, y: -0.49496165}
-      - {x: -0.28476307, y: -0.49268267}
-      - {x: 0.12897098, y: -0.48954594}
-      - {x: 0.20637837, y: -0.48864052}
-      - {x: 0.3338618, y: -0.48624125}
-      - {x: 0.39066055, y: -0.4844473}
-      - {x: 0.4525825, y: -0.48169136}
-      - {x: 0.48339987, y: -0.47732452}
-      - {x: 0.5018599, y: -0.46714392}
-      - {x: 0.49785948, y: -0.45592374}
-      - {x: 0.52255684, y: 0.13673514}
+      - {x: -0.29241368, y: -0.4904025}
+      - {x: 0.052872036, y: -0.47858146}
+      - {x: 0.17037694, y: -0.47430372}
+      - {x: 0.2496486, y: -0.47136232}
+      - {x: 0.33029842, y: -0.46703422}
+      - {x: 0.38051087, y: -0.4597872}
+      - {x: 0.41591775, y: -0.4518173}
+      - {x: 0.4375932, y: -0.44537243}
+      - {x: 0.46773216, y: -0.43605047}
+      - {x: 0.49785948, y: -0.42669606}
+      - {x: 0.50489, y: 0.13673514}
 --- !u!1 &278998243554724193
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 278998243554724193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.404, y: -3.136, z: 0}
-  m_LocalScale: {x: 1, y: 3.099998, z: 1}
+  m_LocalScale: {x: 2.171618, y: 6.732012, z: 2.171618}
   m_Children:
   - {fileID: 278998243185750342}
   m_Father: {fileID: 0}
@@ -168,8 +169,8 @@ Rigidbody2D:
   m_Mass: 3
   m_LinearDrag: 1.99
   m_AngularDrag: 1
-  m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_GravityScale: 3
+  m_Material: {fileID: 6200000, guid: 588b08e7b5d6a7841a5f7aeb6d886b36, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

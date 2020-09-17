@@ -34,9 +34,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         Paws = 10;
-        BridgeRB.drag = 2;
-        BridgeRB.mass = 3;
-        BridgeRB.gravityScale = 2;
         FoxRB = gameObject.GetComponent<Rigidbody2D>();
         BridgeRB.simulated = false;
         Bridge.BridgeGrown = false;
@@ -102,7 +99,6 @@ public class Player : MonoBehaviour
         if (Paws == 0)
         {
             paw1.SetActive(false);
-
             SceneManager.LoadScene("Teemu");
         }
 
@@ -115,6 +111,8 @@ public class Player : MonoBehaviour
         {
             MoveFoxTooFar();
         }
+
+        Debug.DrawLine(gameObject.transform.position, FoxFallTarget.transform.position, Color.red);
     }
     void MoveFoxCorrect()
     {
