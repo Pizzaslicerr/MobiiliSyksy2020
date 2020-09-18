@@ -2492,7 +2492,7 @@ PrefabInstance:
     - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
       propertyPath: bridgeGrowthRate
-      value: 6
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}

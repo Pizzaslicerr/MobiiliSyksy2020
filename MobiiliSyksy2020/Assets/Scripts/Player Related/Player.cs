@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
         if (!Bridge.BridgeGrown && Input.GetMouseButton(0))
         {
             Vector3 v = BridgeO.transform.localScale;
-            v.y = v.y + bridgeGrowthRate;
+            v.y = v.y + bridgeGrowthRate * Time.deltaTime;
             BridgeO.transform.localScale = v;
         }
         if (Input.GetMouseButtonUp(0))
