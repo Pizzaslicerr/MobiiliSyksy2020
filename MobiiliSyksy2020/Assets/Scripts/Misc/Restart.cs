@@ -8,7 +8,7 @@ public class Restart : MonoBehaviour
     // Start is called before the first frame update
     public void RestartGame()
     {
-        SceneManager.LoadScene("Teemu");
+        Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name); ;
     }
     
 }

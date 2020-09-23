@@ -22,7 +22,7 @@ public class BridgeFallDatactor : MonoBehaviour
     {
         if (collision.tag == "Fox")
         {
-            SceneManager.LoadScene("Teemu");
+            Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
         }
         else if (collision.tag == "Bridge")
         {

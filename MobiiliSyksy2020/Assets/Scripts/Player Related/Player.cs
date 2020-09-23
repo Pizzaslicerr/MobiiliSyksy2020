@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
         if (Paws == 0)
         {
             paw1.SetActive(false);
-            SceneManager.LoadScene("Teemu");
+            Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
         }
 
 
