@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class Bridge : MonoBehaviour
 {
+    //Making these variables easily accessible from all scripts
     public static bool BridgeGrown;
     public static bool BridgeDown;
-    // Start is called before the first frame update
+
     void Start()
     {
+        //To make sure a new bridge always has these variables set to false
         BridgeGrown = false;
         BridgeDown = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
