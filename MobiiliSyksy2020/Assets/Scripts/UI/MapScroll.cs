@@ -21,10 +21,21 @@ public class MapScroll : MonoBehaviour, IDragHandler, IEndDragHandler
     private Vector3 panelPosition;
     private Vector3 endPosition;
 
+    public struct MapScreenInfo
+    {
+        public float bottom;
+        public float top;
+    }
+
+    MapScreenInfo mapScreenInfo;
+
     private void Start()
     {
         panelPosition = transform.position;
         mapScreenRect = mapScreen.GetComponent<RectTransform>();
+
+        mapScreenInfo.bottom = mapScreenRect.rect.position.y;
+        mapScreenInfo.top = (mapScreenRect.rect.height - Screen.height) * -1;
     }
     public void OnDrag(PointerEventData data)
     {
@@ -32,6 +43,7 @@ public class MapScroll : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             case coordinateDirections.X:
                 {
+                    //this is left unfinished for now, as the map screen will likely be on the Y-axis.
                     difference = data.pressPosition.x - data.position.x;
                     endPosition = panelPosition - new Vector3(difference, 0, 0);
                     transform.position = panelPosition - new Vector3(difference, 0, 0);
@@ -41,13 +53,14 @@ public class MapScroll : MonoBehaviour, IDragHandler, IEndDragHandler
                 {
                     difference = data.pressPosition.y - data.position.y;
 
-                    if (transform.position.y > 0)
+                    //this whole block handles the map screen's edges.
+                    if (transform.position.y > mapScreenInfo.bottom)
                     {
-                        endPosition = new Vector3(transform.position.x, 0, 0);
+                        endPosition = new Vector3(transform.position.x, mapScreenInfo.bottom, 0);
                     }
-                    else if (transform.position.y < (mapScreenRect.rect.height - Screen.height) * -1)
+                    else if (transform.position.y < mapScreenInfo.top)
                     {
-                        endPosition = new Vector3(transform.position.x, (mapScreenRect.rect.height - Screen.height) * -1, 0);
+                        endPosition = new Vector3(transform.position.x, mapScreenInfo.top, 0);
                     }
                     else
                     {
@@ -71,6 +84,11 @@ public class MapScroll : MonoBehaviour, IDragHandler, IEndDragHandler
         transform.position = endPosition;
         panelPosition = transform.position;
 
+        ZeroValues();
+    }
+
+    private void ZeroValues()
+    {
         endPosition = Vector3.zero;
         difference = 0f;            //probably not necessary, but here just in case
         differenceXY = Vector2.zero;
