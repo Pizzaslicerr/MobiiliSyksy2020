@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/SceneManager.unity
+    guid: afc3939c6324d7949b9da9856b56e63b
+  - enabled: 1
     path: Assets/Scenes/Test scenes/Teemu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Test scenes/Mikko/Mikko.unity
+    guid: c544d52cb060cf14ca0a4d84904cfc5e
+  - enabled: 1
+    path: Assets/Scenes/Test scenes/Mikko/Mikko2.unity
+    guid: a3b266e1538b2214e9e30e07583d6918
   m_configObjects: {}
