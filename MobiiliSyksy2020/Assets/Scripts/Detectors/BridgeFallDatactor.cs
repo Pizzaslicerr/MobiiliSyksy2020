@@ -11,8 +11,7 @@ public class BridgeFallDatactor : MonoBehaviour
     {
         if (collision.tag == "Fox")
         {
-            //When fox falls, reload the scene (Replace with a better solution)
-            SceneManager.LoadScene("Teemu");
+            Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
         }
         else if (collision.tag == "Bridge")
         {
