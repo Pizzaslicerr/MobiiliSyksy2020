@@ -7,17 +7,6 @@ public class BridgeFallDatactor : MonoBehaviour
 {
     public Transform BridgeSpawnPoint;
     public GameObject BridgePrefab;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Fox")
@@ -26,6 +15,7 @@ public class BridgeFallDatactor : MonoBehaviour
         }
         else if (collision.tag == "Bridge")
         {
+            //If the bridge falls, it gets spawned again on the platform
             Destroy(GameObject.FindGameObjectWithTag("Bridge"));
             Instantiate(BridgePrefab, BridgeSpawnPoint.position, transform.rotation);
         }
