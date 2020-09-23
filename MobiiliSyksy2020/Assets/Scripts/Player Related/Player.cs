@@ -41,11 +41,13 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        //Finding objects with tags so there's no need to fiddle around with public game objects
         FoxMovementTarget = GameObject.FindWithTag("MovementTarget");
         BridgeO = GameObject.FindWithTag("Bridge");
         BridgeRB = GameObject.FindWithTag("Bridge").GetComponent<Rigidbody2D>();
         if (!Bridge.BridgeGrown && Input.GetMouseButton(0))
         {
+            //Growing the bridge while pressing and holding the screen
             Vector3 v = BridgeO.transform.localScale;
             v.y = v.y + bridgeGrowthRate * Time.deltaTime;
             BridgeO.transform.localScale = v;
@@ -56,10 +58,11 @@ public class Player : MonoBehaviour
             {
                 Paws = Paws - 1;
             }
+            //Make the bridge's rigidbody simulated so it will fall when you let go of the screen
             BridgeRB.simulated = true;
             Bridge.BridgeGrown = true;
         }
-
+        //The paw system, feel free to replace with something more sensible
         if (Paws == 9)
         {
             paw10.SetActive(false);
@@ -116,12 +119,14 @@ public class Player : MonoBehaviour
     }
     void MoveFoxCorrect()
     {
+        //Moving the fox correctly to the next platform
         BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
         BridgeRB.freezeRotation = true;
         transform.position = Vector2.MoveTowards(transform.position, FoxMovementTarget.transform.position, Speed * Time.deltaTime);
     }
     void MoveFoxTooFar()
     {
+        //Moving the fox too far so it falls
         BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
         BridgeRB.freezeRotation = true;
         transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
