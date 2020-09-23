@@ -172,6 +172,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollDirection: 1
   mapScreen: {fileID: 837859445}
+  endPosition: {x: 0, y: 0, z: 0}
+  horizontalOffset: 0
+  verticalOffset: 0
+  bounceBackDuration: 0
 --- !u!1 &545933710
 GameObject:
   m_ObjectHideFlags: 0
