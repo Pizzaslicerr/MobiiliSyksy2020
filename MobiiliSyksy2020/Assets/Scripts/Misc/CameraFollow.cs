@@ -60,8 +60,8 @@ public class CameraFollow : MonoBehaviour
         //align the camera and the targets z position
         targetPos.z = transform.position.z;
 
-        gameObject.transform.position = new Vector3(target.position.x + cameraDistanceFromPlayer, 0, -10);
-        //transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
+        //gameObject.transform.position = new Vector3(target.position.x + cameraDistanceFromPlayer, 0, -10);
+        transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
 
     }
 }

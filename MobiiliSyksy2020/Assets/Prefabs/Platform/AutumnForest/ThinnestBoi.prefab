@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84476384059670113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.038, y: 8.897, z: 0}
+  m_LocalPosition: {x: 0.979, y: 9.014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4905886207830117542}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3344382771011472336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.619, y: 9.339, z: 0}
+  m_LocalPosition: {x: 0.538, y: 9.456, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4905886207830117542}
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 4905886207830117541}
   - component: {fileID: 6472061180545092905}
   m_Layer: 10
-  m_Name: PlatformPlaceholder (3)
+  m_Name: ThinnestBoi
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
