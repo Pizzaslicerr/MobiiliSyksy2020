@@ -9,6 +9,7 @@ TagManager:
   - Platform
   - Collectibles
   - MovementTarget
+  - BridgeSpawnPoint
   layers:
   - Default
   - TransparentFX

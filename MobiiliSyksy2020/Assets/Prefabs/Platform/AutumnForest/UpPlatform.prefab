@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 7573747489078828845}
   m_Layer: 10
   m_Name: NewBridgeSpawnPoint
-  m_TagString: Untagged
+  m_TagString: BridgeSpawnPoint
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,12 +189,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fox: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494, type: 3}
   Ramp: {fileID: 1767445897772643400}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
   LongBridgeDetector: {fileID: 7487904620348133879}
   CorrectBridgeDetector: {fileID: 7487904620669914514}
-  NewBridgeSpawnPoint: {fileID: 7573747489078828845}
+  NewBridgeSpawnPoint: {fileID: 2509431630667421442}
   FoxMovementTargetOld: {fileID: 979240990744634035}
   FoxMovementTargetNew: {fileID: 979240990744634035}
 --- !u!1 &7487904620348133879
@@ -296,7 +297,7 @@ Transform:
   m_GameObject: {fileID: 7487904620618278337}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.177, y: -3.76, z: 3.365}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 3.4547672}
+  m_LocalScale: {x: 0.46, y: 0.46, z: 3.4547672}
   m_Children:
   - {fileID: 7487904620348133876}
   - {fileID: 7487904620669914515}
@@ -372,7 +373,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -5337960420726062741, guid: f748be1709ca9c747ac3f8064bff0e2f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -525,6 +526,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db6f110a55475e4f869ad6ce47ab2a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BridgeSpawnPoint: {fileID: 7573747489078828845}
-  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
-    type: 3}
+  Fox: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494, type: 3}
