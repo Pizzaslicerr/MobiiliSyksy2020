@@ -19,10 +19,13 @@ public class MapScroll : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     [SerializeField] private GameObject mapScreen;
     private RectTransform mapScreenRect;
 
-    private float difference;
+    [SerializeField] private float difference;  //distance between original touch position and dragged position
     private Vector2 differenceXY;
+    private float differenceDelta;              //the distance one's finger moves in one frame. Used in scroll velocity calculations.
+
     private Vector3 panelPosition;
     [SerializeField] private Vector3 endPosition;
+    [SerializeField] private bool isBeingDragged;
 
     public struct MapScreenInfo
     {
@@ -50,7 +53,7 @@ public class MapScroll : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData data)
     {
-        StopCoroutine(DampScrolling(transform.position));
+        isBeingDragged = true;
     }
 
     public void OnDrag(PointerEventData data)
@@ -101,6 +104,7 @@ public class MapScroll : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
 
     public void OnEndDrag(PointerEventData data)
     {
+        isBeingDragged = false;
         panelPosition = transform.position;
 
         if (transform.position != endPosition)
@@ -115,15 +119,16 @@ public class MapScroll : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     //Smoothly moves the map's position back to the edges of the camera.
     private IEnumerator DampScrolling(Vector3 playerPosition)
     {
-        Vector3 velocity = new Vector3(1, 1, 1);
-
-        float t = 0f;
-        while (t <= 1f)
+        if (!isBeingDragged)
         {
-            t += Time.deltaTime / bounceBackDuration;
-            transform.position = Vector3.Lerp(playerPosition, endPosition, Mathf.SmoothStep(0f, 1f, t));
-            yield return null;
+            float t = 0f;
+            while (t <= 1f)
+            {
+                t += Time.deltaTime / bounceBackDuration;
+                transform.position = Vector3.Lerp(playerPosition, endPosition, Mathf.SmoothStep(0f, 1f, t));
+                yield return null;
+            }
+            panelPosition = transform.position;
         }
-        panelPosition = transform.position;
     }
 }
