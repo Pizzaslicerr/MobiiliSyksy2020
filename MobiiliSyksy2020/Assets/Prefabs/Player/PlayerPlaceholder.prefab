@@ -58,6 +58,9 @@ MonoBehaviour:
   paw10: {fileID: 0}
   Paws: 0
   bridgeGrowthRate: 2
+  BridgeO: {fileID: 0}
+  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
+    type: 3}
   Speed: 1
   FoxFallTarget: {fileID: 0}
 --- !u!50 &2961019305504276007

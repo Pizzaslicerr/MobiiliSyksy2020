@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 7573747489078828845}
   m_Layer: 10
   m_Name: NewBridgeSpawnPoint
-  m_TagString: Untagged
+  m_TagString: BridgeSpawnPoint
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,12 +189,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fox: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494, type: 3}
   Ramp: {fileID: 1767445897772643400}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
   LongBridgeDetector: {fileID: 7487904620348133879}
   CorrectBridgeDetector: {fileID: 7487904620669914514}
-  NewBridgeSpawnPoint: {fileID: 7573747489078828845}
+  NewBridgeSpawnPoint: {fileID: 2509431630667421442}
   FoxMovementTargetOld: {fileID: 979240990744634035}
   FoxMovementTargetNew: {fileID: 979240990744634035}
 --- !u!1 &7487904620348133879
@@ -525,6 +526,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db6f110a55475e4f869ad6ce47ab2a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BridgeSpawnPoint: {fileID: 7573747489078828845}
-  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
-    type: 3}
+  Fox: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494, type: 3}

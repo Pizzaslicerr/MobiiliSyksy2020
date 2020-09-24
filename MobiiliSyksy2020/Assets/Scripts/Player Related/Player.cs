@@ -21,8 +21,8 @@ public class Player : MonoBehaviour
     private bool screenPressed = false;
 
     public float bridgeGrowthRate;
-    //private GameObject BridgeO;
-    public GameObject BridgeO;
+    private GameObject BridgeO;
+    //public GameObject BridgeO;
     public GameObject BridgePrefab;
     public static Rigidbody2D BridgeRB;
     private GameObject BridgeSpawnPoint;
@@ -41,8 +41,10 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+
         Paws = 10;
         FoxRB = gameObject.GetComponent<Rigidbody2D>();
+        BridgeO = GameObject.FindWithTag("Bridge");
     }
 
     void Update()
@@ -125,7 +127,7 @@ public class Player : MonoBehaviour
             MoveFoxTooFar();
         }
 
-        //Debug.DrawLine(gameObject.transform.position, BridgeSpawnPoint.transform.position, Color.red);
+        Debug.DrawLine(gameObject.transform.position, BridgeO.transform.position, Color.red);
     }
     void MoveFoxCorrect()
     {
@@ -142,14 +144,18 @@ public class Player : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
     }
 
-    public void BridgeRest()
+    public void BridgeRest() 
     {
+        //Find the current active spawn point for the bridge
         BridgeSpawnPoint = GameObject.FindWithTag("BridgeSpawnPoint");
+        //Reset variables and remove bridge constraints
         Bridge.BridgeGrown = false;
         BridgeRB.simulated = false;
         Bridge.BridgeDown = false;
         BridgeRB.freezeRotation = false;
         BridgeRB.constraints = RigidbodyConstraints2D.None;
+        //Reset the bridge to the next spot, or the current one if it fell
+        BridgeO = GameObject.FindWithTag("Bridge");
         BridgeO.transform.localScale = BridgePrefab.transform.localScale;
         BridgeO.transform.rotation = BridgePrefab.transform.rotation;
         BridgeO.transform.position = BridgeSpawnPoint.transform.position;

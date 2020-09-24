@@ -8,7 +8,6 @@ public class FoxDetector : MonoBehaviour
 
     public GameObject Ramp;
     public GameObject BridgePrefab;
-    public GameObject BridgeO;
     public GameObject LongBridgeDetector;
     public GameObject CorrectBridgeDetector;
     public GameObject NewBridgeSpawnPoint;
@@ -42,14 +41,6 @@ public class FoxDetector : MonoBehaviour
             Player.FoxMoving = false;
 
             Fox.GetComponent<Player>().BridgeRest();
-
-            /*BridgeO.transform.localScale = BridgePrefab.transform.localScale;
-            BridgeO.transform.rotation = BridgePrefab.transform.rotation;
-            BridgeO.transform.position = NewBridgeSpawnPoint.position;*/
-
-            //Destroy old bridge object and instantiate new on the platform
-            //Destroy(GameObject.FindGameObjectWithTag("Bridge"));
-            //Instantiate(BridgePrefab, NewBridgeSpawnPoint.position, transform.rotation);
 
             //Deactivate old detectors
             LongBridgeDetector.SetActive(false);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3648595965114623740}
   m_Layer: 10
   m_Name: NewBridgeSpawnPoint
-  m_TagString: Untagged
+  m_TagString: BridgeSpawnPoint
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,9 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db6f110a55475e4f869ad6ce47ab2a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BridgeSpawnPoint: {fileID: 3648595965114623740}
-  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
-    type: 3}
+  Fox: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494, type: 3}
 --- !u!1 &2073192275143842593
 GameObject:
   m_ObjectHideFlags: 0
