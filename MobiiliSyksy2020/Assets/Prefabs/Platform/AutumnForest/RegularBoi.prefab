@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483348658355620580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.18, y: 9.383, z: 0}
+  m_LocalPosition: {x: 1.95, y: 9.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7838977914817367442}
@@ -113,7 +113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3022073339652390741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.621, y: 8.954, z: 0}
+  m_LocalPosition: {x: 2.39, y: 9.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7838977914817367442}
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 7838977914817367441}
   - component: {fileID: 8146431426005158941}
   m_Layer: 10
-  m_Name: PlatformPlaceholder (1)
+  m_Name: RegularBoi
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

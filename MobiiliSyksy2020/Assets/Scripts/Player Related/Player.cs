@@ -18,9 +18,11 @@ public class Player : MonoBehaviour
 
     public int Paws;
 
+    private bool screenPressed = false;
+
     public float bridgeGrowthRate;
     private GameObject BridgeO;
-    private Rigidbody2D BridgeRB;
+    public static Rigidbody2D BridgeRB;
 
     private Rigidbody2D FoxRB;
 
@@ -35,8 +37,6 @@ public class Player : MonoBehaviour
     {
         Paws = 10;
         FoxRB = gameObject.GetComponent<Rigidbody2D>();
-        BridgeRB.simulated = false;
-        Bridge.BridgeGrown = false;
     }
 
     void Update()
@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
             Vector3 v = BridgeO.transform.localScale;
             v.y = v.y + bridgeGrowthRate * Time.deltaTime;
             BridgeO.transform.localScale = v;
+            screenPressed = true;
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -61,6 +62,7 @@ public class Player : MonoBehaviour
             //Make the bridge's rigidbody simulated so it will fall when you let go of the screen
             BridgeRB.simulated = true;
             Bridge.BridgeGrown = true;
+            screenPressed = false;
         }
         //The paw system, feel free to replace with something more sensible
         if (Paws == 9)
