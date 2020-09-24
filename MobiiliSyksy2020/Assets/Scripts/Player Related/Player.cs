@@ -21,8 +21,11 @@ public class Player : MonoBehaviour
     private bool screenPressed = false;
 
     public float bridgeGrowthRate;
-    private GameObject BridgeO;
+    //private GameObject BridgeO;
+    public GameObject BridgeO;
+    public GameObject BridgePrefab;
     public static Rigidbody2D BridgeRB;
+    private GameObject BridgeSpawnPoint;
 
     private Rigidbody2D FoxRB;
 
@@ -32,6 +35,9 @@ public class Player : MonoBehaviour
     public float Speed;
     private GameObject FoxMovementTarget;
     public Transform FoxFallTarget;
+
+    Vector3 v;
+    Vector3 temp;
 
     void Start()
     {
@@ -43,12 +49,13 @@ public class Player : MonoBehaviour
     {
         //Finding objects with tags so there's no need to fiddle around with public game objects
         FoxMovementTarget = GameObject.FindWithTag("MovementTarget");
-        BridgeO = GameObject.FindWithTag("Bridge");
-        BridgeRB = GameObject.FindWithTag("Bridge").GetComponent<Rigidbody2D>();
+        //BridgeO = GameObject.FindWithTag("Bridge");
+        BridgeRB = BridgeO.GetComponent<Rigidbody2D>();
         if (!Bridge.BridgeGrown && Input.GetMouseButton(0))
         {
             //Growing the bridge while pressing and holding the screen
-            Vector3 v = BridgeO.transform.localScale;
+            v = BridgeO.transform.localScale;
+            temp = v;
             v.y = v.y + bridgeGrowthRate * Time.deltaTime;
             BridgeO.transform.localScale = v;
             screenPressed = true;
@@ -59,6 +66,7 @@ public class Player : MonoBehaviour
             {
                 Paws = Paws - 1;
             }
+            v.y = temp.y;
             //Make the bridge's rigidbody simulated so it will fall when you let go of the screen
             BridgeRB.simulated = true;
             Bridge.BridgeGrown = true;
@@ -117,7 +125,7 @@ public class Player : MonoBehaviour
             MoveFoxTooFar();
         }
 
-        Debug.DrawLine(gameObject.transform.position, FoxFallTarget.transform.position, Color.red);
+        //Debug.DrawLine(gameObject.transform.position, BridgeSpawnPoint.transform.position, Color.red);
     }
     void MoveFoxCorrect()
     {
@@ -132,5 +140,18 @@ public class Player : MonoBehaviour
         BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
         BridgeRB.freezeRotation = true;
         transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
+    }
+
+    public void BridgeRest()
+    {
+        BridgeSpawnPoint = GameObject.FindWithTag("BridgeSpawnPoint");
+        Bridge.BridgeGrown = false;
+        BridgeRB.simulated = false;
+        Bridge.BridgeDown = false;
+        BridgeRB.freezeRotation = false;
+        BridgeRB.constraints = RigidbodyConstraints2D.None;
+        BridgeO.transform.localScale = BridgePrefab.transform.localScale;
+        BridgeO.transform.rotation = BridgePrefab.transform.rotation;
+        BridgeO.transform.position = BridgeSpawnPoint.transform.position;
     }
 }

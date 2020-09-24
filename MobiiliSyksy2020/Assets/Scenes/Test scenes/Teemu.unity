@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &82705930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 84476384059670113, guid: e8aa260a1934ff94dae08b254a8ffbc2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3693035876627658549}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &146716409 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
@@ -240,8 +246,8 @@ Transform:
   m_LocalPosition: {x: 3.18, y: -2.940061, z: -4.7631836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7769264093442886443}
   - {fileID: 7769264094304758668}
+  - {fileID: 7769264093442886443}
   - {fileID: 1058831959}
   - {fileID: 7769264094214247633}
   - {fileID: 8598912187238054803}
@@ -751,6 +757,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894351223}
   m_CullTransparentMesh: 0
+--- !u!1 &954257686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2509431630667421442, guid: f75edafe70722954992f987e5d0f1c42,
+    type: 3}
+  m_PrefabInstance: {fileID: 7487904620097379218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &976417771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,7 +1220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270679297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.37, y: 0, z: -26.5}
+  m_LocalPosition: {x: 0.32, y: 0, z: -26.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1420,6 +1432,12 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 7487904619570240863, guid: f75edafe70722954992f987e5d0f1c42,
     type: 3}
   m_PrefabInstance: {fileID: 7487904620097379218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1712561595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3022073339652390741, guid: 61773d4d102509945b3eeadad37c9379,
+    type: 3}
+  m_PrefabInstance: {fileID: 511260154000578883}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1780126674
 GameObject:
@@ -1980,62 +1998,18 @@ Transform:
   m_Father: {fileID: 2118566231}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2002308736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2475254359826721429, guid: 4e7a9b7f4c22c1c4685beac6c9583f83,
+    type: 3}
+  m_PrefabInstance: {fileID: 914526973753283449}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2033795383 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494,
     type: 3}
   m_PrefabInstance: {fileID: 4176516368349912773}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &2033795387
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033795383}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f2faf5e3815087b47b75f68b2ce4b42b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 2.75, y: 2.89}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!4 &2033795389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4176516367890117598, guid: 9d545285601fd354295cb7b5f28a6494,
@@ -2133,6 +2107,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 402959745}
     m_Modifications:
+    - target: {fileID: 3022073339652390741, guid: 61773d4d102509945b3eeadad37c9379,
+        type: 3}
+      propertyPath: m_TagString
+      value: BridgeSpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108432069042689005, guid: 61773d4d102509945b3eeadad37c9379,
+        type: 3}
+      propertyPath: BridgeO
+      value: 
+      objectReference: {fileID: 146716409}
+    - target: {fileID: 5108432069042689005, guid: 61773d4d102509945b3eeadad37c9379,
+        type: 3}
+      propertyPath: Fox
+      value: 
+      objectReference: {fileID: 2033795383}
+    - target: {fileID: 5144128754484923851, guid: 61773d4d102509945b3eeadad37c9379,
+        type: 3}
+      propertyPath: BridgeO
+      value: 
+      objectReference: {fileID: 146716409}
+    - target: {fileID: 5144128754484923851, guid: 61773d4d102509945b3eeadad37c9379,
+        type: 3}
+      propertyPath: NewBridgeSpawnPoint
+      value: 
+      objectReference: {fileID: 1712561595}
+    - target: {fileID: 5144128754484923851, guid: 61773d4d102509945b3eeadad37c9379,
+        type: 3}
+      propertyPath: Fox
+      value: 
+      objectReference: {fileID: 2033795383}
     - target: {fileID: 7838977914817367442, guid: 61773d4d102509945b3eeadad37c9379,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2202,6 +2206,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 402959745}
     m_Modifications:
+    - target: {fileID: 2475254359826721429, guid: 4e7a9b7f4c22c1c4685beac6c9583f83,
+        type: 3}
+      propertyPath: m_TagString
+      value: BridgeSpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533460294106322955, guid: 4e7a9b7f4c22c1c4685beac6c9583f83,
+        type: 3}
+      propertyPath: BridgeO
+      value: 
+      objectReference: {fileID: 146716409}
+    - target: {fileID: 5533460294106322955, guid: 4e7a9b7f4c22c1c4685beac6c9583f83,
+        type: 3}
+      propertyPath: NewBridgeSpawnPoint
+      value: 
+      objectReference: {fileID: 2002308736}
+    - target: {fileID: 5533460294106322955, guid: 4e7a9b7f4c22c1c4685beac6c9583f83,
+        type: 3}
+      propertyPath: Fox
+      value: 
+      objectReference: {fileID: 2033795383}
+    - target: {fileID: 5570278668294227501, guid: 4e7a9b7f4c22c1c4685beac6c9583f83,
+        type: 3}
+      propertyPath: BridgeO
+      value: 
+      objectReference: {fileID: 146716409}
+    - target: {fileID: 5570278668294227501, guid: 4e7a9b7f4c22c1c4685beac6c9583f83,
+        type: 3}
+      propertyPath: Fox
+      value: 
+      objectReference: {fileID: 2033795383}
     - target: {fileID: 7449224162193676370, guid: 4e7a9b7f4c22c1c4685beac6c9583f83,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2240,7 +2274,7 @@ PrefabInstance:
     - target: {fileID: 7449224162193676370, guid: 4e7a9b7f4c22c1c4685beac6c9583f83,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7449224162193676370, guid: 4e7a9b7f4c22c1c4685beac6c9583f83,
         type: 3}
@@ -2277,6 +2311,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 402959745}
     m_Modifications:
+    - target: {fileID: 84476384059670113, guid: e8aa260a1934ff94dae08b254a8ffbc2,
+        type: 3}
+      propertyPath: m_TagString
+      value: BridgeSpawnPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 4905886207830117538, guid: e8aa260a1934ff94dae08b254a8ffbc2,
         type: 3}
       propertyPath: m_Name
@@ -2337,6 +2376,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7942197468976992985, guid: e8aa260a1934ff94dae08b254a8ffbc2,
+        type: 3}
+      propertyPath: BridgeO
+      value: 
+      objectReference: {fileID: 146716409}
+    - target: {fileID: 7942197468976992985, guid: e8aa260a1934ff94dae08b254a8ffbc2,
+        type: 3}
+      propertyPath: Fox
+      value: 
+      objectReference: {fileID: 2033795383}
+    - target: {fileID: 8052168655944011007, guid: e8aa260a1934ff94dae08b254a8ffbc2,
+        type: 3}
+      propertyPath: BridgeO
+      value: 
+      objectReference: {fileID: 146716409}
+    - target: {fileID: 8052168655944011007, guid: e8aa260a1934ff94dae08b254a8ffbc2,
+        type: 3}
+      propertyPath: NewBridgeSpawnPoint
+      value: 
+      objectReference: {fileID: 82705930}
+    - target: {fileID: 8052168655944011007, guid: e8aa260a1934ff94dae08b254a8ffbc2,
+        type: 3}
+      propertyPath: Fox
+      value: 
+      objectReference: {fileID: 2033795383}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8aa260a1934ff94dae08b254a8ffbc2, type: 3}
 --- !u!1001 &4176516368349912773
@@ -2456,6 +2520,22 @@ PrefabInstance:
       propertyPath: bridgeGrowthRate
       value: 700
       objectReference: {fileID: 0}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
+      propertyPath: BridgeO
+      value: 
+      objectReference: {fileID: 146716409}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
+      propertyPath: BridgePrefab
+      value: 
+      objectReference: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
+        type: 3}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
+      propertyPath: BridgeSpawnPoint
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
       propertyPath: m_Name
@@ -2531,6 +2611,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 402959745}
     m_Modifications:
+    - target: {fileID: 2509431630667421442, guid: f75edafe70722954992f987e5d0f1c42,
+        type: 3}
+      propertyPath: m_TagString
+      value: BridgeSpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 5494489049216673180, guid: f75edafe70722954992f987e5d0f1c42,
+        type: 3}
+      propertyPath: BridgeO
+      value: 
+      objectReference: {fileID: 146716409}
+    - target: {fileID: 5494489049216673180, guid: f75edafe70722954992f987e5d0f1c42,
+        type: 3}
+      propertyPath: NewBridgeSpawnPoint
+      value: 
+      objectReference: {fileID: 954257686}
+    - target: {fileID: 5494489049216673180, guid: f75edafe70722954992f987e5d0f1c42,
+        type: 3}
+      propertyPath: Fox
+      value: 
+      objectReference: {fileID: 2033795383}
+    - target: {fileID: 5604464288554548154, guid: f75edafe70722954992f987e5d0f1c42,
+        type: 3}
+      propertyPath: BridgeO
+      value: 
+      objectReference: {fileID: 146716409}
+    - target: {fileID: 5604464288554548154, guid: f75edafe70722954992f987e5d0f1c42,
+        type: 3}
+      propertyPath: Fox
+      value: 
+      objectReference: {fileID: 2033795383}
     - target: {fileID: 7487904620348133877, guid: f75edafe70722954992f987e5d0f1c42,
         type: 3}
       propertyPath: m_Offset.y
@@ -2633,6 +2743,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 402959745}
     m_Modifications:
+    - target: {fileID: 137174906973379618, guid: 93a980edd40b3354db310454c41d6655,
+        type: 3}
+      propertyPath: m_TagString
+      value: BridgeSpawnPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 2073192275143842593, guid: 93a980edd40b3354db310454c41d6655,
         type: 3}
       propertyPath: m_Name
@@ -2676,8 +2791,18 @@ PrefabInstance:
     - target: {fileID: 2073192275143842597, guid: 93a980edd40b3354db310454c41d6655,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5130597313170596957, guid: 93a980edd40b3354db310454c41d6655,
+        type: 3}
+      propertyPath: BridgeO
+      value: 
+      objectReference: {fileID: 146716409}
+    - target: {fileID: 5130597313170596957, guid: 93a980edd40b3354db310454c41d6655,
+        type: 3}
+      propertyPath: Fox
+      value: 
+      objectReference: {fileID: 2033795383}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93a980edd40b3354db310454c41d6655, type: 3}
 --- !u!4 &8598912187238054803 stripped

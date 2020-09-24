@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class FoxDetector : MonoBehaviour
 {
+    public GameObject Fox;
+
     public GameObject Ramp;
     public GameObject BridgePrefab;
+    public GameObject BridgeO;
     public GameObject LongBridgeDetector;
     public GameObject CorrectBridgeDetector;
-    public Transform NewBridgeSpawnPoint;
+    public GameObject NewBridgeSpawnPoint;
     public GameObject FoxMovementTargetOld;
     public GameObject FoxMovementTargetNew;
     void Start()
     {
+        NewBridgeSpawnPoint.SetActive(false);
         FoxMovementTargetNew.SetActive(false);
         FoxMovementTargetOld.SetActive(true);
         Ramp.SetActive(false);
@@ -25,6 +29,8 @@ public class FoxDetector : MonoBehaviour
     {
         if (collision.tag == "Fox")
         {
+            GameObject.FindWithTag("BridgeSpawnPoint").SetActive(false);
+            NewBridgeSpawnPoint.SetActive(true);
             //Activate ramp
             Ramp.SetActive(true);
 
@@ -35,9 +41,15 @@ public class FoxDetector : MonoBehaviour
             //Stop fox movement
             Player.FoxMoving = false;
 
+            Fox.GetComponent<Player>().BridgeRest();
+
+            /*BridgeO.transform.localScale = BridgePrefab.transform.localScale;
+            BridgeO.transform.rotation = BridgePrefab.transform.rotation;
+            BridgeO.transform.position = NewBridgeSpawnPoint.position;*/
+
             //Destroy old bridge object and instantiate new on the platform
-            Destroy(GameObject.FindGameObjectWithTag("Bridge"));
-            Instantiate(BridgePrefab, NewBridgeSpawnPoint.position, transform.rotation);
+            //Destroy(GameObject.FindGameObjectWithTag("Bridge"));
+            //Instantiate(BridgePrefab, NewBridgeSpawnPoint.position, transform.rotation);
 
             //Deactivate old detectors
             LongBridgeDetector.SetActive(false);
