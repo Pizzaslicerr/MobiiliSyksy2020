@@ -848,16 +848,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3d353dd89757b4aac8a75338b823ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraDistanceFromPlayer: 0
   target: {fileID: 2087984555}
   smoothTime: 0.15
-  YMaxEnabled: 0
+  YMaxEnabled: 1
   YMaxValue: 0
   YMinEnabled: 1
-  YMinValue: 0.16
+  YMinValue: 0
   XMaxEnabled: 1
   XMaxValue: 43.2
   XMinEnabled: 1
-  XMinValue: 0.02
+  XMinValue: 0
 --- !u!1 &1096110323
 GameObject:
   m_ObjectHideFlags: 0

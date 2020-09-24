@@ -1564,14 +1564,14 @@ MonoBehaviour:
   cameraDistanceFromPlayer: 1
   target: {fileID: 1488030248}
   smoothTime: 0.15
-  YMaxEnabled: 0
+  YMaxEnabled: 1
   YMaxValue: 0
   YMinEnabled: 1
-  YMinValue: 0.16
+  YMinValue: 0
   XMaxEnabled: 1
-  XMaxValue: 43.2
+  XMaxValue: 54.8
   XMinEnabled: 1
-  XMinValue: 0.02
+  XMinValue: 1
 --- !u!81 &1270679299
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1631,7 +1631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270679297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.37, y: 0, z: -26.5}
+  m_LocalPosition: {x: 1, y: 0, z: -26.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
