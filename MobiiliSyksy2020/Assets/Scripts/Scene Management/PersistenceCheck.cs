@@ -13,6 +13,7 @@ public class PersistenceCheck : MonoBehaviour
     {
         if (SceneManager.GetSceneByBuildIndex(0).isLoaded == false)
         {
+            Debug.Log("This should run only once");
             operations.Add(SceneManager.LoadSceneAsync(0, LoadSceneMode.Additive));
             StartCoroutine(LoadPersistentScene());
         }

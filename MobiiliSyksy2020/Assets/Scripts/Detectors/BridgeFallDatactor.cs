@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utilities;
 
 public class BridgeFallDatactor : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class BridgeFallDatactor : MonoBehaviour
     {
         if (collision.tag == "Fox")
         {
-            Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+            SceneHandler.instance.SceneReload(this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
         }
         else if (collision.tag == "Bridge")
         {

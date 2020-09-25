@@ -25,7 +25,7 @@ namespace Utilities
         //scene load operations are added to this list; this is required for loading bars and especially to make sure scenes have been loaded
         //two voids for method overloads, having a scene to unload is not necessary
         List<AsyncOperation> operations = new List<AsyncOperation>();
-        public void SceneLoad(SceneField sceneToLoad, LoadingScreens LoadingScreen)
+        public void SceneLoad(SceneField sceneToLoad, LoadingScreens loadingScreen)
         {
             operations.Add(SceneManager.LoadSceneAsync(sceneToLoad.SceneName, LoadSceneMode.Additive));
 
@@ -33,13 +33,22 @@ namespace Utilities
         }
 
 
-        public void SceneLoad(SceneField sceneToLoad, int sceneToUnload, LoadingScreens LoadScreenType)
+        public void SceneLoad(SceneField sceneToLoad, int sceneToUnload, LoadingScreens loadingScreen)
         {
-            loadingScreenManager.Activate((int)LoadScreenType);
+            loadingScreenManager.Activate((int)loadingScreen);
             operations.Add(SceneManager.LoadSceneAsync(sceneToLoad.SceneName, LoadSceneMode.Additive));
             operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));
 
-            StartCoroutine(GetSceneLoadProgress((int)LoadScreenType));
+            StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
+        }
+
+        public void SceneReload(int sceneToReload, LoadingScreens loadingScreen)
+        {
+            loadingScreenManager.Activate((int)loadingScreen);
+            operations.Add(SceneManager.UnloadSceneAsync(sceneToReload));
+            operations.Add(SceneManager.LoadSceneAsync(sceneToReload, LoadSceneMode.Additive));
+
+            StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
         }
 
 
@@ -56,7 +65,6 @@ namespace Utilities
             operations.Clear();
             yield break;
         }
-
 
         private IEnumerator GetSceneLoadProgress(int loadScreenVariant)
         {
