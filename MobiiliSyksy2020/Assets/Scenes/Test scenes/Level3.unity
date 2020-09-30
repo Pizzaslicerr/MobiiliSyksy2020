@@ -2830,6 +2830,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
+      propertyPath: paws.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
       propertyPath: Stick
       value: 
       objectReference: {fileID: 146716409}
@@ -2938,6 +2943,21 @@ PrefabInstance:
       propertyPath: bridgeGrowthRate
       value: 700
       objectReference: {fileID: 0}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
+      propertyPath: paws.Array.data[0]
+      value: 
+      objectReference: {fileID: 844100718}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
+      propertyPath: paws.Array.data[1]
+      value: 
+      objectReference: {fileID: 481667426}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
+      propertyPath: paws.Array.data[2]
+      value: 
+      objectReference: {fileID: 1944522301}
     - target: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
       propertyPath: m_Name

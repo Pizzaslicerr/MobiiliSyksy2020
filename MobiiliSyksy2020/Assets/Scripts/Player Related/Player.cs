@@ -6,7 +6,7 @@ using Utilities;
 
 public class Player : MonoBehaviour
 {
-    public GameObject[] paws;
+    public GameObject[] paw;
 
     [SerializeField] private int pawsUsed;
 
@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     {
         FoxRB = gameObject.GetComponent<Rigidbody2D>();
         BridgeO = GameObject.FindWithTag("Bridge");
+        BridgeSpawnPoint = GameObject.FindWithTag("BridgeSpawnPoint");
     }
 
     void Update()
@@ -45,10 +46,6 @@ public class Player : MonoBehaviour
         BridgeRB = BridgeO.GetComponent<Rigidbody2D>();
         if (Input.GetMouseButton(0))
         {
-            if (pawsUsed == paws.Length)
-            {
-                SceneHandler.instance.SceneReload(this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
-            }
 
             if (!Bridge.BridgeGrown)
             {
@@ -64,12 +61,6 @@ public class Player : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
-            if (!Bridge.BridgeDown && !Bridge.BridgeGrown)
-            {
-                Debug.Log("pawsUsed: " + pawsUsed);
-                paws[pawsUsed].SetActive(false);
-                pawsUsed++;
-            }
             v.y = temp.y;
             //Make the bridge's rigidbody simulated so it will fall when you let go of the screen
             BridgeRB.simulated = true;
@@ -103,10 +94,19 @@ public class Player : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
     }
 
-    public void BridgeRest() 
+    public void BridgeReset()
     {
+        if (!Bridge.BridgeDown)
+        {
+            Debug.Log("pawsUsed: " + pawsUsed);
+            paw[pawsUsed].SetActive(false);
+            pawsUsed++;
+        }
+        if (pawsUsed == paw.Length)
+        {
+            SceneHandler.instance.SceneReload(this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
+        }
         //Find the current active spawn point for the bridge
-        BridgeSpawnPoint = GameObject.FindWithTag("BridgeSpawnPoint");
         //Reset variables and remove bridge constraints
         Bridge.BridgeGrown = false;
         BridgeRB.simulated = false;

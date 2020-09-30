@@ -15,7 +15,7 @@ public class BridgeFallDatactor : MonoBehaviour
         }
         else if (collision.tag == "Bridge")
         {
-            Fox.GetComponent<Player>().BridgeRest();
+            Fox.GetComponent<Player>().BridgeReset();
         }
     }
 }
