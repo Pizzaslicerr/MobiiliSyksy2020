@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿//InitializeSceneSwitch.cs by Mikko Kyllönen
+//Starts the scene swap/load process.
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

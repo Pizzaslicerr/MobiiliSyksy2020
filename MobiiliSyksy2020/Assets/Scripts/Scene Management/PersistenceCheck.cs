@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class PersistenceCheck : MonoBehaviour
 {
+#if UNITY_EDITOR
+
     List<AsyncOperation> operations = new List<AsyncOperation>();
     private void Awake()
     {
@@ -34,4 +36,6 @@ public class PersistenceCheck : MonoBehaviour
 
         yield break;
     }
+
+#endif
 }

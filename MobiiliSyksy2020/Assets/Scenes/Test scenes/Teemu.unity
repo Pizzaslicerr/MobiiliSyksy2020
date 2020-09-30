@@ -376,7 +376,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462806155}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -385,7 +385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 147.8, y: 580.1}
+  m_AnchoredPosition: {x: 147.80003, y: 580.1}
   m_SizeDelta: {x: 42.77762, y: 43.63159}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &462806157
@@ -877,6 +877,7 @@ GameObject:
   - component: {fileID: 1074135907}
   - component: {fileID: 1074135906}
   - component: {fileID: 1074135905}
+  - component: {fileID: 1074135908}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -932,6 +933,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1074135908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074135904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76d07d0c3235474dade5d5252f86ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1241887103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,6 +2425,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
+      propertyPath: paws.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
       propertyPath: Stick
       value: 
       objectReference: {fileID: 146716409}
@@ -2536,6 +2554,21 @@ PrefabInstance:
       propertyPath: BridgeSpawnPoint
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
+      propertyPath: paws.Array.data[0]
+      value: 
+      objectReference: {fileID: 481667426}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
+      propertyPath: paws.Array.data[1]
+      value: 
+      objectReference: {fileID: 1944522301}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
+      propertyPath: paws.Array.data[2]
+      value: 
+      objectReference: {fileID: 462806155}
     - target: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
       propertyPath: m_Name
