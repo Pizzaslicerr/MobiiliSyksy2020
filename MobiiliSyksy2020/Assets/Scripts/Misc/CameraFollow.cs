@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿//Tehnyt: Emilia Leinonen
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
     public float cameraDistanceFromPlayer;
+
     //what we are following
     public Transform target;
 
