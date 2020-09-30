@@ -63,18 +63,18 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   spriteImportData:
-  - name: s_c_fox_default_illumination_1
+  - name: 
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 723
-      height: 447
-    spriteID: a9e21ef4e7b107145be56c81ac3a0b96
+      width: 0
+      height: 0
+    spriteID: 
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -94,11 +94,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 256
-      y: 245
-      width: 61
-      height: 181
-    spriteID: 34510d15bf70fe842b28792608e0daef
+      x: 226
+      y: 522
+      width: 92
+      height: 256
+    spriteID: cb67193b34e6c504b87670b09dc52129
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -108,7 +108,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -150, y: 165}
+    uvTransform: {x: -341, y: 412}
   - name: HIND_LEG
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -116,11 +116,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 98
-      y: 245
-      width: 79
-      height: 184
-    spriteID: f6efef165f7fbf646a8ed70ac4f8059e
+      x: 4
+      y: 522
+      width: 103
+      height: 260
+    spriteID: 012f3b0bd1ea6f24fa724dca26c16565
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -130,7 +130,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -159, y: 166}
+    uvTransform: {x: -360, y: 411}
   - name: EAR
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -138,11 +138,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 256
-      y: 434
-      width: 38
-      height: 55
-    spriteID: c49d0030b660d634b8da758e690168ac
+      x: 321
+      y: 394
+      width: 50
+      height: 78
+    spriteID: c248943b0f9626c4cbf2159d7a5472b4
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -152,7 +152,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -199, y: 136}
+    uvTransform: {x: -325, y: -28}
   - name: HEAD
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -160,11 +160,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 262
-      y: 4
-      width: 155
-      height: 124
-    spriteID: 2fd4eedfe1d87df40961faaa94499898
+      x: 4
+      y: 211
+      width: 219
+      height: 175
+    spriteID: 8ec80e73576478141a78a4a2d9f11750
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -174,7 +174,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -120, y: -251}
+    uvTransform: {x: -536, y: -151}
   - name: TORSO
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -184,9 +184,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 250
-      height: 141
-    spriteID: 17439b9a49477b24da5579b9158a41b2
+      width: 353
+      height: 199
+    spriteID: fead39dea31049d4cad2d80553dc12f6
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -196,7 +196,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -247, y: -169}
+    uvTransform: {x: -353, y: -242}
   - name: TAIL
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -205,10 +205,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 153
-      width: 220
-      height: 84
-    spriteID: 638bd8c94e5be4048ad5f4af2e09ea7a
+      y: 394
+      width: 309
+      height: 120
+    spriteID: 883c5313efc173442ac687663304e788
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -218,19 +218,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -41, y: -47}
-  - name: EAR_BACK
+    uvTransform: {x: -63, y: 111}
+  - name: EAR BACK
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 185
-      y: 436
-      width: 38
-      height: 55
-    spriteID: 3e0fa148e89670644879b2e82494b035
+      x: 379
+      y: 394
+      width: 50
+      height: 78
+    spriteID: 34d55964fc9840d468a932fe072898ef
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -240,19 +240,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -267, y: 138}
-  - name: FRONT_LEG-BACK
+    uvTransform: {x: -264, y: -28}
+  - name: FRONT_LEG BACK
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 185
-      y: 245
-      width: 63
-      height: 183
-    spriteID: cbb21667d1cf2c34aad429d6a6f95d85
+      x: 326
+      y: 522
+      width: 92
+      height: 256
+    spriteID: dbd05b2074d81f441876b45fbaaf058c
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -262,19 +262,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -212, y: 166}
-  - name: HIND_LEG_BACK
+    uvTransform: {x: -238, y: 412}
+  - name: HIND_LEG BACK
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 245
-      width: 86
-      height: 184
-    spriteID: 732f3c5012cdf9842a7e4703417c2015
+      x: 115
+      y: 522
+      width: 103
+      height: 260
+    spriteID: 3c7b2a4b8cf6c154c885db4731460d1c
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -284,21 +284,21 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -241, y: 163}
+    uvTransform: {x: -246, y: 411}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
   importedTextureWidth: 512
-  importedTextureHeight: 512
-  documentSize: {x: 723, y: 447}
+  importedTextureHeight: 1024
+  documentSize: {x: 1024, y: 633}
   paperDollMode: 0
   keepDupilcateSpriteName: 0
   spriteCategoryList:
     categories: []
   textureActualWidth: 512
-  textureActualHeight: 512
+  textureActualHeight: 1024
   spritePackingTag: 
   resliceFromLayer: 0
   characterMode: 1
@@ -308,65 +308,65 @@ ScriptedImporter:
     spriteName: FRONT_LEG
     isGroup: 0
     parentIndex: -1
-    spriteID: 34510d15bf70fe842b28792608e0daef
+    spriteID: cb67193b34e6c504b87670b09dc52129
     layerID: 0
-    mosaicPosition: {x: 256, y: 245}
+    mosaicPosition: {x: 226, y: 522}
   - name: HIND_LEG
     spriteName: HIND_LEG
     isGroup: 0
     parentIndex: -1
-    spriteID: f6efef165f7fbf646a8ed70ac4f8059e
+    spriteID: 012f3b0bd1ea6f24fa724dca26c16565
     layerID: 2102800648
-    mosaicPosition: {x: 98, y: 245}
+    mosaicPosition: {x: 4, y: 522}
   - name: EAR
     spriteName: EAR
     isGroup: 0
     parentIndex: -1
-    spriteID: c49d0030b660d634b8da758e690168ac
+    spriteID: c248943b0f9626c4cbf2159d7a5472b4
     layerID: -728891226
-    mosaicPosition: {x: 256, y: 434}
+    mosaicPosition: {x: 321, y: 394}
   - name: HEAD
     spriteName: HEAD
     isGroup: 0
     parentIndex: -1
-    spriteID: 2fd4eedfe1d87df40961faaa94499898
+    spriteID: 8ec80e73576478141a78a4a2d9f11750
     layerID: 1488409984
-    mosaicPosition: {x: 262, y: 4}
+    mosaicPosition: {x: 4, y: 211}
   - name: TORSO
     spriteName: TORSO
     isGroup: 0
     parentIndex: -1
-    spriteID: 17439b9a49477b24da5579b9158a41b2
+    spriteID: fead39dea31049d4cad2d80553dc12f6
     layerID: 1729969833
     mosaicPosition: {x: 4, y: 4}
   - name: TAIL
     spriteName: TAIL
     isGroup: 0
     parentIndex: -1
-    spriteID: 638bd8c94e5be4048ad5f4af2e09ea7a
+    spriteID: 883c5313efc173442ac687663304e788
     layerID: 2053060128
-    mosaicPosition: {x: 4, y: 153}
-  - name: EAR_BACK
-    spriteName: EAR_BACK
+    mosaicPosition: {x: 4, y: 394}
+  - name: EAR BACK
+    spriteName: EAR BACK
     isGroup: 0
     parentIndex: -1
-    spriteID: 3e0fa148e89670644879b2e82494b035
-    layerID: 1251893736
-    mosaicPosition: {x: 185, y: 436}
-  - name: FRONT_LEG-BACK
-    spriteName: FRONT_LEG-BACK
+    spriteID: 34d55964fc9840d468a932fe072898ef
+    layerID: 2040584793
+    mosaicPosition: {x: 379, y: 394}
+  - name: FRONT_LEG BACK
+    spriteName: FRONT_LEG BACK
     isGroup: 0
     parentIndex: -1
-    spriteID: cbb21667d1cf2c34aad429d6a6f95d85
-    layerID: 271083750
-    mosaicPosition: {x: 185, y: 245}
-  - name: HIND_LEG_BACK
-    spriteName: HIND_LEG_BACK
+    spriteID: dbd05b2074d81f441876b45fbaaf058c
+    layerID: 1817154655
+    mosaicPosition: {x: 326, y: 522}
+  - name: HIND_LEG BACK
+    spriteName: HIND_LEG BACK
     isGroup: 0
     parentIndex: -1
-    spriteID: 732f3c5012cdf9842a7e4703417c2015
-    layerID: -1225872362
-    mosaicPosition: {x: 4, y: 245}
+    spriteID: 3c7b2a4b8cf6c154c885db4731460d1c
+    layerID: -1225742979
+    mosaicPosition: {x: 115, y: 522}
   characterData:
     bones: []
     parts: []
