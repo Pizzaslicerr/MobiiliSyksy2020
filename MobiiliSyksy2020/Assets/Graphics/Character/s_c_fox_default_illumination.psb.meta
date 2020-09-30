@@ -63,18 +63,18 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   spriteImportData:
-  - name: 
+  - name: s_c_fox_default_illumination_1
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 0
-      height: 0
-    spriteID: 
+      width: 723
+      height: 447
+    spriteID: a9e21ef4e7b107145be56c81ac3a0b96
     internalID: 0
     spriteBone: []
     spriteOutline: []

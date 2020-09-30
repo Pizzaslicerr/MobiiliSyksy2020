@@ -4511,6 +4511,6 @@ ScriptedImporter:
   prefabAssetName: s_c_fox_default Prefab
   spriteLibAssetName: s_c_fox_default Sprite Lib
   secondarySpriteTextures:
-  - name: illumination
+  - name: _illumination
     texture: {fileID: 8348982817719536228, guid: 221b025cef7e76d4d8f6bf620a1da0be,
       type: 3}
