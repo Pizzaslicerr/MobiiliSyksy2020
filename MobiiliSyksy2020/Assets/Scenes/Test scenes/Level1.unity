@@ -1103,6 +1103,7 @@ GameObject:
   - component: {fileID: 1074135907}
   - component: {fileID: 1074135906}
   - component: {fileID: 1074135905}
+  - component: {fileID: 1074135908}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1158,6 +1159,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1074135908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074135904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76d07d0c3235474dade5d5252f86ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1126836379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7838977914817367442, guid: 61773d4d102509945b3eeadad37c9379,
@@ -1467,7 +1480,6 @@ GameObject:
   - component: {fileID: 1270679300}
   - component: {fileID: 1270679299}
   - component: {fileID: 1270679298}
-  - component: {fileID: 1270679302}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1533,7 +1545,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.028381
+  orthographic size: 11.2341385
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1563,18 +1575,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1270679302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270679297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76d07d0c3235474dade5d5252f86ebf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1341430265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2661,7 +2661,12 @@ PrefabInstance:
     - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
       propertyPath: paws.Array.size
-      value: 10
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
+      propertyPath: paw.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
@@ -2797,37 +2802,47 @@ PrefabInstance:
         type: 3}
       propertyPath: paws.Array.data[3]
       value: 
-      objectReference: {fileID: 1948430145}
+      objectReference: {fileID: 1944522301}
     - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
       propertyPath: paws.Array.data[4]
       value: 
-      objectReference: {fileID: 894351223}
+      objectReference: {fileID: 1944522301}
     - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
       propertyPath: paws.Array.data[5]
       value: 
-      objectReference: {fileID: 1341430265}
+      objectReference: {fileID: 1944522301}
     - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
       propertyPath: paws.Array.data[6]
       value: 
-      objectReference: {fileID: 653377094}
+      objectReference: {fileID: 1944522301}
     - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
       propertyPath: paws.Array.data[7]
       value: 
-      objectReference: {fileID: 1931045315}
+      objectReference: {fileID: 1944522301}
     - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
       propertyPath: paws.Array.data[8]
       value: 
-      objectReference: {fileID: 355452126}
+      objectReference: {fileID: 1944522301}
     - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
       propertyPath: paws.Array.data[9]
       value: 
-      objectReference: {fileID: 844100718}
+      objectReference: {fileID: 1944522301}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
+      propertyPath: paw.Array.data[0]
+      value: 
+      objectReference: {fileID: 481667426}
+    - target: {fileID: 4176516367890117586, guid: 9d545285601fd354295cb7b5f28a6494,
+        type: 3}
+      propertyPath: paw.Array.data[1]
+      value: 
+      objectReference: {fileID: 1944522301}
     - target: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494,
         type: 3}
       propertyPath: m_Name

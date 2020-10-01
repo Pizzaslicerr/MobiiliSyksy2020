@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class SceneHandler : MonoBehaviour
 {
     private LoadingScreenManager loadingScreenManager;  //loading screens are only visible (for now) with LoadAndUnloadScene()
+    public GameObject backupCamera;
     private int loadedScene;
     public int LoadedScene { set => loadedScene = value; }
 
@@ -25,6 +26,7 @@ public class SceneHandler : MonoBehaviour
     List<AsyncOperation> operations = new List<AsyncOperation>();
     public void SceneLoad(SceneField sceneToLoad, LoadingScreens loadingScreen)
     {
+        backupCamera.SetActive(true);
         operations.Add(SceneManager.LoadSceneAsync(sceneToLoad.SceneName, LoadSceneMode.Additive));
 
         StartCoroutine(GetSceneLoadProgress());
@@ -33,6 +35,7 @@ public class SceneHandler : MonoBehaviour
 
     public void SceneLoad(SceneField sceneToLoad, int sceneToUnload, LoadingScreens loadingScreen)
     {
+        backupCamera.SetActive(true);
         loadingScreenManager.Activate((int)loadingScreen);
         operations.Add(SceneManager.LoadSceneAsync(sceneToLoad.SceneName, LoadSceneMode.Additive));
         operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));
@@ -40,11 +43,12 @@ public class SceneHandler : MonoBehaviour
         StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
     }
 
-    public void ReloadScene(int sceneToReload, LoadingScreens loadingScreen)
+    public void SceneReload(int sceneToReload, LoadingScreens loadingScreen)
     {
+        backupCamera.SetActive(true);
         loadingScreenManager.Activate((int)loadingScreen);
-        operations.Add(SceneManager.LoadSceneAsync(sceneToReload, LoadSceneMode.Additive));
         operations.Add(SceneManager.UnloadSceneAsync(sceneToReload));
+        operations.Add(SceneManager.LoadSceneAsync(sceneToReload, LoadSceneMode.Additive));
 
         StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
     }
@@ -60,10 +64,10 @@ public class SceneHandler : MonoBehaviour
             }
         }
 
+        backupCamera.SetActive(true);
         operations.Clear();
         yield break;
     }
-
 
     private IEnumerator GetSceneLoadProgress(int loadScreenVariant)
     {
@@ -76,6 +80,7 @@ public class SceneHandler : MonoBehaviour
         }
         yield return new WaitForSecondsRealtime(1f);
 
+        backupCamera.SetActive(false);
         loadingScreenManager.Deactivate(loadScreenVariant);
         operations.Clear();
         yield break;

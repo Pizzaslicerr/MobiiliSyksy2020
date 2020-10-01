@@ -8,11 +8,14 @@ using UnityEngine.SceneManagement;
 
 public class PersistenceCheck : MonoBehaviour
 {
+#if UNITY_EDITOR
+
     List<AsyncOperation> operations = new List<AsyncOperation>();
     private void Awake()
     {
         if (SceneManager.GetSceneByBuildIndex(0).isLoaded == false)
         {
+            Debug.Log("This should run only once");
             operations.Add(SceneManager.LoadSceneAsync(0, LoadSceneMode.Additive));
             StartCoroutine(LoadPersistentScene());
         }
@@ -33,4 +36,6 @@ public class PersistenceCheck : MonoBehaviour
 
         yield break;
     }
+
+#endif
 }

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utilities;
 
 public class Player : MonoBehaviour
 {
-    public GameObject[] paws;
+    public GameObject[] paw;
 
-    private int pawsUsed;
+    [SerializeField] private int pawsUsed;
 
     private bool screenPressed = false;
 
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
     {
         FoxRB = gameObject.GetComponent<Rigidbody2D>();
         BridgeO = GameObject.FindWithTag("Bridge");
+        BridgeSpawnPoint = GameObject.FindWithTag("BridgeSpawnPoint");
     }
 
     void Update()
@@ -42,29 +44,29 @@ public class Player : MonoBehaviour
         FoxMovementTarget = GameObject.FindWithTag("MovementTarget");
         //BridgeO = GameObject.FindWithTag("Bridge");
         BridgeRB = BridgeO.GetComponent<Rigidbody2D>();
-        if (!Bridge.BridgeGrown && Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0))
         {
-            //Growing the bridge while pressing and holding the screen
-            v = BridgeO.transform.localScale;
-            temp = v;
-            v.y = v.y + bridgeGrowthRate * Time.deltaTime;
-            BridgeO.transform.localScale = v;
-            screenPressed = true;
+
+            if (!Bridge.BridgeGrown)
+            {
+                //Growing the bridge while pressing and holding the screen
+                v = BridgeO.transform.localScale;
+                temp = v;
+                v.y = v.y + bridgeGrowthRate * Time.deltaTime;
+                BridgeO.transform.localScale = v;
+                screenPressed = true;
+
+            }
+
         }
         if (Input.GetMouseButtonUp(0))
         {
-            if (!Bridge.BridgeDown && !Bridge.BridgeGrown)
-            {
-                paws[pawsUsed].SetActive(false);
-                pawsUsed++;
-            }
             v.y = temp.y;
             //Make the bridge's rigidbody simulated so it will fall when you let go of the screen
             BridgeRB.simulated = true;
             Bridge.BridgeGrown = true;
             screenPressed = false;
         }
-
 
         if (FoxMoving)
         {
@@ -92,16 +94,19 @@ public class Player : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
     }
 
-    public void BridgeRest()
+    public void BridgeReset()
     {
-        //commented out for now, bizarrely this runs even when pawsUsed doesn't equal paws.Length
-        /*if (pawsUsed == paws.Length)
+        if (!Bridge.BridgeDown)
         {
-            Debug.Log("Why does this run?");
-            SceneHandler.instance.ReloadScene(this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
-        }*/
+            Debug.Log("pawsUsed: " + pawsUsed);
+            paw[pawsUsed].SetActive(false);
+            pawsUsed++;
+        }
+        if (pawsUsed == paw.Length)
+        {
+            SceneHandler.instance.SceneReload(this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
+        }
         //Find the current active spawn point for the bridge
-        BridgeSpawnPoint = GameObject.FindWithTag("BridgeSpawnPoint");
         //Reset variables and remove bridge constraints
         Bridge.BridgeGrown = false;
         BridgeRB.simulated = false;

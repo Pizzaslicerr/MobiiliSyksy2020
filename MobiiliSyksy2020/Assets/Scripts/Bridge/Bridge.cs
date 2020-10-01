@@ -13,6 +13,9 @@ public class Bridge : MonoBehaviour
         //To make sure a new bridge always has these variables set to false
         BridgeGrown = false;
         BridgeDown = false;
-        Player.BridgeRB.simulated = false;
+        if (Player.BridgeRB != null)
+        {
+            Player.BridgeRB.simulated = false;
+        }
     }
 }
