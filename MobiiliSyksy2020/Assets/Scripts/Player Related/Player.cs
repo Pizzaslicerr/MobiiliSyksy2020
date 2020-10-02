@@ -6,18 +6,13 @@ using Utilities;
 
 public class Player : MonoBehaviour
 {
-    public GameObject[] paw;
-
-    [SerializeField] private int pawsUsed;
 
     private bool screenPressed = false;
 
     public float bridgeGrowthRate;
-    private GameObject BridgeO;
-    //public GameObject BridgeO;
-    public GameObject BridgePrefab;
+    public static GameObject BridgeO;
     public static Rigidbody2D BridgeRB;
-    private GameObject BridgeSpawnPoint;
+    public static GameObject BridgeSpawnPoint;
 
     private Rigidbody2D FoxRB;
 
@@ -93,34 +88,4 @@ public class Player : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
     }
 
-    public void BridgeReset()
-    {
-        PawHandler();
-        //Find the current active spawn point for the bridge
-        BridgeSpawnPoint = GameObject.FindWithTag("BridgeSpawnPoint");
-        //Reset variables and remove bridge constraints
-        Bridge.BridgeGrown = false;
-        BridgeRB.simulated = false;
-        Bridge.BridgeDown = false;
-        BridgeRB.freezeRotation = false;
-        BridgeRB.constraints = RigidbodyConstraints2D.None;
-        //Reset the bridge to the next spot, or the current one if it fell
-        //BridgeO = GameObject.FindWithTag("Bridge");
-        BridgeO.transform.localScale = BridgePrefab.transform.localScale;
-        BridgeO.transform.rotation = BridgePrefab.transform.rotation;
-        BridgeO.transform.position = BridgeSpawnPoint.transform.position;
-    }
-    public void PawHandler()
-    {
-        if (!Bridge.BridgeDown)
-        {
-            Debug.Log("pawsUsed: " + pawsUsed);
-            paw[pawsUsed].SetActive(false);
-            pawsUsed++;
-        }
-        if (pawsUsed == paw.Length)
-        {
-            SceneHandler.instance.SceneReload(this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
-        }
-    }
 }

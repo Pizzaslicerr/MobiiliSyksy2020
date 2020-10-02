@@ -5,6 +5,7 @@ using UnityEngine;
 public class FoxDetector : MonoBehaviour
 {
     public GameObject Fox;
+    public GameObject pawHandler;
 
     public GameObject Ramp;
     public GameObject BridgePrefab;
@@ -40,7 +41,7 @@ public class FoxDetector : MonoBehaviour
             //Stop fox movement
             Player.FoxMoving = false;
 
-            Fox.GetComponent<Player>().BridgeReset();
+            pawHandler.GetComponent<PawHandler>().BridgeReset();
 
             //Deactivate old detectors
             LongBridgeDetector.SetActive(false);
