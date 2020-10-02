@@ -35,7 +35,6 @@ public class Player : MonoBehaviour
     {
         FoxRB = gameObject.GetComponent<Rigidbody2D>();
         BridgeO = GameObject.FindWithTag("Bridge");
-        BridgeSpawnPoint = GameObject.FindWithTag("BridgeSpawnPoint");
     }
 
     void Update()
@@ -96,6 +95,23 @@ public class Player : MonoBehaviour
 
     public void BridgeReset()
     {
+        PawHandler();
+        //Find the current active spawn point for the bridge
+        BridgeSpawnPoint = GameObject.FindWithTag("BridgeSpawnPoint");
+        //Reset variables and remove bridge constraints
+        Bridge.BridgeGrown = false;
+        BridgeRB.simulated = false;
+        Bridge.BridgeDown = false;
+        BridgeRB.freezeRotation = false;
+        BridgeRB.constraints = RigidbodyConstraints2D.None;
+        //Reset the bridge to the next spot, or the current one if it fell
+        //BridgeO = GameObject.FindWithTag("Bridge");
+        BridgeO.transform.localScale = BridgePrefab.transform.localScale;
+        BridgeO.transform.rotation = BridgePrefab.transform.rotation;
+        BridgeO.transform.position = BridgeSpawnPoint.transform.position;
+    }
+    public void PawHandler()
+    {
         if (!Bridge.BridgeDown)
         {
             Debug.Log("pawsUsed: " + pawsUsed);
@@ -106,17 +122,5 @@ public class Player : MonoBehaviour
         {
             SceneHandler.instance.SceneReload(this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
         }
-        //Find the current active spawn point for the bridge
-        //Reset variables and remove bridge constraints
-        Bridge.BridgeGrown = false;
-        BridgeRB.simulated = false;
-        Bridge.BridgeDown = false;
-        BridgeRB.freezeRotation = false;
-        BridgeRB.constraints = RigidbodyConstraints2D.None;
-        //Reset the bridge to the next spot, or the current one if it fell
-        BridgeO = GameObject.FindWithTag("Bridge");
-        BridgeO.transform.localScale = BridgePrefab.transform.localScale;
-        BridgeO.transform.rotation = BridgePrefab.transform.rotation;
-        BridgeO.transform.position = BridgeSpawnPoint.transform.position;
     }
 }
