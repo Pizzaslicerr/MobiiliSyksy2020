@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utilities;
 
-public class BridgeFallDatactor : MonoBehaviour
+public class BridgeFallDetector : MonoBehaviour
 {
-    public GameObject Fox;
+    public GameObject pawHandler;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Fox")
@@ -15,7 +15,7 @@ public class BridgeFallDatactor : MonoBehaviour
         }
         else if (collision.tag == "Bridge")
         {
-            Fox.GetComponent<Player>().BridgeReset();
+            pawHandler.GetComponent<PawHandler>().BridgeReset();
         }
     }
 }
