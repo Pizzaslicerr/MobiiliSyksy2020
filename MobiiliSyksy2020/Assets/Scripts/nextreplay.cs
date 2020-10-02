@@ -11,6 +11,6 @@ public class nextreplay : MonoBehaviour
     }
     public void reloadLevel()
     {
-        Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name); ;
+        SceneHandler.instance.SceneReload(this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
     }
 }
