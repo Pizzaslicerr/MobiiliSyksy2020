@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class FoxDetector : MonoBehaviour
 {
-    public GameObject Fox;
-    public GameObject pawHandler;
+    public GameObject fox;
 
     public GameObject Ramp;
     public GameObject BridgePrefab;
@@ -22,9 +21,6 @@ public class FoxDetector : MonoBehaviour
         Ramp.SetActive(false);
     }
 
-    void Update()
-    {
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Fox")
@@ -41,7 +37,7 @@ public class FoxDetector : MonoBehaviour
             //Stop fox movement
             Player.FoxMoving = false;
 
-            pawHandler.GetComponent<PawHandler>().BridgeReset();
+            fox.GetComponent<PawHandler>().BridgeReset();
 
             //Deactivate old detectors
             LongBridgeDetector.SetActive(false);
