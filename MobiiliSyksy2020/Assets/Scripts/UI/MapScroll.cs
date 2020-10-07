@@ -1,6 +1,8 @@
 ﻿//MapScroll.cs by Mikko Kyllönen
 //Handles how the player interacts with the map screen.
 
+//UNUSED!!
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +18,7 @@ public class MapScroll : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     };
 
     [SerializeField] private coordinateDirections scrollDirection = coordinateDirections.X; //is overridden, but is here just to get rid of warning messages in the debug log
-    [SerializeField] private GameObject mapScreen;
+    [SerializeField] private GameObject mapScreen = null;
     private RectTransform mapScreenRect;
 
     [SerializeField] private float difference;  //distance between original touch position and dragged position
@@ -36,8 +38,8 @@ public class MapScroll : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     private MapScreenInfo mapScreenInfo;
 
     [Header("Additional Values")]
-    [Tooltip("If you want the player's scrolling to stop earlier than the map texture's edge, increase this value.")]
-    [SerializeField] private uint horizontalOffset = 0;
+    /*[Tooltip("If you want the player's scrolling to stop earlier than the map texture's edge, increase this value.")]
+    [SerializeField] private uint horizontalOffset = 0;*/
     [Tooltip("If you want the player's scrolling to stop earlier than the map texture's edge, increase this value.")]
     [SerializeField] private uint verticalOffset = 0;
     [SerializeField] private float bounceBackDuration = 0;

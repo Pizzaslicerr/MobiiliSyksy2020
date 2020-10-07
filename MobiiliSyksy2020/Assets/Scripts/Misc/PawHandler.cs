@@ -8,7 +8,7 @@ public class PawHandler : MonoBehaviour
 
     [SerializeField] private int pawsUsed;
 
-    [SerializeField] private GameObject BridgePrefab;
+    [SerializeField] private GameObject BridgePrefab = null;
 
     public void pawHandler()
     {

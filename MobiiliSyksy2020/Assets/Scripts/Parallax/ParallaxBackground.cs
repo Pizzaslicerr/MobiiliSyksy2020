@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class ParallaxBackground : MonoBehaviour
 {
-    [SerializeField] private Vector2 parallaxEffectMultiplier;
-    [SerializeField] private bool infiniteHorizontal;
-    [SerializeField] private bool infiniteVertical;
+    [SerializeField] private Vector2 parallaxEffectMultiplier = Vector2.zero;
+    [SerializeField] private bool infiniteHorizontal = false;
+    [SerializeField] private bool infiniteVertical = false;
 
     private Transform cameraTransform;
     private Vector3 lastCameraPosition; //The position of the camera in the previous frame

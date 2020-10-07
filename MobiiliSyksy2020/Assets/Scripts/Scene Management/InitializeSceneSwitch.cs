@@ -11,7 +11,7 @@ namespace Utilities
     public class InitializeSceneSwitch : MonoBehaviour
     {
         [SerializeField] private LoadingScreens loadScreenType = LoadingScreens.Leaves;
-        [SerializeField] private SceneField sceneToLoad;
+        [SerializeField] private SceneField sceneToLoad = null;
         [Tooltip("Whether or not the previous scene should be unloaded. For most cases, leave this enabled.")]
         [SerializeField] private bool unloadPreviousScene = true;
 
