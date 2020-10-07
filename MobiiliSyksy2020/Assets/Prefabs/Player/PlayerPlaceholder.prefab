@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4176516367890117598}
   - component: {fileID: 4176516367890117586}
+  - component: {fileID: 1987598256732175366}
   - component: {fileID: 2961019305504276007}
   - component: {fileID: 7209476865235658045}
-  - component: {fileID: 4877434679475824419}
+  - component: {fileID: 5813295044697664205}
   m_Layer: 9
   m_Name: PlayerPlaceholder
   m_TagString: Fox
@@ -46,13 +47,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78de016de57db15469db130a02b365f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paw: []
-  pawsUsed: 0
   bridgeGrowthRate: 700
-  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
-    type: 3}
   Speed: 4
   FoxFallTarget: {fileID: 0}
+--- !u!114 &1987598256732175366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4176516367890117587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13720d04cf40a5b4e89fd7fe14b69521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paws: 0
+  pawsUsed: 0
+  BridgePrefab: {fileID: 0}
 --- !u!50 &2961019305504276007
 Rigidbody2D:
   serializedVersion: 4
@@ -90,7 +102,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!212 &4877434679475824419
+--- !u!212 &5813295044697664205
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -6,7 +6,7 @@ using Utilities;
 
 public class BridgeFallDetector : MonoBehaviour
 {
-    public GameObject pawHandler;
+    public GameObject player;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Fox")
@@ -15,7 +15,7 @@ public class BridgeFallDetector : MonoBehaviour
         }
         else if (collision.tag == "Bridge")
         {
-            pawHandler.GetComponent<PawHandler>().BridgeReset();
+            player.GetComponent<PawHandler>().BridgeReset();
         }
     }
 }

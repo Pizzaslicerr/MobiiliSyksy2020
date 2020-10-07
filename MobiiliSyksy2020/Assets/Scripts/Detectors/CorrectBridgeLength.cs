@@ -10,11 +10,6 @@ public class CorrectBridgeLength : MonoBehaviour
         Player.FoxMoving = false;
     }
 
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Bridge")
