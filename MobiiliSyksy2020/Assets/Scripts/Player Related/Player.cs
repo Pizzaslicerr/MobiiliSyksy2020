@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public static GameObject BridgeO;
     public static Rigidbody2D BridgeRB;
     public static GameObject BridgeSpawnPoint;
+    public float BridgeMaxLength;
 
     private Rigidbody2D FoxRB;
 
@@ -53,8 +54,13 @@ public class Player : MonoBehaviour
             }
 
         }
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) || BridgeO.transform.localScale.y > BridgeMaxLength)
         {
+            if(BridgeO.transform.localScale.y < 80f)
+            {
+                v.y = 80f;
+                BridgeO.transform.localScale = v;
+            }
             v.y = temp.y;
             //Make the bridge's rigidbody simulated so it will fall when you let go of the screen
             BridgeRB.simulated = true;

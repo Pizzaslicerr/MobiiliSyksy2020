@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bridgeGrowthRate: 700
+  BridgeMaxLength: 410
   Speed: 4
   FoxFallTarget: {fileID: 0}
 --- !u!114 &1987598256732175366
@@ -63,7 +64,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paws: 0
-  pawsUsed: 0
+  pawRoot: {fileID: 0}
+  pawPrefab: {fileID: 0}
   BridgePrefab: {fileID: 0}
 --- !u!50 &2961019305504276007
 Rigidbody2D:
