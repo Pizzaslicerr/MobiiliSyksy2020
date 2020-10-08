@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+
         //Finding objects with tags so there's no need to fiddle around with public game objects
         FoxMovementTarget = GameObject.FindWithTag("MovementTarget");
         //BridgeO = GameObject.FindWithTag("Bridge");
