@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PawHandler : MonoBehaviour
 {
@@ -32,7 +33,10 @@ public class PawHandler : MonoBehaviour
     {
         if (!Bridge.BridgeDown)
         {
-            UIpaws[pawsUsed].SetActive(false);
+            //object cannot be set inactive, otherwise the paw meter will jump all over the place. Instead, the sprite's alpha value is used.
+            Color pawSpriteColor = UIpaws[paws - pawsUsed - 1].GetComponent<Image>().color;
+            UIpaws[paws - pawsUsed - 1].GetComponent<Image>().color = new Color(pawSpriteColor.r, pawSpriteColor.g, pawSpriteColor.b, 0);
+
             pawsUsed++;
         }
         if (pawsUsed == UIpaws.Length)
