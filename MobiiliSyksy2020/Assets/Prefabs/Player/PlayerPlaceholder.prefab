@@ -63,10 +63,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13720d04cf40a5b4e89fd7fe14b69521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paws: 0
+  paws: 5
   pawRoot: {fileID: 0}
-  pawPrefab: {fileID: 0}
-  BridgePrefab: {fileID: 0}
+  pawPrefab: {fileID: 7514769633777815121, guid: e1ab086d9bcde0f45bda41e1bbcdb5ce,
+    type: 3}
+  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
+    type: 3}
 --- !u!50 &2961019305504276007
 Rigidbody2D:
   serializedVersion: 4
