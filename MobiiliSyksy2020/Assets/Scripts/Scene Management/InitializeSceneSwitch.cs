@@ -10,7 +10,11 @@ namespace Utilities
 {
     public class InitializeSceneSwitch : MonoBehaviour
     {
+        private bool pauseButtonLoaded = false;
+
         [SerializeField] private LoadingScreens loadScreenType = LoadingScreens.Leaves;
+        [SerializeField] private SceneTypes sceneType = SceneTypes.level;
+
         [SerializeField] private SceneField sceneToLoad = null;
         [Tooltip("Whether or not the previous scene should be unloaded. For most cases, leave this enabled.")]
         [SerializeField] private bool unloadPreviousScene = true;
@@ -24,6 +28,14 @@ namespace Utilities
             else
             {
                 SceneHandler.instance.SceneLoad(sceneToLoad, loadScreenType);
+            }
+
+            UIManager.instance.SceneType = sceneType;
+
+            if (!pauseButtonLoaded)
+            {
+                UIManager.instance.LoadPauseButton();
+                pauseButtonLoaded = true;
             }
         }
     }

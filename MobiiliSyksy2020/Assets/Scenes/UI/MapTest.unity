@@ -318,10 +318,10 @@ GameObject:
   - component: {fileID: 545933713}
   - component: {fileID: 545933712}
   - component: {fileID: 545933711}
-  - component: {fileID: 545933715}
+  - component: {fileID: 545933714}
   m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
+  m_Name: Camera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -391,7 +391,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &545933715
+--- !u!114 &545933714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -400,9 +400,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 545933710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76d07d0c3235474dade5d5252f86ebf, type: 3}
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &555749216
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadScreenType: 0
+  sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: 8a254cf11f9c9a742bcc70160c5799d9, type: 3}
     sceneName: Scenes/Test scenes/Level2
@@ -604,6 +624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadScreenType: 0
+  sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: c544d52cb060cf14ca0a4d84904cfc5e, type: 3}
     sceneName: Scenes/Test scenes/Mikko/Mikko
@@ -1074,6 +1095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadScreenType: 0
+  sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: 3068c7668f39b794bbdcb1ea200d5a50, type: 3}
     sceneName: Scenes/Test scenes/Level1
@@ -1209,6 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadScreenType: 0
+  sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: 87df7bed739d9074a96f7d417db8c693, type: 3}
     sceneName: Scenes/Test scenes/Level3
@@ -1435,6 +1458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadScreenType: 0
+  sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: 682ea4e1d0fcf914bad90bbcdde91c40, type: 3}
     sceneName: Scenes/Test scenes/Level5
@@ -1583,6 +1607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadScreenType: 0
+  sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: 0b01b103ab53f364e84e3218cffa3d54, type: 3}
     sceneName: Scenes/Test scenes/Level4
@@ -1767,6 +1792,7 @@ GameObject:
   - component: {fileID: 1914749387}
   - component: {fileID: 1914749386}
   - component: {fileID: 1914749385}
+  - component: {fileID: 1914749388}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1822,6 +1848,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1914749388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914749384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76d07d0c3235474dade5d5252f86ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1926638608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,7 +1911,7 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1897,7 +1935,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
