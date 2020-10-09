@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public float BridgeMaxLength;
 
     private Rigidbody2D FoxRB;
+    public Animator anim;
 
     public static bool BridgeTooLong;
     public static bool FoxMoving;
@@ -72,10 +73,12 @@ public class Player : MonoBehaviour
         if (FoxMoving)
         {
             MoveFoxCorrect();
+            Animate();
         }
         if (BridgeTooLong)
         {
             MoveFoxTooFar();
+            Animate();
         }
 
         Debug.DrawLine(gameObject.transform.position, BridgeO.transform.position, Color.red);
@@ -93,6 +96,12 @@ public class Player : MonoBehaviour
         BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
         BridgeRB.freezeRotation = true;
         transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
+    }
+
+    void Animate()
+    {
+        anim.SetFloat("isMoving", 1f);
+        
     }
 
 }

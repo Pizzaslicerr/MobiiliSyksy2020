@@ -3921,6 +3921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bridgeGrowthRate: 700
   BridgeMaxLength: 410
+  anim: {fileID: 2115351177}
   Speed: 4
   FoxFallTarget: {fileID: 856512464}
 --- !u!114 &2115351176
