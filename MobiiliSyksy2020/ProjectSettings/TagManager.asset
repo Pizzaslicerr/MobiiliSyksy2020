@@ -10,6 +10,7 @@ TagManager:
   - Collectibles
   - MovementTarget
   - BridgeSpawnPoint
+  - PressDetector
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Fox
   - Platform
   - Collectible
-  - 
+  - PressDetector
   - 
   - 
   - 

@@ -15,7 +15,10 @@ public class Player : MonoBehaviour
     public static GameObject BridgeSpawnPoint;
     public float BridgeMaxLength;
 
+    public LayerMask layerMask;
+
     private Rigidbody2D FoxRB;
+    public Animator anim;
 
     public static bool BridgeTooLong;
     public static bool FoxMoving;
@@ -40,7 +43,13 @@ public class Player : MonoBehaviour
         FoxMovementTarget = GameObject.FindWithTag("MovementTarget");
         //BridgeO = GameObject.FindWithTag("Bridge");
         BridgeRB = BridgeO.GetComponent<Rigidbody2D>();
-        if (Input.GetMouseButton(0))
+
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+
+        RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, layerMask);
+
+        if (Input.GetMouseButton(0) && hit.collider != null && hit.collider.tag == "PressDetector")
         {
 
             if (!Bridge.BridgeGrown)
@@ -55,7 +64,7 @@ public class Player : MonoBehaviour
             }
 
         }
-        if (Input.GetMouseButtonUp(0) || BridgeO.transform.localScale.y > BridgeMaxLength)
+        if (Input.GetMouseButtonUp(0) && screenPressed || BridgeO.transform.localScale.y > BridgeMaxLength && screenPressed)
         {
             if(BridgeO.transform.localScale.y < 80f)
             {
@@ -72,10 +81,12 @@ public class Player : MonoBehaviour
         if (FoxMoving)
         {
             MoveFoxCorrect();
+            Animate();
         }
         if (BridgeTooLong)
         {
             MoveFoxTooFar();
+            Animate();
         }
 
         Debug.DrawLine(gameObject.transform.position, BridgeO.transform.position, Color.red);
@@ -93,6 +104,12 @@ public class Player : MonoBehaviour
         BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
         BridgeRB.freezeRotation = true;
         transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
+    }
+
+    void Animate()
+    {
+        anim.SetFloat("isMoving", 1f);
+        
     }
 
 }

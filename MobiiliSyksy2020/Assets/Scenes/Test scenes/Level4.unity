@@ -2003,6 +2003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bridgeGrowthRate: 700
   BridgeMaxLength: 410
+  anim: {fileID: 407547890}
   Speed: 4
   FoxFallTarget: {fileID: 856512464}
 --- !u!114 &407547889
@@ -3381,6 +3382,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1886414718715315507, guid: ee9c0f7a8e308b142ae993949d42e0d4,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 407547886}
     - target: {fileID: 7588353899407049221, guid: ee9c0f7a8e308b142ae993949d42e0d4,
         type: 3}
       propertyPath: m_Name
