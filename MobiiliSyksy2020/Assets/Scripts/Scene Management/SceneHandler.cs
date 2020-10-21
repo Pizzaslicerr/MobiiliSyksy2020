@@ -32,17 +32,18 @@ public class SceneHandler : MonoBehaviour
         StartCoroutine(GetSceneLoadProgress());
     }
 
-
+    //an alternative version of SceneLoad where the previous scene is unloaded during the new scene's load process. This is the one that's most often used.
     public void SceneLoad(SceneField sceneToLoad, int sceneToUnload, LoadingScreens loadingScreen)
     {
         backupCamera.SetActive(true);
         loadingScreenManager.Activate((int)loadingScreen);
-        operations.Add(SceneManager.LoadSceneAsync(sceneToLoad.SceneName, LoadSceneMode.Additive));
         operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));
+        operations.Add(SceneManager.LoadSceneAsync(sceneToLoad.SceneName, LoadSceneMode.Additive));
 
         StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
     }
 
+    //reloads current scene, so only requires one scene.
     public void SceneReload(int sceneToReload, LoadingScreens loadingScreen)
     {
         backupCamera.SetActive(true);
