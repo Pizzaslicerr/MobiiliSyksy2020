@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     {
         FoxRB = gameObject.GetComponent<Rigidbody2D>();
         BridgeO = GameObject.FindWithTag("Bridge");
+        anim = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -81,15 +82,27 @@ public class Player : MonoBehaviour
         if (FoxMoving)
         {
             MoveFoxCorrect();
-            Animate();
         }
         if (BridgeTooLong)
         {
             MoveFoxTooFar();
-            Animate();
         }
 
-        Debug.DrawLine(gameObject.transform.position, BridgeO.transform.position, Color.red);
+            Debug.DrawLine(gameObject.transform.position, BridgeO.transform.position, Color.red);
+    }
+
+    void FixedUpdate()
+    {
+        if (FoxRB.velocity.magnitude > 0.1f)
+        {
+            anim.SetFloat("isMoving", 1f);
+        }
+        else if (FoxRB.velocity.magnitude <= 0f)
+        {
+            anim.SetFloat("isMoving", 0f);
+
+        }
+
     }
     void MoveFoxCorrect()
     {
@@ -104,12 +117,6 @@ public class Player : MonoBehaviour
         BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
         BridgeRB.freezeRotation = true;
         transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
-    }
-
-    void Animate()
-    {
-        anim.SetFloat("isMoving", 1f);
-        
     }
 
 }
