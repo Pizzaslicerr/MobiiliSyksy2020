@@ -13,6 +13,7 @@ public class FoxDetector : MonoBehaviour
     public GameObject NewBridgeSpawnPoint;
     public GameObject FoxMovementTargetOld;
     public GameObject FoxMovementTargetNew;
+    public Transform FoxTPTarget;
     void Start()
     {
         NewBridgeSpawnPoint.SetActive(false);
@@ -25,6 +26,8 @@ public class FoxDetector : MonoBehaviour
     {
         if (collision.tag == "Fox")
         {
+            fox.transform.position = FoxTPTarget.position;
+
             GameObject.FindWithTag("BridgeSpawnPoint").SetActive(false);
             NewBridgeSpawnPoint.SetActive(true);
             //Activate ramp

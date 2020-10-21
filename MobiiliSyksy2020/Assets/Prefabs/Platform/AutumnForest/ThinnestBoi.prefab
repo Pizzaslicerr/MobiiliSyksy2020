@@ -189,8 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fox: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494, type: 3}
-  pawHandler: {fileID: 0}
+  fox: {fileID: 0}
   Ramp: {fileID: 4285296786722200875}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
@@ -199,6 +198,7 @@ MonoBehaviour:
   NewBridgeSpawnPoint: {fileID: 84476384059670113}
   FoxMovementTargetOld: {fileID: 3344382771011472336}
   FoxMovementTargetNew: {fileID: 3344382771011472336}
+  FoxTPTarget: {fileID: 0}
 --- !u!1 &4905886207023380628
 GameObject:
   m_ObjectHideFlags: 0

@@ -119,6 +119,36 @@ Transform:
   m_Father: {fileID: 7838977914817367442}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4063826657805424119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108410823465420308}
+  m_Layer: 0
+  m_Name: FoxTpPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &108410823465420308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4063826657805424119}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.86, y: 7.48, z: -6.686483}
+  m_LocalScale: {x: 2.173913, y: 2.173913, z: 33.756344}
+  m_Children: []
+  m_Father: {fileID: 7838977914817367442}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7838977913232471310
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,9 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fox: {fileID: 4176516367890117587, guid: 9d545285601fd354295cb7b5f28a6494, type: 3}
-  pawHandler: {fileID: 4731868306026661776, guid: fe0d291a6054f7a4886136f888fa5b54,
-    type: 3}
+  fox: {fileID: 0}
   Ramp: {fileID: 1415537499254725663}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
@@ -200,6 +228,7 @@ MonoBehaviour:
   NewBridgeSpawnPoint: {fileID: 3022073339652390741}
   FoxMovementTargetOld: {fileID: 483348658355620580}
   FoxMovementTargetNew: {fileID: 483348658355620580}
+  FoxTPTarget: {fileID: 108410823465420308}
 --- !u!1 &7838977914014824864
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +406,7 @@ Transform:
   - {fileID: 7077580828505274234}
   - {fileID: 3003008717695813763}
   - {fileID: 2358486862041209893}
+  - {fileID: 108410823465420308}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
