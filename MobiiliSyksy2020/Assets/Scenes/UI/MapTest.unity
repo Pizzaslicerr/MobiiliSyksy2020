@@ -179,10 +179,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 119
+    m_FontSize: 88
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 132
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -451,7 +451,7 @@ RectTransform:
   m_GameObject: {fileID: 555749216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.52343, y: 0.52343, z: 0.52343}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 756312645}
   m_Father: {fileID: 217714972}
@@ -459,8 +459,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 238, y: -2140}
-  m_SizeDelta: {x: 512, y: 512}
+  m_AnchoredPosition: {x: 0, y: -2048}
+  m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &555749218
 MonoBehaviour:
@@ -477,7 +477,7 @@ MonoBehaviour:
   loadScreenType: 0
   sceneType: 0
   sceneToLoad:
-    sceneAsset: {fileID: 102900000, guid: 8a254cf11f9c9a742bcc70160c5799d9, type: 3}
+    sceneAsset: {fileID: 102900000, guid: 8f5b669e7f33dc5439fcdc2d1bdf686f, type: 3}
     sceneName: Scenes/Test scenes/Level2
   unloadPreviousScene: 1
 --- !u!114 &555749219
@@ -600,7 +600,7 @@ RectTransform:
   m_GameObject: {fileID: 738085567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.52343, y: 0.52343, z: 0.52343}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1624898217}
   m_Father: {fileID: 217714972}
@@ -609,7 +609,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 158, y: 2266}
-  m_SizeDelta: {x: 512, y: 512}
+  m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738085569
 MonoBehaviour:
@@ -778,10 +778,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 119
+    m_FontSize: 88
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 132
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -931,10 +931,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 119
+    m_FontSize: 88
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 132
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -980,7 +980,7 @@ RectTransform:
   m_GameObject: {fileID: 1351598864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.52343, y: 0.52343, z: 0.52343}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1901404382}
   m_Father: {fileID: 217714972}
@@ -988,8 +988,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -286, y: -2695}
-  m_SizeDelta: {x: 512, y: 512}
+  m_AnchoredPosition: {x: -405, y: -2695}
+  m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1351598866
 MonoBehaviour:
@@ -1097,7 +1097,7 @@ MonoBehaviour:
   loadScreenType: 0
   sceneType: 0
   sceneToLoad:
-    sceneAsset: {fileID: 102900000, guid: 3068c7668f39b794bbdcb1ea200d5a50, type: 3}
+    sceneAsset: {fileID: 102900000, guid: fc997c112cf148f40ab9ab240811c09c, type: 3}
     sceneName: Scenes/Test scenes/Level1
   unloadPreviousScene: 1
 --- !u!1 &1425861836
@@ -1158,10 +1158,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 119
+    m_FontSize: 88
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 132
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1207,7 +1207,7 @@ RectTransform:
   m_GameObject: {fileID: 1443016899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.52343, y: 0.52343, z: 0.52343}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1158211653}
   m_Father: {fileID: 217714972}
@@ -1215,8 +1215,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -277, y: -1621}
-  m_SizeDelta: {x: 512, y: 512}
+  m_AnchoredPosition: {x: 420, y: -1349}
+  m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1443016901
 MonoBehaviour:
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   loadScreenType: 0
   sceneType: 0
   sceneToLoad:
-    sceneAsset: {fileID: 102900000, guid: 87df7bed739d9074a96f7d417db8c693, type: 3}
+    sceneAsset: {fileID: 102900000, guid: 79070524554360546b34091f10ce4064, type: 3}
     sceneName: Scenes/Test scenes/Level3
   unloadPreviousScene: 1
 --- !u!114 &1443016902
@@ -1279,12 +1279,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1443016901}
-        m_MethodName: ChangeScenes
-        m_Mode: 1
+      - m_Target: {fileID: 1914749389}
+        m_MethodName: ToggleLevelStats
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1443016899}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1385,10 +1385,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 119
+    m_FontSize: 88
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 132
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1434,7 +1434,7 @@ RectTransform:
   m_GameObject: {fileID: 1726162476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.52343, y: 0.52343, z: 0.52343}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 191297284}
   m_Father: {fileID: 217714972}
@@ -1442,8 +1442,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -286, y: -560}
-  m_SizeDelta: {x: 512, y: 512}
+  m_AnchoredPosition: {x: -384.00006, y: 304}
+  m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1726162478
 MonoBehaviour:
@@ -1460,7 +1460,7 @@ MonoBehaviour:
   loadScreenType: 0
   sceneType: 0
   sceneToLoad:
-    sceneAsset: {fileID: 102900000, guid: 682ea4e1d0fcf914bad90bbcdde91c40, type: 3}
+    sceneAsset: {fileID: 102900000, guid: 39457e31f1fe24e439f1fa76b2d0d01d, type: 3}
     sceneName: Scenes/Test scenes/Level5
   unloadPreviousScene: 1
 --- !u!114 &1726162479
@@ -1506,12 +1506,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1726162478}
-        m_MethodName: ChangeScenes
-        m_Mode: 1
+      - m_Target: {fileID: 1914749389}
+        m_MethodName: ToggleLevelStats
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1726162476}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1583,7 +1583,7 @@ RectTransform:
   m_GameObject: {fileID: 1746975279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.52343, y: 0.52343, z: 0.52343}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1425861837}
   m_Father: {fileID: 217714972}
@@ -1591,8 +1591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248, y: -1066}
-  m_SizeDelta: {x: 512, y: 512}
+  m_AnchoredPosition: {x: 43, y: -560}
+  m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746975281
 MonoBehaviour:
@@ -1655,12 +1655,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1746975281}
-        m_MethodName: ChangeScenes
-        m_Mode: 1
+      - m_Target: {fileID: 1914749389}
+        m_MethodName: ToggleLevelStats
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1746975279}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1761,10 +1761,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 119
+    m_FontSize: 88
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 8
     m_MaxSize: 132
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1873,7 +1873,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5b18148773a7842a4cb1c1492a0d2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popupPrefab: {fileID: 684415212850037069, guid: c5465aaaf6bae5c498b4cf8038a7a995,
+  edgeTreshold: 275
+  popupPanelPrefab: {fileID: 8479569428524209214, guid: 4213da7cd94cf884c88c8102b24acef4,
+    type: 3}
+  popupArrowPrefab: {fileID: 684415212850037069, guid: c5465aaaf6bae5c498b4cf8038a7a995,
     type: 3}
 --- !u!1 &1926638608
 GameObject:
