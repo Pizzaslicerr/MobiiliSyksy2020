@@ -14,6 +14,7 @@ public class CorrectBridgeLength : MonoBehaviour
     {
         if (collision.tag == "Bridge")
         {
+            SinkingDetector.sinking = false;
             Bridge.BridgeDown = true;
             Player.FoxMoving = true;
         }
