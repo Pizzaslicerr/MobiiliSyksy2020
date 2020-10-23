@@ -8,11 +8,15 @@ using UnityEngine;
 public enum SceneTypes
 {
     level,
+    mainMenu,
     mapScreen
 }
 
 public class UIManager : MonoBehaviour
 {
+    [Tooltip("This is the canvas that contains all the menus and submenus.")]
+    [SerializeField] private GameObject canvas = null;
+
     [Header("Menus")]
     [SerializeField] private GameObject gamePauseMenu = null;
     [SerializeField] private GameObject mapPauseMenu = null;
@@ -20,15 +24,21 @@ public class UIManager : MonoBehaviour
 
     private GameObject currentPauseMenu;
     private bool isPauseMenuOpen = false;
+    private bool isCanvasVisible = true;
 
     public SceneTypes SceneType {set => sceneType = value; }
-        private SceneTypes sceneType;
+        private SceneTypes sceneType = SceneTypes.mainMenu;
 
     public static UIManager instance;
 
     void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        currentPauseMenu = mapPauseMenu;
     }
 
     public void LoadPauseButton()
@@ -70,6 +80,28 @@ public class UIManager : MonoBehaviour
             currentPauseMenu.SetActive(false);
             isPauseMenuOpen = false;
         }
+    }
+
+    //This hides the pause button (and menus) for loading screens.
+    public void ToggleCanvas()
+    {
+        if (isCanvasVisible)
+        {
+            HidePauseMenu();
+            canvas.SetActive(false);
+        }
+        else
+        {
+            canvas.SetActive(true);
+        }
+
+        isCanvasVisible = !isCanvasVisible;
+    }
+
+    //This only hides the actual overlay, not the button.
+    public void HidePauseMenu()
+    {
+        currentPauseMenu.SetActive(false);
     }
 
     //opens submenus (menus inside menus).

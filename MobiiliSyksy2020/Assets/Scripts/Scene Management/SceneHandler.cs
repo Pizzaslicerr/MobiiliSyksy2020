@@ -36,8 +36,7 @@ public class SceneHandler : MonoBehaviour
     //an alternative version of SceneLoad where the previous scene is unloaded during the new scene's load process. This is the one that's most often used.
     public void SceneLoad(SceneField sceneToLoad, int sceneToUnload, LoadingScreens loadingScreen)
     {
-        backupCamera.SetActive(true);
-        loadingScreenManager.Activate((int)loadingScreen);
+        ToggleVisibilities(loadingScreen);
         operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));
         operations.Add(SceneManager.LoadSceneAsync(sceneToLoad.SceneName, LoadSceneMode.Additive));
 
@@ -48,20 +47,17 @@ public class SceneHandler : MonoBehaviour
     //This is only used for the map screen. Goddamn edgecases...
     public void SceneLoad(int mapBuildIndex, string sceneToUnload, LoadingScreens loadingScreen)
     {
-        backupCamera.SetActive(true);
-        loadingScreenManager.Activate((int)loadingScreen);
+        ToggleVisibilities(loadingScreen);
         operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));
         operations.Add(SceneManager.LoadSceneAsync(mapBuildIndex, LoadSceneMode.Additive));
 
         StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
     }
 
-
     //reloads current scene, so only requires one scene.
     public void SceneReload(int sceneToReload, LoadingScreens loadingScreen)
     {
-        backupCamera.SetActive(true);
-        loadingScreenManager.Activate((int)loadingScreen);
+        ToggleVisibilities(loadingScreen);
         operations.Add(SceneManager.UnloadSceneAsync(sceneToReload));
         operations.Add(SceneManager.LoadSceneAsync(sceneToReload, LoadSceneMode.Additive));
 
@@ -79,7 +75,8 @@ public class SceneHandler : MonoBehaviour
             }
         }
 
-        backupCamera.SetActive(true);
+        UIManager.instance.ToggleCanvas();
+        backupCamera.SetActive(false);
         operations.Clear();
         yield break;
     }
@@ -95,9 +92,17 @@ public class SceneHandler : MonoBehaviour
         }
         yield return new WaitForSecondsRealtime(1f);
 
+        UIManager.instance.ToggleCanvas();
         backupCamera.SetActive(false);
         loadingScreenManager.Deactivate(loadScreenVariant);
         operations.Clear();
         yield break;
+    }
+
+    private void ToggleVisibilities(LoadingScreens loadingScreen)
+    {
+        backupCamera.SetActive(true);
+        UIManager.instance.ToggleCanvas();
+        loadingScreenManager.Activate((int)loadingScreen);
     }
 }

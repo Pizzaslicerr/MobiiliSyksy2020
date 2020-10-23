@@ -1901,6 +1901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2612017409048b34098c217a0f5e3c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 1174792328}
   gamePauseMenu: {fileID: 2144826095}
   mapPauseMenu: {fileID: 1683253441}
   pauseButton: {fileID: 1380902237}
