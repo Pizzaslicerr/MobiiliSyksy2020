@@ -30,13 +30,28 @@ namespace Utilities
                 SceneHandler.instance.SceneLoad(sceneToLoad, loadScreenType);
             }
 
-            UIManager.instance.SceneType = sceneType;
+            SceneHandler.instance.LoadedScene = sceneToLoad.SceneName;
+            DetermineSceneType();
 
             if (!pauseButtonLoaded)
             {
                 UIManager.instance.LoadPauseButton();
                 pauseButtonLoaded = true;
             }
+
+        }
+
+        //only used to switch to map scene
+        public void ChangeToMapScene(int mapBuildIndex)
+        {
+            SceneHandler.instance.SceneLoad(mapBuildIndex, SceneHandler.instance.LoadedScene, loadScreenType);
+            DetermineSceneType();
+        }
+
+        //this changes the SceneType variable, which affects what pause menu is used
+        private void DetermineSceneType()
+        {
+            UIManager.instance.SceneType = sceneType;
         }
     }
 }

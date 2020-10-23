@@ -10,8 +10,8 @@ public class SceneHandler : MonoBehaviour
 {
     private LoadingScreenManager loadingScreenManager;  //loading screens are only visible (for now) with LoadAndUnloadScene()
     public GameObject backupCamera;
-    private int loadedScene;
-    public int LoadedScene { set => loadedScene = value; }
+    private string loadedScene;
+    public string LoadedScene { get => loadedScene; set => loadedScene = value; }
 
 
     public static SceneHandler instance;
@@ -32,6 +32,7 @@ public class SceneHandler : MonoBehaviour
         StartCoroutine(GetSceneLoadProgress());
     }
 
+
     //an alternative version of SceneLoad where the previous scene is unloaded during the new scene's load process. This is the one that's most often used.
     public void SceneLoad(SceneField sceneToLoad, int sceneToUnload, LoadingScreens loadingScreen)
     {
@@ -42,6 +43,19 @@ public class SceneHandler : MonoBehaviour
 
         StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
     }
+
+
+    //This is only used for the map screen. Goddamn edgecases...
+    public void SceneLoad(int mapBuildIndex, string sceneToUnload, LoadingScreens loadingScreen)
+    {
+        backupCamera.SetActive(true);
+        loadingScreenManager.Activate((int)loadingScreen);
+        operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));
+        operations.Add(SceneManager.LoadSceneAsync(mapBuildIndex, LoadSceneMode.Additive));
+
+        StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
+    }
+
 
     //reloads current scene, so only requires one scene.
     public void SceneReload(int sceneToReload, LoadingScreens loadingScreen)
