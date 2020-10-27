@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Test scenes/Level4.unity
     guid: 0b01b103ab53f364e84e3218cffa3d54
   - enabled: 0
-    path: Assets/Scenes/Test scenes/Level5.unity
+    path: Assets/Scenes/Test scenes/LevelPlaceholder.unity
     guid: 39457e31f1fe24e439f1fa76b2d0d01d
   - enabled: 0
     path: Assets/Scenes/Test scenes/Teemu.unity
