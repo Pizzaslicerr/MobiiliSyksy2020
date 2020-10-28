@@ -93,20 +93,24 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (FoxRB.velocity.magnitude >= 0.1f)
+        var velocity = FoxRB.velocity;
+
+        //Detecting if players rigidbody is moving then playing walk animation
+        if (velocity.magnitude >= 0.1f)
         {
             anim.SetBool("isMoving", true);
             anim.SetFloat("MoveX", 1f);
-            anim.SetFloat("MoveY", 0f);
+   
         }
-        else if (FoxRB.velocity.magnitude <= 0.0f)
+        //If players rigidbody isn´t moving then idle
+        else if (velocity.magnitude <= 0.0f)
         {
             anim.SetBool("isMoving", false);
             anim.SetFloat("MoveX", 0f);
 
         }
-
     }
+
     void MoveFoxCorrect()
     {
         //Moving the fox correctly to the next platform
