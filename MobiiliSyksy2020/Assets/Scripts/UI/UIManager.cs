@@ -15,7 +15,7 @@ public enum SceneTypes
 public class UIManager : MonoBehaviour
 {
     [Tooltip("This is the canvas that contains all the menus and submenus.")]
-    [SerializeField] private GameObject canvas = null;
+    [SerializeField] private GameObject pauseMenuObjects = null;
 
     [Header("Menus")]
     [SerializeField] private GameObject gamePauseMenu = null;
@@ -88,11 +88,12 @@ public class UIManager : MonoBehaviour
         if (isCanvasVisible)
         {
             HidePauseMenu();
-            canvas.SetActive(false);
+            pauseMenuObjects.SetActive(false);
+            isPauseMenuOpen = false;
         }
         else
         {
-            canvas.SetActive(true);
+            pauseMenuObjects.SetActive(true);
         }
 
         isCanvasVisible = !isCanvasVisible;
