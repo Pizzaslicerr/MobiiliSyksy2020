@@ -13,7 +13,15 @@ public class PersistenceCheck : MonoBehaviour
     List<AsyncOperation> operations = new List<AsyncOperation>();
     private void Awake()
     {
-        if (SceneManager.GetSceneByBuildIndex(0).isLoaded == false)
+        //loads main menu if ONLY SceneManager has been loaded
+        if (SceneManager.sceneCount == 1 && SceneManager.GetSceneAt(0).buildIndex == 0)
+        {
+            operations.Add(SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive)); //build index 1 is main menu
+            StartCoroutine(LoadPersistentScene());
+        }
+
+        //loads SceneManager if it has not yet been loaded
+        else if (SceneManager.GetSceneByBuildIndex(0).isLoaded == false)
         {
             Debug.Log("This should run only once");
             operations.Add(SceneManager.LoadSceneAsync(0, LoadSceneMode.Additive));
