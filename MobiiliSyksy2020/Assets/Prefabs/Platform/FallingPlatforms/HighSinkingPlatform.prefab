@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698600430181683113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.13, y: 9.17, z: 0}
+  m_LocalPosition: {x: 1.38, y: 4.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5514875663796993390}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2806958456923257368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.37, y: 9.82, z: 0}
+  m_LocalPosition: {x: 1.16, y: 5.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5514875663796993390}
@@ -85,7 +85,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3739567723664911587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.93, y: 8.53, z: 0}
+  m_LocalPosition: {x: 0.2, y: 4.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5514875663796993390}
@@ -176,7 +176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5514875662430111218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.92, y: 9.43, z: 0}
+  m_LocalPosition: {x: 0.72, y: 5.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5514875663796993390}
@@ -268,7 +268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5514875662994688348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.43, y: 10.93, z: 0}
+  m_LocalPosition: {x: 1.1, y: 5.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5514875663796993390}
@@ -340,7 +340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5514875663475856697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.36, y: 8.288, z: 0}
+  m_LocalPosition: {x: -1.28, y: 4.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5514875663796993390}
@@ -359,7 +359,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.29541078, y: 0.48765716}
+  m_Offset: {x: -0.05710034, y: 0.18071002}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -370,7 +370,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.41762644, y: 0.030555546}
+  m_Size: {x: 0.97713804, y: 0.5013083}
   m_EdgeRadius: 0
 --- !u!114 &3362172284511191515
 MonoBehaviour:
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 3538835004772543302}
   - component: {fileID: 8731002088173941922}
   m_Layer: 10
-  m_Name: SinkingPlatform
+  m_Name: HighSinkingPlatform
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -411,8 +411,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5514875663796993386}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.25, y: -2.97, z: 3.365}
-  m_LocalScale: {x: 0.46, y: 0.46, z: 3.4547672}
+  m_LocalPosition: {x: 1.095, y: -3.338, z: 3.365}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 5514875662994688351}
   - {fileID: 5514875663475856696}
@@ -438,18 +438,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.056817055, y: 8.237366}
+  m_Offset: {x: -0.025130153, y: 4.2354927}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.36, y: 20.48}
+    oldSize: {x: 3.99, y: 9.47}
     newSize: {x: 8.36, y: 20.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.401021, y: 0.99871063}
+  m_Size: {x: 3.5220802, y: 0.7528589}
   m_EdgeRadius: 0
 --- !u!212 &3538835004772543302
 SpriteRenderer:
@@ -490,7 +490,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -5337960420726062741, guid: f748be1709ca9c747ac3f8064bff0e2f,
+  m_Sprite: {fileID: 5331759463593260464, guid: d3b87fc391022ed49afcf05c33168ff2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -515,6 +515,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SinkingTarget: {fileID: 4410004376074622014}
+  BridgeSinkingTarget: {fileID: 0}
+  bridge: {fileID: 0}
   SinkingSpeed: 0
 --- !u!1 &6005642133368793135
 GameObject:
@@ -540,7 +542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6005642133368793135}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 7.67, z: 3.1669192}
+  m_LocalPosition: {x: -0.68, y: 4.15, z: 3.1669192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5514875663796993390}
