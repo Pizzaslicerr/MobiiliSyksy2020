@@ -15,6 +15,7 @@ namespace Utilities
         [SerializeField] private LoadingScreens loadScreenType = LoadingScreens.Leaves;
         [SerializeField] private SceneTypes sceneType = SceneTypes.level;
 
+        [Tooltip("Just drag and drop the desired scene into this field.")]
         [SerializeField] private SceneField sceneToLoad = null;
         [Tooltip("Whether or not the previous scene should be unloaded. For most cases, leave this enabled.")]
         [SerializeField] private bool unloadPreviousScene = true;
