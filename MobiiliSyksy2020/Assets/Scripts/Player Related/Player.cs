@@ -93,13 +93,16 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (FoxRB.velocity.magnitude > 0.1f)
+        if (FoxRB.velocity.magnitude >= 0.1f)
         {
-            anim.SetFloat("isMoving", 1f);
+            anim.SetBool("isMoving", true);
+            anim.SetFloat("MoveX", 1f);
+            anim.SetFloat("MoveY", 0f);
         }
-        else if (FoxRB.velocity.magnitude <= 0f)
+        else if (FoxRB.velocity.magnitude <= 0.0f)
         {
-            anim.SetFloat("isMoving", 0f);
+            anim.SetBool("isMoving", false);
+            anim.SetFloat("MoveX", 0f);
 
         }
 
