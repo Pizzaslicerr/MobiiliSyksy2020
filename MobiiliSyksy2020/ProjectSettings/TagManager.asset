@@ -11,6 +11,7 @@ TagManager:
   - MovementTarget
   - BridgeSpawnPoint
   - PressDetector
+  - BridgeSinkTarget
   layers:
   - Default
   - TransparentFX
