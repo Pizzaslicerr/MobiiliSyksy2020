@@ -5800,6 +5800,11 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 704477805143673534, guid: 165226be44566834e8742d4e14e17d01,
+        type: 3}
+      propertyPath: m_TagString
+      value: BridgeSinkTarget
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 165226be44566834e8742d4e14e17d01, type: 3}
 --- !u!114 &376904605934730754
@@ -5843,6 +5848,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SinkingTarget: {fileID: 5580605996378184513}
+  BridgeSinkingTarget: {fileID: 0}
+  bridge: {fileID: 0}
   SinkingSpeed: 0.5
 --- !u!1 &708050676584531312
 GameObject:

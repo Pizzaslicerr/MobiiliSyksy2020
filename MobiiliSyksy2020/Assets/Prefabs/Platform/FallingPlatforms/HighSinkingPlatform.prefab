@@ -221,7 +221,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fox: {fileID: 0}
-  Ramp: {fileID: 3739567723664911587}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
   LongBridgeDetector: {fileID: 5514875662994688348}
@@ -515,9 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SinkingTarget: {fileID: 4410004376074622014}
-  BridgeSinkingTarget: {fileID: 0}
-  bridge: {fileID: 0}
-  SinkingSpeed: 0
+  SinkingSpeed: 0.5
 --- !u!1 &6005642133368793135
 GameObject:
   m_ObjectHideFlags: 0
