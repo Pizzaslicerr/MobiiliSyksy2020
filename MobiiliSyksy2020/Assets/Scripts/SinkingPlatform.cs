@@ -5,8 +5,8 @@ using UnityEngine;
 public class SinkingPlatform : MonoBehaviour
 {
     public Transform SinkingTarget;
-    private GameObject BridgeSinkingTarget;
-    private GameObject bridge;
+    public GameObject BridgeSinkingTarget;
+    public GameObject bridge;
 
     public float SinkingSpeed;
 
