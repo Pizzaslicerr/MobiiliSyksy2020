@@ -6,7 +6,6 @@ public class FoxDetector : MonoBehaviour
 {
     public GameObject fox;
 
-    public GameObject Ramp;
     public GameObject BridgePrefab;
     public GameObject LongBridgeDetector;
     public GameObject CorrectBridgeDetector;
@@ -19,7 +18,6 @@ public class FoxDetector : MonoBehaviour
         NewBridgeSpawnPoint.SetActive(false);
         FoxMovementTargetNew.SetActive(false);
         FoxMovementTargetOld.SetActive(true);
-        Ramp.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,8 +28,6 @@ public class FoxDetector : MonoBehaviour
 
             GameObject.FindWithTag("BridgeSpawnPoint").SetActive(false);
             NewBridgeSpawnPoint.SetActive(true);
-            //Activate ramp
-            Ramp.SetActive(true);
 
             //Deactivate the previous movement target and activate a new one
             FoxMovementTargetNew.SetActive(true);
