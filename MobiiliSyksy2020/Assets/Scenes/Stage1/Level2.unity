@@ -3604,7 +3604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bridgeGrowthRate: 700
-  BridgeMaxLength: 410
+  BridgeMaxLength: 575
   layerMask:
     serializedVersion: 2
     m_Bits: 0
