@@ -13,6 +13,9 @@ public class SceneHandler : MonoBehaviour
     private string loadedScene;
     public string LoadedScene { get => loadedScene; set => loadedScene = value; }
 
+    //this is a bodge. No lying about that here. If I were to properly fix this, it would take far longer.
+    private int loadedSceneAsInt;
+    public int LoadedSceneAsInt { get => loadedSceneAsInt; set => loadedSceneAsInt = value; }
 
     public static SceneHandler instance;
     private void Awake()
@@ -102,6 +105,7 @@ public class SceneHandler : MonoBehaviour
         UIManager.instance.ToggleCanvas();
         backupCamera.SetActive(false);
         operations.Clear();
+
         yield break;
     }
 

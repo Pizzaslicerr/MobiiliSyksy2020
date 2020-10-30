@@ -45,7 +45,7 @@ namespace Utilities
         //only used to switch to map scene
         public void ChangeToMapScene(int mapBuildIndex)
         {
-            SceneHandler.instance.SceneLoad(mapBuildIndex, SceneHandler.instance.LoadedScene, loadScreenType);
+            SceneHandler.instance.SceneLoad(mapBuildIndex, SceneHandler.instance.LoadedSceneAsInt, loadScreenType);
             DetermineSceneType();
         }
 

@@ -7,6 +7,7 @@ public class NextAndReplay : MonoBehaviour
 {
     public void nextLevel()
     {
+        SceneHandler.instance.LoadedSceneAsInt = this.gameObject.scene.buildIndex + 1;
         SceneHandler.instance.SceneLoad(this.gameObject.scene.buildIndex + 1, this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
     }
     public void reloadLevel()
