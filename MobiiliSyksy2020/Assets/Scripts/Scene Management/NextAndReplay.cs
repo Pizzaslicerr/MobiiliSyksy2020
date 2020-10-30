@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class nextreplay : MonoBehaviour
+public class NextAndReplay : MonoBehaviour
 {
     public void nextLevel()
     {
-        SceneManager.LoadScene(this.gameObject.scene.buildIndex + 1);
+        SceneHandler.instance.SceneLoad(this.gameObject.scene.buildIndex + 1, this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
     }
     public void reloadLevel()
     {

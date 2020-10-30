@@ -21,6 +21,10 @@ public class SceneHandler : MonoBehaviour
         loadingScreenManager = gameObject.GetComponent<LoadingScreenManager>();
     }
 
+
+//----------------------------------------------------------------------------------------------------------------------------
+
+
     //scene load operations are added to this list; this is required for loading bars and especially to make sure scenes have been loaded
     //two voids for method overloads, having a scene to unload is not necessary
     List<AsyncOperation> operations = new List<AsyncOperation>();
@@ -32,7 +36,6 @@ public class SceneHandler : MonoBehaviour
         StartCoroutine(GetSceneLoadProgress());
     }
 
-
     //an alternative version of SceneLoad where the previous scene is unloaded during the new scene's load process. This is the one that's most often used.
     public void SceneLoad(SceneField sceneToLoad, int sceneToUnload, LoadingScreens loadingScreen)
     {
@@ -42,6 +45,17 @@ public class SceneHandler : MonoBehaviour
 
         StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
     }
+    public void SceneLoad(int sceneToLoad, int sceneToUnload, LoadingScreens loadingScreen)
+    {
+        ToggleVisibilities(loadingScreen);
+        operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));
+        operations.Add(SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive));
+
+        StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
+    }
+
+
+    //--------------------------------------------------------------------------------------------------------------------------------------
 
 
     //This is only used for the map screen. Goddamn edgecases...
