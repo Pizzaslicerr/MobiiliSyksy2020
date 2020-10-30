@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bridgeGrowthRate: 700
-  BridgeMaxLength: 410
+  BridgeMaxLength: 585
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -1115,6 +1115,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5514875663796993390, guid: 755febcd6b7b17444a8ca56fa3b921fe,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 755febcd6b7b17444a8ca56fa3b921fe, type: 3}
@@ -2274,6 +2279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5514875663796993390, guid: 755febcd6b7b17444a8ca56fa3b921fe,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 755febcd6b7b17444a8ca56fa3b921fe, type: 3}
