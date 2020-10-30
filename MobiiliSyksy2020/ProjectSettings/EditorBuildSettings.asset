@@ -20,16 +20,37 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage1/Level2.unity
     guid: 8f5b669e7f33dc5439fcdc2d1bdf686f
-  - enabled: 0
-    path: Assets/Scenes/Test scenes/LevelPlaceholder.unity
-    guid: 39457e31f1fe24e439f1fa76b2d0d01d
+  - enabled: 1
+    path: Assets/Scenes/Stage1/Level3.unity
+    guid: 8f12fb31adb7be14ea95ef1bc7dcf590
+  - enabled: 1
+    path: Assets/Scenes/Stage1/Level4.unity
+    guid: c1e47bcc19dcbe0458cf9093d9626a12
+  - enabled: 1
+    path: Assets/Scenes/Stage1/Level5.unity
+    guid: 05e3f65c26710f24885bdfb0af56b3d4
+  - enabled: 1
+    path: Assets/Scenes/Stage1/Level6.unity
+    guid: 14c67572f6a16744e8a6b36e4c93ebd3
+  - enabled: 1
+    path: Assets/Scenes/Stage1/Level7.unity
+    guid: 4d4eaf891afdb0142845addbb0d264bb
+  - enabled: 1
+    path: Assets/Scenes/Stage2/Stage2Level1.unity
+    guid: 9a9538fdbd47be34bb924eb4a574eac5
+  - enabled: 1
+    path: Assets/Scenes/Stage2/Stage2Level2.unity
+    guid: 1b3e811fb78af2a4da4c8a355488c2ee
+  - enabled: 1
+    path: Assets/Scenes/Stage2/Stage2Level3.unity
+    guid: 63a97125a1f0eac48a2ed585e9577712
   - enabled: 0
     path: Assets/Scenes/Test scenes/Teemu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test scenes/Mikko/Mikko.unity
     guid: c544d52cb060cf14ca0a4d84904cfc5e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test scenes/Mikko/Mikko2.unity
     guid: a3b266e1538b2214e9e30e07583d6918
   m_configObjects: {}
