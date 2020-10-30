@@ -390,7 +390,7 @@ PrefabInstance:
     - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
         type: 3}
       propertyPath: sceneToLoad.sceneName
-      value: Scenes/Test scenes/Level6Proto
+      value: Scenes/Stage1/Level6
       objectReference: {fileID: 0}
     - target: {fileID: 7649507055358450517, guid: 79affa96af25a9e4cb872ba44f97c4fd,
         type: 3}
@@ -637,7 +637,7 @@ MonoBehaviour:
   sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: 8f5b669e7f33dc5439fcdc2d1bdf686f, type: 3}
-    sceneName: Scenes/Test scenes/Level2
+    sceneName: Scenes/Stage1/Level2
   unloadPreviousScene: 1
 --- !u!114 &555749219
 MonoBehaviour:
@@ -866,7 +866,7 @@ PrefabInstance:
     - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
         type: 3}
       propertyPath: sceneToLoad.sceneName
-      value: Scenes/Test scenes/Level7Proto
+      value: Scenes/Stage1/Level7
       objectReference: {fileID: 0}
     - target: {fileID: 7649507055358450517, guid: 79affa96af25a9e4cb872ba44f97c4fd,
         type: 3}
@@ -1402,7 +1402,7 @@ MonoBehaviour:
   sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: fc997c112cf148f40ab9ab240811c09c, type: 3}
-    sceneName: Scenes/Test scenes/Level1
+    sceneName: Scenes/Stage1/Level1
   unloadPreviousScene: 1
 --- !u!1 &1425861836
 GameObject:
@@ -1538,7 +1538,7 @@ MonoBehaviour:
   sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: 8f12fb31adb7be14ea95ef1bc7dcf590, type: 3}
-    sceneName: Scenes/Test scenes/Level3Proto
+    sceneName: Scenes/Stage1/Level3
   unloadPreviousScene: 1
 --- !u!114 &1443016902
 MonoBehaviour:
@@ -1765,7 +1765,7 @@ MonoBehaviour:
   sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: 05e3f65c26710f24885bdfb0af56b3d4, type: 3}
-    sceneName: Scenes/Test scenes/Level5Proto
+    sceneName: Scenes/Stage1/Level5
   unloadPreviousScene: 1
 --- !u!114 &1726162479
 MonoBehaviour:
@@ -1914,7 +1914,7 @@ MonoBehaviour:
   sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: c1e47bcc19dcbe0458cf9093d9626a12, type: 3}
-    sceneName: Scenes/Test scenes/Level4Proto
+    sceneName: Scenes/Stage1/Level4
   unloadPreviousScene: 1
 --- !u!114 &1746975282
 MonoBehaviour:
