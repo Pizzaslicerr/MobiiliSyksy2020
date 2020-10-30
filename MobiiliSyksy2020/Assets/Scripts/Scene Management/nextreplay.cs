@@ -7,7 +7,7 @@ public class nextreplay : MonoBehaviour
 {
     public void nextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(this.gameObject.scene.buildIndex + 1);
     }
     public void reloadLevel()
     {
