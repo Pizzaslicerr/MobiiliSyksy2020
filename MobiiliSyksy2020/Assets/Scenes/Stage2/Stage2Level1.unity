@@ -893,7 +893,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448792173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 4.14, z: 3.1669192}
+  m_LocalPosition: {x: 0.34, y: 4.14, z: 3.1669192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1642357337}
@@ -1406,8 +1406,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fox: {fileID: 125798984}
-  Ramp: {fileID: 1693765465}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
   LongBridgeDetector: {fileID: 1357253657}
@@ -1472,7 +1470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718600869}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.48, y: 4.01, z: 3.1669192}
+  m_LocalPosition: {x: 0.03, y: 4.01, z: 3.1669192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1862511073}
@@ -1522,8 +1520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fox: {fileID: 125798984}
-  Ramp: {fileID: 1070798075}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
   LongBridgeDetector: {fileID: 669784945}
@@ -2362,7 +2358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202498808}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 4.14, z: 3.1669192}
+  m_LocalPosition: {x: 0.26, y: 4.14, z: 3.1669192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1560831681}
@@ -5518,8 +5514,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fox: {fileID: 125798984}
-  Ramp: {fileID: 2059923697}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
   LongBridgeDetector: {fileID: 1077966953}
@@ -5848,8 +5842,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SinkingTarget: {fileID: 5580605996378184513}
-  BridgeSinkingTarget: {fileID: 0}
-  bridge: {fileID: 0}
   SinkingSpeed: 0.5
 --- !u!1 &708050676584531312
 GameObject:
@@ -6329,7 +6321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8704207864565487606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.48, y: 4.01, z: 3.1669192}
+  m_LocalPosition: {x: -0.15, y: 4.01, z: 3.1669192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7429562172022604471}
@@ -6347,8 +6339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fox: {fileID: 125798984}
-  Ramp: {fileID: 4874210926976426908}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
   LongBridgeDetector: {fileID: 4380302838097446435}
@@ -6777,7 +6767,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708050676584531312}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 4.14, z: 3.1669192}
+  m_LocalPosition: {x: 0.08, y: 4.14, z: 3.1669192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7071802904820318049}
@@ -6795,8 +6785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fox: {fileID: 125798984}
-  Ramp: {fileID: 7808750120840261985}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
   LongBridgeDetector: {fileID: 1383480187803800798}
@@ -7139,7 +7127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8702235370060782333}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 4.14, z: 3.1669192}
+  m_LocalPosition: {x: 0.36, y: 4.14, z: 3.1669192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1383480188074467564}
@@ -7157,8 +7145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fox: {fileID: 125798984}
-  Ramp: {fileID: 2110301997753380588}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
   LongBridgeDetector: {fileID: 7071802905087298387}
@@ -7327,8 +7313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fox: {fileID: 125798984}
-  Ramp: {fileID: 1762667037904507706}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
   LongBridgeDetector: {fileID: 7429562172293281413}
@@ -7359,7 +7343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2529162307934693200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.53, y: 4.17, z: 3.1669192}
+  m_LocalPosition: {x: -0.02, y: 4.17, z: 3.1669192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4380302837289136657}
