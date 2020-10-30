@@ -51,9 +51,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage2/Stage2Level5.unity
     guid: acd6a4485e2a7984ba21e63f58cc2d59
   - enabled: 0
-    path: 
-    guid: 39457e31f1fe24e439f1fa76b2d0d01d
-  - enabled: 0
     path: Assets/Scenes/Test scenes/Teemu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1

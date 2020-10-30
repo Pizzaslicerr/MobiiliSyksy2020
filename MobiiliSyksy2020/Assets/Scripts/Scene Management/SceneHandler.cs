@@ -64,6 +64,16 @@ public class SceneHandler : MonoBehaviour
         StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
     }
 
+    //string version of SceneReload, thanks to SceneField bizarrely not allowing the user to get the build index.
+    public void SceneReload(string sceneToReload, LoadingScreens loadingScreen)
+    {
+        ToggleVisibilities(loadingScreen);
+        operations.Add(SceneManager.UnloadSceneAsync(sceneToReload));
+        operations.Add(SceneManager.LoadSceneAsync(sceneToReload, LoadSceneMode.Additive));
+
+        StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
+    }
+
 
     private IEnumerator GetSceneLoadProgress()
     {
