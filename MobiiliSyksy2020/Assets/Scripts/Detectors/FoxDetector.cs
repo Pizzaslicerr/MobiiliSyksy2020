@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FoxDetector : MonoBehaviour
 {
-    public GameObject fox;
+    private GameObject fox;
 
     public GameObject BridgePrefab;
     public GameObject LongBridgeDetector;
@@ -15,6 +15,7 @@ public class FoxDetector : MonoBehaviour
     public Transform FoxTPTarget;
     void Start()
     {
+        fox = GameObject.FindWithTag("Fox");
         NewBridgeSpawnPoint.SetActive(false);
         FoxMovementTargetNew.SetActive(false);
         FoxMovementTargetOld.SetActive(true);

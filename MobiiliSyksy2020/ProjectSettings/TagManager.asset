@@ -12,6 +12,7 @@ TagManager:
   - BridgeSpawnPoint
   - PressDetector
   - BridgeSinkTarget
+  - SinkingPlatform
   layers:
   - Default
   - TransparentFX

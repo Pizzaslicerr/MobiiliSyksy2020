@@ -5,8 +5,10 @@ using UnityEngine;
 public class SinkingPlatform : MonoBehaviour
 {
     public Transform SinkingTarget;
-    private GameObject BridgeSinkingTarget;
+    public static GameObject BridgeSinkingTarget;
     private GameObject bridge;
+
+    public static bool SinkBridge;
 
     public float SinkingSpeed;
 
@@ -19,8 +21,7 @@ public class SinkingPlatform : MonoBehaviour
     {
         if (SinkingDetector.sinking)
         {
-            transform.position = Vector2.MoveTowards(transform.position, SinkingTarget.position, SinkingSpeed * Time.deltaTime);
-            bridge.transform.position = Vector2.MoveTowards(bridge.transform.position, BridgeSinkingTarget.transform.position, SinkingSpeed * Time.deltaTime);
+            this.transform.position = Vector2.MoveTowards(this.transform.position, SinkingTarget.position, SinkingSpeed * Time.deltaTime);
         }
     }
 }
