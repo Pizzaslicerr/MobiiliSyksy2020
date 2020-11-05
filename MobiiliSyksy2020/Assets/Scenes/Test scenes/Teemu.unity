@@ -777,6 +777,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4399646142205631347, guid: 45b78f88965db074e8cb1c0a222868a5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399646142205631347, guid: 45b78f88965db074e8cb1c0a222868a5,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399646142205631347, guid: 45b78f88965db074e8cb1c0a222868a5,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399646142205631347, guid: 45b78f88965db074e8cb1c0a222868a5,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45b78f88965db074e8cb1c0a222868a5, type: 3}
 --- !u!1 &1074135904
