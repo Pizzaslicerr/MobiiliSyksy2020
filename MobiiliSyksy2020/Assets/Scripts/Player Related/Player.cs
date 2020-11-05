@@ -96,18 +96,10 @@ public class Player : MonoBehaviour
         var velocity = FoxRB.velocity;
 
         //Detecting if players rigidbody is moving then playing walk animation
-        if (velocity.magnitude >= 0.1f)
+        if (velocity.magnitude <= 0.0f)
         {
-            anim.SetBool("isMoving", true);
-            anim.SetFloat("MoveX", 1f);
-   
-        }
-        //If players rigidbody isn´t moving then idle
-        else if (velocity.magnitude <= 0.0f)
-        {
-            anim.SetBool("isMoving", false);
             anim.SetFloat("MoveX", 0f);
-
+   
         }
     }
 
@@ -117,6 +109,7 @@ public class Player : MonoBehaviour
         BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
         BridgeRB.freezeRotation = true;
         transform.position = Vector2.MoveTowards(transform.position, FoxMovementTarget.transform.position, Speed * Time.deltaTime);
+        anim.SetFloat("MoveX", 1f);
     }
     void MoveFoxTooFar()
     {
@@ -124,6 +117,7 @@ public class Player : MonoBehaviour
         BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
         BridgeRB.freezeRotation = true;
         transform.position = Vector2.MoveTowards(transform.position, FoxFallTarget.transform.position, Speed * Time.deltaTime);
+        anim.SetFloat("MoveX", 1f);
     }
 
 }
