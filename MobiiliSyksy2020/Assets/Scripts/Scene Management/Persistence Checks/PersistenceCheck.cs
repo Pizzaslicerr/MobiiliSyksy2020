@@ -26,6 +26,7 @@ public class PersistenceCheck : MonoBehaviour
             }
             StartCoroutine(LoadPersistentScene());
         }
+        SceneHandler.instance.LoadedScene.ScenePath = this.gameObject.scene.path;
     }
 
     //This makes sure all required scenes are loaded

@@ -10,12 +10,8 @@ public class SceneHandler : MonoBehaviour
 {
     private LoadingScreenManager loadingScreenManager;  //loading screens are only visible (for now) with LoadAndUnloadScene()
     public GameObject backupCamera;
-    private string loadedScene;
-    public string LoadedScene { get => loadedScene; set => loadedScene = value; }
-
-    //this is a bodge. No lying about that here. If I were to properly fix this, it would take far longer.
-    private int loadedSceneAsInt;
-    public int LoadedSceneAsInt { get => loadedSceneAsInt; set => loadedSceneAsInt = value; }
+    private SceneReference loadedScene;
+    public SceneReference LoadedScene { get => loadedScene; set => loadedScene = value; }
 
     public static SceneHandler instance;
     private void Awake()
@@ -31,24 +27,16 @@ public class SceneHandler : MonoBehaviour
     //scene load operations are added to this list; this is required for loading bars and especially to make sure scenes have been loaded
     //two voids for method overloads, having a scene to unload is not necessary
     List<AsyncOperation> operations = new List<AsyncOperation>();
-    public void SceneLoad(SceneField sceneToLoad, LoadingScreens loadingScreen)
+    public void SceneLoad(SceneReference sceneToLoad, LoadingScreens loadingScreen)
     {
         backupCamera.SetActive(true);
-        operations.Add(SceneManager.LoadSceneAsync(sceneToLoad.SceneName, LoadSceneMode.Additive));
+        operations.Add(SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive));
 
         StartCoroutine(GetSceneLoadProgress());
     }
 
     //an alternative version of SceneLoad where the previous scene is unloaded during the new scene's load process. This is the one that's most often used.
-    public void SceneLoad(SceneField sceneToLoad, int sceneToUnload, LoadingScreens loadingScreen)
-    {
-        ToggleVisibilities(loadingScreen);
-        operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));
-        operations.Add(SceneManager.LoadSceneAsync(sceneToLoad.SceneName, LoadSceneMode.Additive));
-
-        StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
-    }
-    public void SceneLoad(int sceneToLoad, int sceneToUnload, LoadingScreens loadingScreen)
+    public void SceneLoad(SceneReference sceneToLoad, SceneReference sceneToUnload, LoadingScreens loadingScreen)
     {
         ToggleVisibilities(loadingScreen);
         operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));
@@ -57,19 +45,17 @@ public class SceneHandler : MonoBehaviour
         StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
     }
 
-
-    //--------------------------------------------------------------------------------------------------------------------------------------
-
-
-    //This is only used for the map screen. Goddamn edgecases...
-    public void SceneLoad(int mapBuildIndex, string sceneToUnload, LoadingScreens loadingScreen)
+    //an alternate that uses an int for unloading scenes as opposed to the new SceneReference.
+    public void SceneLoad(int sceneToLoad, SceneReference sceneToUnload, LoadingScreens loadingScreen)
     {
         ToggleVisibilities(loadingScreen);
         operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));
-        operations.Add(SceneManager.LoadSceneAsync(mapBuildIndex, LoadSceneMode.Additive));
+        operations.Add(SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive));
 
         StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
     }
+
+    //--------------------------------------------------------------------------------------------------------------------------------------
 
     //reloads current scene, so only requires one scene.
     public void SceneReload(int sceneToReload, LoadingScreens loadingScreen)
@@ -80,17 +66,6 @@ public class SceneHandler : MonoBehaviour
 
         StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
     }
-
-    //string version of SceneReload, thanks to SceneField bizarrely not allowing the user to get the build index.
-    public void SceneReload(string sceneToReload, LoadingScreens loadingScreen)
-    {
-        ToggleVisibilities(loadingScreen);
-        operations.Add(SceneManager.UnloadSceneAsync(sceneToReload));
-        operations.Add(SceneManager.LoadSceneAsync(sceneToReload, LoadSceneMode.Additive));
-
-        StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
-    }
-
 
     private IEnumerator GetSceneLoadProgress()
     {

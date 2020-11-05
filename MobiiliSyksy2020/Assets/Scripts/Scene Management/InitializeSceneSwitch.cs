@@ -16,7 +16,7 @@ namespace Utilities
         [SerializeField] private SceneTypes sceneType = SceneTypes.level;
 
         [Tooltip("Just drag and drop the desired scene into this field.")]
-        [SerializeField] private SceneField sceneToLoad = null;
+        [SerializeField] private SceneReference sceneToLoad = null;
         [Tooltip("Whether or not the previous scene should be unloaded. For most cases, leave this enabled.")]
         [SerializeField] private bool unloadPreviousScene = true;
 
@@ -24,14 +24,17 @@ namespace Utilities
         {
             if (unloadPreviousScene)
             {
-                SceneHandler.instance.SceneLoad(sceneToLoad, this.gameObject.scene.buildIndex, loadScreenType);
+                SceneReference currentScene = null;
+                currentScene.ScenePath = this.gameObject.scene.path;
+                currentScene.OnBeforeSerialize();
+                SceneHandler.instance.SceneLoad(sceneToLoad, currentScene, loadScreenType);
             }
             else
             {
                 SceneHandler.instance.SceneLoad(sceneToLoad, loadScreenType);
             }
 
-            SceneHandler.instance.LoadedScene = sceneToLoad.SceneName;
+            SceneHandler.instance.LoadedScene = sceneToLoad;
             DetermineSceneType();
 
             if (!pauseButtonLoaded)
@@ -40,13 +43,6 @@ namespace Utilities
                 pauseButtonLoaded = true;
             }
 
-        }
-
-        //only used to switch to map scene
-        public void ChangeToMapScene(int mapBuildIndex)
-        {
-            SceneHandler.instance.SceneLoad(mapBuildIndex, SceneHandler.instance.LoadedSceneAsInt, loadScreenType);
-            DetermineSceneType();
         }
 
         //this changes the SceneType variable, which affects what pause menu is used
