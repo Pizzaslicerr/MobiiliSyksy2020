@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a4e616166d67647b1bc7058342bf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
+  BridgePrefab: {fileID: 4399646142205631345, guid: 45b78f88965db074e8cb1c0a222868a5,
     type: 3}
   LongBridgeDetector: {fileID: 7544198398479846821}
   CorrectBridgeDetector: {fileID: 7544198397878882752}
