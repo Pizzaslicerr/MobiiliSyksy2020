@@ -89,19 +89,20 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.2078051, y: 5.124199}
       - {x: -0.19973953, y: 5.1369905}
-      - {x: -0.204534, y: -4.9147716}
-      - {x: -0.17198001, y: -2.176807}
-      - {x: -0.16468592, y: -1.4324055}
-      - {x: -0.1035659, y: -1.3839355}
-      - {x: 0.092105456, y: -0.9537306}
-      - {x: 0.16071631, y: -0.118490696}
+      - {x: -0.204534, y: -5.423016}
+      - {x: -0.11097151, y: -4.1603894}
+      - {x: -0.03710319, y: -2.8085268}
+      - {x: 0.040428936, y: -2.2214184}
+      - {x: 0.0938888, y: -1.6596256}
+      - {x: 0.16472878, y: -0.68320715}
       - {x: 0.1867192, y: 0.965785}
       - {x: 0.19805852, y: 1.9309427}
       - {x: 0.20187035, y: 2.6749034}
       - {x: 0.20375732, y: 2.898646}
       - {x: 0.20472822, y: 3.129147}
-      - {x: 0.2021249, y: 3.3017144}
-      - {x: 0.20406324, y: 3.4133024}
+      - {x: 0.20455275, y: 3.1968253}
+      - {x: 0.20435402, y: 3.2734783}
+      - {x: 0.20495489, y: 3.4133024}
       - {x: 0.20558609, y: 3.666423}
 --- !u!212 &8227736290969491421
 SpriteRenderer:
@@ -163,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4399646142205631346}
   - component: {fileID: 4399646142205631347}
-  - component: {fileID: 2802317324406600640}
+  - component: {fileID: -663708688026072447}
   m_Layer: 8
   m_Name: RockyDunesBridge
   m_TagString: Bridge
@@ -199,16 +200,16 @@ Rigidbody2D:
   m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
-  m_LinearDrag: 0.07
-  m_AngularDrag: 0.07
-  m_GravityScale: 6
+  m_Mass: 20
+  m_LinearDrag: 0.5
+  m_AngularDrag: 0.5
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: 588b08e7b5d6a7841a5f7aeb6d886b36, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2802317324406600640
+--- !u!114 &-663708688026072447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,7 +218,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4399646142205631345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17b0681540a8a384dad2a31290d085b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 87d59253e6354de4dbd334ad5b51b969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sinkingSpeed: 0

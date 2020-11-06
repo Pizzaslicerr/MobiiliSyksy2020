@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bridge : MonoBehaviour
+public class RockyBridge : MonoBehaviour
 {
     //Making these variables easily accessible from all scripts
     public static bool BridgeGrown;
     public static bool BridgeDown;
 
+    private GameObject sinkingPlatform;
+    public float sinkingSpeed;
+
     void Start()
     {
+        sinkingPlatform = GameObject.FindWithTag("SinkingPlatform");
         //To make sure a new bridge always has these variables set to false
         BridgeGrown = false;
         BridgeDown = false;
+        sinkingSpeed = sinkingPlatform.GetComponent<SinkingPlatform>().SinkingSpeed;
 
         if (Player.BridgeRB != null)
         {
@@ -21,5 +26,9 @@ public class Bridge : MonoBehaviour
     }
     private void Update()
     {
+        if (SinkingDetector.sinking)
+        {
+            gameObject.transform.position = Vector2.MoveTowards(gameObject.transform.position, SinkingPlatform.BridgeSinkingTarget.transform.position, sinkingSpeed * Time.deltaTime);
+        }
     }
 }
