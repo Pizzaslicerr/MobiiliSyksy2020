@@ -36,19 +36,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage1/Level7.unity
     guid: 4d4eaf891afdb0142845addbb0d264bb
   - enabled: 1
-    path: Assets/Scenes/Stage2/Stage2Level1.unity
+    path: Assets/Scenes/Stage3/Stage2Level1.unity
     guid: 9a9538fdbd47be34bb924eb4a574eac5
   - enabled: 1
-    path: Assets/Scenes/Stage2/Stage2Level2.unity
+    path: Assets/Scenes/Stage3/Stage2Level2.unity
     guid: 1b3e811fb78af2a4da4c8a355488c2ee
   - enabled: 1
-    path: Assets/Scenes/Stage2/Stage2Level3.unity
+    path: Assets/Scenes/Stage3/Stage2Level3.unity
     guid: 63a97125a1f0eac48a2ed585e9577712
   - enabled: 1
-    path: Assets/Scenes/Stage2/Stage2Level4.unity
+    path: Assets/Scenes/Stage3/Stage2Level4.unity
     guid: 35014f49a2e7fff4b8da01e4bf52055b
   - enabled: 1
-    path: Assets/Scenes/Stage2/Stage2Level5.unity
+    path: Assets/Scenes/Stage3/Stage2Level5.unity
     guid: acd6a4485e2a7984ba21e63f58cc2d59
   - enabled: 0
     path: Assets/Scenes/Test scenes/Teemu.unity
