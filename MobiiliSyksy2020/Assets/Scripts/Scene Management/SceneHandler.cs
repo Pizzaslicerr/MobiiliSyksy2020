@@ -10,8 +10,12 @@ public class SceneHandler : MonoBehaviour
 {
     private LoadingScreenManager loadingScreenManager;  //loading screens are only visible (for now) with LoadAndUnloadScene()
     public GameObject backupCamera;
-    private SceneReference loadedScene;
-    public SceneReference LoadedScene { get => loadedScene; set => loadedScene = value; }
+
+    private Scene loadedScene;
+    public Scene LoadedScene { get => loadedScene; set => loadedScene = value; }
+
+    [SerializeField] private int loadedSceneIndex;
+    public int LoadedSceneIndex { get => loadedSceneIndex; set => loadedSceneIndex = value; }
 
     public static SceneHandler instance;
     private void Awake()
@@ -36,7 +40,7 @@ public class SceneHandler : MonoBehaviour
     }
 
     //an alternative version of SceneLoad where the previous scene is unloaded during the new scene's load process. This is the one that's most often used.
-    public void SceneLoad(SceneReference sceneToLoad, SceneReference sceneToUnload, LoadingScreens loadingScreen)
+    public void SceneLoad(SceneReference sceneToLoad, Scene sceneToUnload, LoadingScreens loadingScreen)
     {
         ToggleVisibilities(loadingScreen);
         operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));
@@ -45,8 +49,8 @@ public class SceneHandler : MonoBehaviour
         StartCoroutine(GetSceneLoadProgress((int)loadingScreen));
     }
 
-    //an alternate that uses an int for unloading scenes as opposed to the new SceneReference.
-    public void SceneLoad(int sceneToLoad, SceneReference sceneToUnload, LoadingScreens loadingScreen)
+    //This alternative uses Scenes as opposed to SceneReferences. This is only reserved for scene variables assigned at runtime!
+    public void SceneLoad(int sceneToLoad, Scene sceneToUnload, LoadingScreens loadingScreen)
     {
         ToggleVisibilities(loadingScreen);
         operations.Add(SceneManager.UnloadSceneAsync(sceneToUnload));

@@ -26,7 +26,13 @@ public class PersistenceCheck : MonoBehaviour
             }
             StartCoroutine(LoadPersistentScene());
         }
-        SceneHandler.instance.LoadedScene.ScenePath = this.gameObject.scene.path;
+
+        //makes it so the most recently loaded scene (that isn't for managing game elements) is easily accessible
+        if (this.gameObject.scene.buildIndex != 0)
+        {
+            SceneHandler.instance.LoadedScene = this.gameObject.scene;
+            SceneHandler.instance.LoadedSceneIndex = this.gameObject.scene.buildIndex;
+        }
     }
 
     //This makes sure all required scenes are loaded

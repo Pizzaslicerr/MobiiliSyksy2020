@@ -5,20 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class NextAndReplay : MonoBehaviour
 {
-    [SerializeField] SceneReference thisScene = null;
+    [SerializeField] private Scene thisScene;
     private void Awake()
     {
-        thisScene.ScenePath = this.gameObject.scene.path;
-        thisScene.OnBeforeSerialize();
+        thisScene = this.gameObject.scene;
     }
 
     public void nextLevel()
     {
-        if (SceneManager.GetSceneByBuildIndex(this.gameObject.scene.buildIndex + 1).IsValid())
-        {
+        //Commented the if statement out because Unity is dumb like that and made the statement not work
+        /*if (SceneManager.GetSceneByBuildIndex(this.gameObject.scene.buildIndex + 1).IsValid())
+        {*/
             SceneHandler.instance.LoadedScene = thisScene;
             SceneHandler.instance.SceneLoad(this.gameObject.scene.buildIndex + 1, thisScene, LoadingScreens.Leaves);
-        }
+        //}
     }
     public void reloadLevel()
     {

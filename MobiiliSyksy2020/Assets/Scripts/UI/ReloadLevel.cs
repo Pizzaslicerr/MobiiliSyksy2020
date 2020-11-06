@@ -8,12 +8,12 @@ using UnityEngine.SceneManagement;
 
 public class ReloadLevel : MonoBehaviour
 {
-    private Scene sceneToReload = SceneManager.GetSceneByPath(SceneHandler.instance.LoadedScene);
+    //This is ran through the scene reload button.
     public void Reload()
     {
-        if (sceneToReload.IsValid())
+        if (SceneHandler.instance.LoadedScene.IsValid())
         {
-            SceneHandler.instance.SceneReload(sceneToReload.buildIndex, LoadingScreens.Leaves);
+            SceneHandler.instance.SceneReload(SceneHandler.instance.LoadedScene.buildIndex, LoadingScreens.Leaves);
         }
     }
 }

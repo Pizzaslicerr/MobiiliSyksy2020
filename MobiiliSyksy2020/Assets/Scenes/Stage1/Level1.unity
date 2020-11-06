@@ -1218,8 +1218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisScene:
-    sceneAsset: {fileID: 0}
-    scenePath: 
+    m_Handle: 0
 --- !u!1 &1292168267
 GameObject:
   m_ObjectHideFlags: 0

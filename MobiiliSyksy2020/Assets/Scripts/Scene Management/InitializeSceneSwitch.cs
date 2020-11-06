@@ -17,6 +17,7 @@ namespace Utilities
 
         [Tooltip("Just drag and drop the desired scene into this field.")]
         [SerializeField] private SceneReference sceneToLoad = null;
+
         [Tooltip("Whether or not the previous scene should be unloaded. For most cases, leave this enabled.")]
         [SerializeField] private bool unloadPreviousScene = true;
 
@@ -24,17 +25,13 @@ namespace Utilities
         {
             if (unloadPreviousScene)
             {
-                SceneReference currentScene = null;
-                currentScene.ScenePath = this.gameObject.scene.path;
-                currentScene.OnBeforeSerialize();
-                SceneHandler.instance.SceneLoad(sceneToLoad, currentScene, loadScreenType);
+                SceneHandler.instance.SceneLoad(sceneToLoad, SceneHandler.instance.LoadedScene, loadScreenType);
             }
             else
             {
                 SceneHandler.instance.SceneLoad(sceneToLoad, loadScreenType);
             }
 
-            SceneHandler.instance.LoadedScene = sceneToLoad;
             DetermineSceneType();
 
             if (!pauseButtonLoaded)
