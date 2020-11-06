@@ -55,6 +55,7 @@ public class PawHandler : MonoBehaviour
         Bridge.BridgeDown = false;
         Player.BridgeRB.freezeRotation = false;
         Player.BridgeRB.constraints = RigidbodyConstraints2D.None;
+        Player.BridgeRB.angularVelocity = 0;
         //Reset the bridge to the next spot, or the current one if it fell
         Player.BridgeO = GameObject.FindWithTag("Bridge");
         Player.BridgeO.transform.localScale = BridgePrefab.transform.localScale;
