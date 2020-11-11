@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13720d04cf40a5b4e89fd7fe14b69521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paws: 0
+  paws: 4
   pawRoot: {fileID: 1223889896}
   pawPrefab: {fileID: 7514769633777815121, guid: e1ab086d9bcde0f45bda41e1bbcdb5ce,
     type: 3}
@@ -1421,54 +1421,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2118566231}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1431061506
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1431061508}
-  - component: {fileID: 1431061507}
-  m_Layer: 0
-  m_Name: AppleHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1431061507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431061506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322c88d9842aef54ba4bf4762afe9a92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  apples:
-  - {fileID: 930183684}
-  - {fileID: 1287093080}
-  - {fileID: 1747203226}
-  pawCount: 0
---- !u!4 &1431061508
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431061506}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 276.90884, y: 612.0194, z: -53.382587}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1626382888 stripped
 Transform:
@@ -4247,6 +4199,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1241887107}
     m_Modifications:
+    - target: {fileID: 1048751069919968859, guid: 9358b1c46abf648479a1363f8e4c0819,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641672437976544606, guid: 9358b1c46abf648479a1363f8e4c0819,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5363018310313031966, guid: 9358b1c46abf648479a1363f8e4c0819,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4372,6 +4334,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1241887108}
+    - target: {fileID: 7861699803841483818, guid: 9358b1c46abf648479a1363f8e4c0819,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9358b1c46abf648479a1363f8e4c0819, type: 3}
 --- !u!4 &7287037661277379615
@@ -5350,6 +5317,7 @@ GameObject:
   - component: {fileID: 7769264094687358108}
   - component: {fileID: 4646520463216972895}
   - component: {fileID: 1974461529}
+  - component: {fileID: 7769264094687358107}
   m_Layer: 10
   m_Name: FoxDetector
   m_TagString: Untagged
@@ -5357,6 +5325,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7769264094687358107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7769264094687358106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322c88d9842aef54ba4bf4762afe9a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apples:
+  - {fileID: 930183684}
+  - {fileID: 1287093080}
+  - {fileID: 1747203226}
 --- !u!61 &7769264094687358108
 BoxCollider2D:
   m_ObjectHideFlags: 0

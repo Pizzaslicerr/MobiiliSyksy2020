@@ -12,36 +12,41 @@ public class AppleHandler : MonoBehaviour
 
     void Start()
     {
+        //Checks how many paws are in the scene
         pawCount = GameObject.FindGameObjectsWithTag("Paw").Length;
+   
     }
 
     public void ApplesAcheived()
     {
-        int pawsLeft = GameObject.FindGameObjectsWithTag("Paw").Length;
+        int pawsLost = GameObject.FindGameObjectsWithTag("Paw").Length;
 
-        //One apple
-        if (pawsLeft == 1)
+        if (pawsLost == 1)
         {
+            //One apple
             apples[0].SetActive(true);
     
         }
-        //Two apples
-        else if (pawsLeft == 2)
+        
+        else if (pawsLost == 2)
         {
+            //Two apples
             apples[0].SetActive(true);
-            apples[2].SetActive(true);
+            apples[1].SetActive(true);
         }
-        else if (pawsLeft == 3)
+        else if (pawsLost == 3)
         {
+            //Two apples
             apples[0].SetActive(true);
-            apples[2].SetActive(true);
+            apples[1].SetActive(true);
         }
-        //Three apples
-        else if (pawsLeft == 4)
+
+        else if (pawsLost == 4)
         {
+            //Three apples
             apples[0].SetActive(true);
+            apples[1].SetActive(true);
             apples[2].SetActive(true);
-            apples[3].SetActive(true);
         }
 
     }
