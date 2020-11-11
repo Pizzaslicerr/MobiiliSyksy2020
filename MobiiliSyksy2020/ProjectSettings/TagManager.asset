@@ -16,6 +16,7 @@ TagManager:
   - FoxTpTarget
   - MoveNode1
   - MoveNode2
+  - Paw
   layers:
   - Default
   - TransparentFX
