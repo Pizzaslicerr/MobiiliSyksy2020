@@ -1,22 +1,7 @@
 fileFormatVersion: 2
-guid: d1b6998d0070025419a3c7960fbb23a2
+guid: f295554ffa4167b4ebd38d525c56b1d8
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 5064087528559644174
-    second: s_e_AutumnWoods_PlatformsBasic_0
-  - first:
-      213: -5337960420726062741
-    second: s_e_AutumnWoods_PlatformsBasic_1
-  - first:
-      213: 4409924430175830932
-    second: s_e_AutumnWoods_PlatformsBasic_2
-  - first:
-      213: 8554184910216670933
-    second: s_e_AutumnWoods_PlatformsBasic_3
-  - first:
-      213: -7754525805056264364
-    second: s_e_AutumnWoods_PlatformsBasic_4
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -86,138 +71,9 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: s_e_AutumnWoods_PlatformsBasic_0
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 0
-        width: 584
-        height: 1005
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0e884bc6c0474640800000000000000
-      internalID: 5064087528559644174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: s_e_AutumnWoods_PlatformsBasic_1
-      rect:
-        serializedVersion: 2
-        x: 626
-        y: 0
-        width: 416
-        height: 992
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6147817741cbe5b0800000000000000
-      internalID: -5337960420726062741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: s_e_AutumnWoods_PlatformsBasic_2
-      rect:
-        serializedVersion: 2
-        x: 1063
-        y: 0
-        width: 341
-        height: 990
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49382fa87e2333d30800000000000000
-      internalID: 4409924430175830932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: s_e_AutumnWoods_PlatformsBasic_3
-      rect:
-        serializedVersion: 2
-        x: 1434
-        y: 0
-        width: 221
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5dea8749ad196b670800000000000000
-      internalID: 8554184910216670933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: s_e_AutumnWoods_PlatformsBasic_4
-      rect:
-        serializedVersion: 2
-        x: 1697
-        y: 0
-        width: 181
-        height: 1012
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45775049dd3626490800000000000000
-      internalID: -7754525805056264364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

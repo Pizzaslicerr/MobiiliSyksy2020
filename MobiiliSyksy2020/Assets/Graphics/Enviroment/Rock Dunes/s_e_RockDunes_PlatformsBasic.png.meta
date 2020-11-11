@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3788aea6f427c3b42b13a1c2f0311c7a
+guid: 51515d9056c72124f895bf241d6e9b30
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -117,8 +117,8 @@ TextureImporter:
       name: s_e_RockDunes_PlatformsBasic_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 0
+        x: 103
+        y: 19
         width: 548
         height: 966
       alignment: 0
@@ -138,8 +138,8 @@ TextureImporter:
       name: s_e_RockDunes_PlatformsBasic_1
       rect:
         serializedVersion: 2
-        x: 614
-        y: 0
+        x: 705
+        y: 19
         width: 405
         height: 981
       alignment: 0
@@ -159,8 +159,8 @@ TextureImporter:
       name: s_e_RockDunes_PlatformsBasic_2
       rect:
         serializedVersion: 2
-        x: 1045
-        y: 0
+        x: 1136
+        y: 19
         width: 340
         height: 960
       alignment: 0
@@ -180,8 +180,8 @@ TextureImporter:
       name: s_e_RockDunes_PlatformsBasic_3
       rect:
         serializedVersion: 2
-        x: 1416
-        y: 0
+        x: 1507
+        y: 19
         width: 221
         height: 958
       alignment: 0
@@ -201,8 +201,8 @@ TextureImporter:
       name: s_e_RockDunes_PlatformsBasic_4
       rect:
         serializedVersion: 2
-        x: 1679
-        y: 0
+        x: 1770
+        y: 19
         width: 181
         height: 975
       alignment: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d3b87fc391022ed49afcf05c33168ff2
+guid: 43a0a00d88b545b4e8bde6f43ea91620
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -17,6 +17,9 @@ TextureImporter:
   - first:
       213: 3948480566549701673
     second: s_e_RockDunes_PlatformsSand_4
+  - first:
+      213: -275986415737830911
+    second: s_e_RockDunes_PlatformsSand_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,10 +120,10 @@ TextureImporter:
       name: s_e_RockDunes_PlatformsSand_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 0
-        width: 546
-        height: 947
+        x: 429
+        y: 958
+        width: 1118
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,10 +141,10 @@ TextureImporter:
       name: s_e_RockDunes_PlatformsSand_1
       rect:
         serializedVersion: 2
-        x: 617
+        x: 105
         y: 0
-        width: 399
-        height: 947
+        width: 545
+        height: 946
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +162,10 @@ TextureImporter:
       name: s_e_RockDunes_PlatformsSand_2
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 708
         y: 0
-        width: 322
-        height: 947
+        width: 399
+        height: 946
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,10 +183,10 @@ TextureImporter:
       name: s_e_RockDunes_PlatformsSand_3
       rect:
         serializedVersion: 2
-        x: 1424
+        x: 1147
         y: 0
-        width: 207
-        height: 947
+        width: 322
+        height: 946
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +204,10 @@ TextureImporter:
       name: s_e_RockDunes_PlatformsSand_4
       rect:
         serializedVersion: 2
-        x: 1687
+        x: 1515
         y: 0
-        width: 163
-        height: 947
+        width: 207
+        height: 946
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,6 +217,27 @@ TextureImporter:
       bones: []
       spriteID: 9246ab3c722dbc630800000000000000
       internalID: 3948480566549701673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_RockDunes_PlatformsSand_5
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 0
+        width: 163
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1020d1f21df7b2cf0800000000000000
+      internalID: -275986415737830911
       vertices: []
       indices: 
       edges: []
