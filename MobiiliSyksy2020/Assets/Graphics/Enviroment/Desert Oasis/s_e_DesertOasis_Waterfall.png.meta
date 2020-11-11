@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: 38456bf686838e9478defb6572453064
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8359858022274502068
+    second: s_e_DesertOasis_Waterfall_0
+  - first:
+      213: -2889294327915333639
+    second: s_e_DesertOasis_Waterfall_1
+  - first:
+      213: -5096622755241395883
+    second: s_e_DesertOasis_Waterfall_2
+  - first:
+      213: 7100549971168072499
+    second: s_e_DesertOasis_Waterfall_3
+  - first:
+      213: -4372280999539346565
+    second: s_e_DesertOasis_Waterfall_4
+  - first:
+      213: 6008339480446492990
+    second: s_e_DesertOasis_Waterfall_5
+  - first:
+      213: -2497871888534069997
+    second: s_e_DesertOasis_Waterfall_6
+  - first:
+      213: -7330750413054123077
+    second: s_e_DesertOasis_Waterfall_7
+  - first:
+      213: -7746992672999246480
+    second: s_e_DesertOasis_Waterfall_8
+  - first:
+      213: -603932513965935574
+    second: s_e_DesertOasis_Waterfall_9
+  - first:
+      213: -2360067041551045227
+    second: s_e_DesertOasis_Waterfall_10
+  - first:
+      213: -8616121388552222358
+    second: s_e_DesertOasis_Waterfall_11
+  - first:
+      213: -4847425173186456254
+    second: s_e_DesertOasis_Waterfall_12
+  - first:
+      213: 3902726137765407637
+    second: s_e_DesertOasis_Waterfall_13
+  - first:
+      213: 9099881436999166545
+    second: s_e_DesertOasis_Waterfall_14
+  - first:
+      213: -8852002061657912640
+    second: s_e_DesertOasis_Waterfall_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,7 +145,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: s_e_DesertOasis_Waterfall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 436
+        height: 2048
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd0f5e249e240470800000000000000
+      internalID: 8359858022274502068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_DesertOasis_Waterfall_1
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 0
+        width: 436
+        height: 2048
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f73e0ded1a27e7d0800000000000000
+      internalID: -2889294327915333639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_DesertOasis_Waterfall_2
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 0
+        width: 436
+        height: 2048
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559f9af6b982549b0800000000000000
+      internalID: -5096622755241395883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_DesertOasis_Waterfall_3
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 0
+        width: 436
+        height: 2048
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333126514983a8260800000000000000
+      internalID: 7100549971168072499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_DesertOasis_Waterfall_4
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 0
+        width: 436
+        height: 2048
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b737444a8998253c0800000000000000
+      internalID: -4372280999539346565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_DesertOasis_Waterfall_5
+      rect:
+        serializedVersion: 2
+        x: 2185
+        y: 0
+        width: 436
+        height: 2048
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31e7f58ce8e16350800000000000000
+      internalID: 6008339480446492990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_DesertOasis_Waterfall_6
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 0
+        width: 436
+        height: 2048
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d1e7d60c6c55dd0800000000000000
+      internalID: -2497871888534069997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_DesertOasis_Waterfall_7
+      rect:
+        serializedVersion: 2
+        x: 3059
+        y: 0
+        width: 436
+        height: 2048
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb36cdcd651f34a90800000000000000
+      internalID: -7330750413054123077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

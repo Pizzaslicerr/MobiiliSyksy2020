@@ -1,37 +1,76 @@
 fileFormatVersion: 2
-guid: 31fd907847d49ff4e9c08cf93715f72f
+guid: 2955cd7998a59984abad30110143e5bf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5329658137273675705
-    second: s_e_DesertOasis_PlatformsLogs_0
+      213: 6651428639459484238
+    second: s_e_DesertOasis_Foreground_layers_0
   - first:
-      213: 3991316422485741072
-    second: s_e_DesertOasis_PlatformsLogs_1
+      213: 7494065520022485177
+    second: s_e_DesertOasis_Foreground_layers_1
   - first:
-      213: 3054160946753132737
-    second: s_e_DesertOasis_PlatformsLogs_2
+      213: -381328222591856387
+    second: s_e_DesertOasis_Foreground_layers_2
   - first:
-      213: -3873746484361756485
-    second: s_e_DesertOasis_PlatformsLogs_3
+      213: -4746094126966911553
+    second: s_e_DesertOasis_Foreground_layers_3
   - first:
-      213: 268434347625970521
-    second: s_e_DesertOasis_PlatformsLogs_4
+      213: 2949059742636357000
+    second: s_e_DesertOasis_Foreground_layers_4
   - first:
-      213: -906492875565949041
-    second: s_e_DesertOasis_PlatformsLogs_5
+      213: 269286675291422888
+    second: s_e_DesertOasis_Foreground_layers_5
   - first:
-      213: -6920331984451966380
-    second: s_e_DesertOasis_PlatformsLogs_6
+      213: 1557603536385168409
+    second: s_e_DesertOasis_Foreground_layers_6
   - first:
-      213: 1211264214380474351
-    second: s_e_DesertOasis_PlatformsLogs_7
+      213: -1098687549991288170
+    second: s_e_DesertOasis_Foreground_layers_7
   - first:
-      213: -935416095494142291
-    second: s_e_DesertOasis_PlatformsLogs_8
+      213: -3130141848139700437
+    second: s_e_DesertOasis_Foreground_layers_8
   - first:
-      213: 7774908462420136529
-    second: s_e_DesertOasis_PlatformsLogs_9
+      213: 1434310378414341874
+    second: s_e_DesertOasis_Foreground_layers_9
+  - first:
+      213: 1502403629386228797
+    second: s_e_DesertOasis_Foreground_layers_10
+  - first:
+      213: 7036431262360658393
+    second: s_e_DesertOasis_Foreground_layers_11
+  - first:
+      213: -5123367191309692152
+    second: s_e_DesertOasis_Foreground_layers_12
+  - first:
+      213: -7402406185719878938
+    second: s_e_DesertOasis_Foreground_layers_13
+  - first:
+      213: -5119356818020133007
+    second: s_e_DesertOasis_Foreground_layers_14
+  - first:
+      213: 1307942508537223518
+    second: s_e_DesertOasis_Foreground_layers_15
+  - first:
+      213: 4805803346166585004
+    second: s_e_DesertOasis_Foreground_layers_16
+  - first:
+      213: -8918421741862117418
+    second: s_e_DesertOasis_Foreground_layers_17
+  - first:
+      213: 8353940949197123600
+    second: s_e_DesertOasis_Foreground_layers_18
+  - first:
+      213: -4079548218130929628
+    second: s_e_DesertOasis_Foreground_layers_19
+  - first:
+      213: 3087415491511386727
+    second: s_e_DesertOasis_Foreground_layers_20
+  - first:
+      213: 4620653641327689478
+    second: s_e_DesertOasis_Foreground_layers_21
+  - first:
+      213: -6648056714645352809
+    second: s_e_DesertOasis_Foreground_layers_22
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -129,13 +168,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: s_e_DesertOasis_PlatformsLogs_0
+      name: s_e_DesertOasis_Foreground_layers_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 388
-        width: 490
-        height: 112
+        y: 1087
+        width: 2048
+        height: 961
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,41 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 740588179204906b0800000000000000
-      internalID: -5329658137273675705
+      spriteID: e42a7d75b1f9e4c50800000000000000
+      internalID: 6651428639459484238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: s_e_DesertOasis_PlatformsLogs_1
-      rect:
-        serializedVersion: 2
-        x: 490
-        y: 384
-        width: 365
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01e027ca321046730800000000000000
-      internalID: 3991316422485741072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: s_e_DesertOasis_PlatformsLogs_2
+      name: s_e_DesertOasis_Foreground_layers_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 264
-        width: 490
-        height: 112
+        y: 683
+        width: 2048
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c8571e033f826a20800000000000000
-      internalID: 3054160946753132737
+      spriteID: 9b8717c92e4400860800000000000000
+      internalID: 7494065520022485177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: s_e_DesertOasis_PlatformsLogs_3
+      name: s_e_DesertOasis_Foreground_layers_2
       rect:
         serializedVersion: 2
-        x: 490
-        y: 260
-        width: 365
-        height: 111
+        x: 0
+        y: 1
+        width: 2048
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,50 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb003b1b810bd3ac0800000000000000
-      internalID: -3873746484361756485
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: s_e_DesertOasis_PlatformsLogs_4
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 134
-        width: 282
-        height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95b72cfed9ba9b300800000000000000
-      internalID: 268434347625970521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: s_e_DesertOasis_PlatformsLogs_5
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 10
-        width: 282
-        height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8f1870588d7b63f0800000000000000
-      internalID: -906492875565949041
+      spriteID: df0d49d700045baf0800000000000000
+      internalID: -381328222591856387
       vertices: []
       indices: 
       edges: []
