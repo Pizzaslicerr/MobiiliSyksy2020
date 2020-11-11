@@ -6,13 +6,13 @@ public class EndScreen : MonoBehaviour
 {
 
     public GameObject Endscrn;
-    
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Fox")
-        {
+        if (other.gameObject.tag == "Fox")
+        { 
             Endscrn.gameObject.SetActive(true);
+            GetComponent<AppleHandler>().ApplesAcheived();
         }
     }
 }

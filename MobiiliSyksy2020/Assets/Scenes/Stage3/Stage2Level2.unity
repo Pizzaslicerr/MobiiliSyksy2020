@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -172,7 +172,7 @@ MonoBehaviour:
   NewBridgeSpawnPoint: {fileID: 1948457243}
   FoxMovementTargetOld: {fileID: 1088676781}
   FoxMovementTargetNew: {fileID: 1088676781}
-  FoxTPTarget: {fileID: 1812012798}
+  FoxTPTarget: {fileID: 1812012797}
 --- !u!61 &14751457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1605,7 +1605,7 @@ MonoBehaviour:
   NewBridgeSpawnPoint: {fileID: 291400800}
   FoxMovementTargetOld: {fileID: 1672776659}
   FoxMovementTargetNew: {fileID: 1672776659}
-  FoxTPTarget: {fileID: 1368917911}
+  FoxTPTarget: {fileID: 1368917910}
 --- !u!61 &674867424
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1780,7 +1780,7 @@ MonoBehaviour:
   NewBridgeSpawnPoint: {fileID: 1186208226}
   FoxMovementTargetOld: {fileID: 652306515}
   FoxMovementTargetNew: {fileID: 652306515}
-  FoxTPTarget: {fileID: 1202498809}
+  FoxTPTarget: {fileID: 1202498808}
 --- !u!61 &696930225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1824,7 +1824,7 @@ GameObject:
   - component: {fileID: 718600870}
   m_Layer: 0
   m_Name: FoxTpPoint
-  m_TagString: Untagged
+  m_TagString: FoxTpTarget
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2803,7 +2803,7 @@ GameObject:
   - component: {fileID: 1202498809}
   m_Layer: 0
   m_Name: FoxTpPoint
-  m_TagString: Untagged
+  m_TagString: FoxTpTarget
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2947,6 +2947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c9b55db7ea09f45946f50098da1cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisScene:
+    m_Handle: 0
 --- !u!1 &1273752078
 GameObject:
   m_ObjectHideFlags: 0
@@ -3162,7 +3164,7 @@ GameObject:
   - component: {fileID: 1368917911}
   m_Layer: 0
   m_Name: FoxTpPoint
-  m_TagString: Untagged
+  m_TagString: FoxTpTarget
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3674,7 +3676,7 @@ GameObject:
   - component: {fileID: 1812012798}
   m_Layer: 0
   m_Name: FoxTpPoint
-  m_TagString: Untagged
+  m_TagString: FoxTpTarget
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5681,7 +5683,7 @@ MonoBehaviour:
   NewBridgeSpawnPoint: {fileID: 398083666}
   FoxMovementTargetOld: {fileID: 842642552}
   FoxMovementTargetNew: {fileID: 842642552}
-  FoxTPTarget: {fileID: 718600870}
+  FoxTPTarget: {fileID: 718600869}
 --- !u!61 &2088345614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6040,7 +6042,7 @@ GameObject:
   - component: {fileID: 3848155327114252435}
   m_Layer: 0
   m_Name: FoxTpPoint
-  m_TagString: Untagged
+  m_TagString: FoxTpTarget
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6586,7 +6588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754839513974036449}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26, y: 0, z: 3.365}
+  m_LocalPosition: {x: 30.37, y: 0, z: 3.365}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1754839514776593364}
@@ -7598,7 +7600,7 @@ MonoBehaviour:
   NewBridgeSpawnPoint: {fileID: 6199821399599796779}
   FoxMovementTargetOld: {fileID: 8741359388924094362}
   FoxMovementTargetNew: {fileID: 8741359388924094362}
-  FoxTPTarget: {fileID: 4931556220448788254}
+  FoxTPTarget: {fileID: 8702235370060782333}
 --- !u!1 &4100106661167554460
 GameObject:
   m_ObjectHideFlags: 0
@@ -7986,7 +7988,7 @@ MonoBehaviour:
   NewBridgeSpawnPoint: {fileID: 2818475014349196710}
   FoxMovementTargetOld: {fileID: 601372027991062551}
   FoxMovementTargetNew: {fileID: 601372027991062551}
-  FoxTPTarget: {fileID: 3848155327114252435}
+  FoxTPTarget: {fileID: 708050676584531312}
 --- !u!1001 &5363018310062306589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8154,7 +8156,7 @@ MonoBehaviour:
   NewBridgeSpawnPoint: {fileID: 2459581394677706864}
   FoxMovementTargetOld: {fileID: 965895147167860161}
   FoxMovementTargetNew: {fileID: 965895147167860161}
-  FoxTPTarget: {fileID: 1594913265955220754}
+  FoxTPTarget: {fileID: 8704207864565487606}
 --- !u!4 &5580605996378184513
 Transform:
   m_ObjectHideFlags: 0
@@ -9336,7 +9338,7 @@ GameObject:
   - component: {fileID: 4931556220448788254}
   m_Layer: 0
   m_Name: FoxTpPoint
-  m_TagString: Untagged
+  m_TagString: FoxTpTarget
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9352,7 +9354,7 @@ GameObject:
   - component: {fileID: 1594913265955220754}
   m_Layer: 0
   m_Name: FoxTpPoint
-  m_TagString: Untagged
+  m_TagString: FoxTpTarget
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
