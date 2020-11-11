@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 31fd907847d49ff4e9c08cf93715f72f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5329658137273675705
+    second: s_e_DesertOasis_PlatformsLogs_0
+  - first:
+      213: 3991316422485741072
+    second: s_e_DesertOasis_PlatformsLogs_1
+  - first:
+      213: 3054160946753132737
+    second: s_e_DesertOasis_PlatformsLogs_2
+  - first:
+      213: -3873746484361756485
+    second: s_e_DesertOasis_PlatformsLogs_3
+  - first:
+      213: 268434347625970521
+    second: s_e_DesertOasis_PlatformsLogs_4
+  - first:
+      213: -906492875565949041
+    second: s_e_DesertOasis_PlatformsLogs_5
+  - first:
+      213: -6920331984451966380
+    second: s_e_DesertOasis_PlatformsLogs_6
+  - first:
+      213: 1211264214380474351
+    second: s_e_DesertOasis_PlatformsLogs_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,7 +121,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: s_e_DesertOasis_PlatformsLogs_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 149
+        width: 488
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740588179204906b0800000000000000
+      internalID: -5329658137273675705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_DesertOasis_PlatformsLogs_1
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 145
+        width: 356
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e027ca321046730800000000000000
+      internalID: 3991316422485741072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_DesertOasis_PlatformsLogs_2
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 147
+        width: 278
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8571e033f826a20800000000000000
+      internalID: 3054160946753132737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_DesertOasis_PlatformsLogs_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 4
+        width: 475
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b72cfed9ba9b300800000000000000
+      internalID: 268434347625970521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_DesertOasis_PlatformsLogs_6
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 0
+        width: 357
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a67f2c9ba06ff90800000000000000
+      internalID: -6920331984451966380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_e_DesertOasis_PlatformsLogs_7
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 1
+        width: 273
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef6a4ba2664fc010800000000000000
+      internalID: 1211264214380474351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

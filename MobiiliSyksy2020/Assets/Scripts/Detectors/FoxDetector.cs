@@ -12,20 +12,23 @@ public class FoxDetector : MonoBehaviour
     public GameObject NewBridgeSpawnPoint;
     public GameObject FoxMovementTargetOld;
     public GameObject FoxMovementTargetNew;
-    public Transform FoxTPTarget;
+    public GameObject FoxTPTarget;
     void Start()
     {
         fox = GameObject.FindWithTag("Fox");
         NewBridgeSpawnPoint.SetActive(false);
         FoxMovementTargetNew.SetActive(false);
         FoxMovementTargetOld.SetActive(true);
+        FoxTPTarget.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Fox")
         {
-            fox.transform.position = FoxTPTarget.position;
+            GameObject.FindWithTag("FoxTpTarget").SetActive(false);
+            FoxTPTarget.SetActive(true);
+            fox.transform.position = FoxTPTarget.transform.position;
 
             GameObject.FindWithTag("BridgeSpawnPoint").SetActive(false);
             NewBridgeSpawnPoint.SetActive(true);

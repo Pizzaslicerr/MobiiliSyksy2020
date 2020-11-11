@@ -168,7 +168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718930755474407689}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: -1.340939, z: 4.1191406}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1718930754670818620}
@@ -335,7 +335,7 @@ MonoBehaviour:
   NewBridgeSpawnPoint: {fileID: 5972887167132840906}
   FoxMovementTargetOld: {fileID: 9054004916936984187}
   FoxMovementTargetNew: {fileID: 9054004916936984187}
-  FoxTPTarget: {fileID: 4654942788524453631}
+  FoxTPTarget: {fileID: 8947888826918107932}
 --- !u!114 &8938280688967594322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 4654942788524453631}
   m_Layer: 0
   m_Name: FoxTpPoint
-  m_TagString: Untagged
+  m_TagString: FoxTpTarget
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

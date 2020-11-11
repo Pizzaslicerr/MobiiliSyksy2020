@@ -13,6 +13,9 @@ TagManager:
   - PressDetector
   - BridgeSinkTarget
   - SinkingPlatform
+  - FoxTpTarget
+  - MoveNode1
+  - MoveNode2
   layers:
   - Default
   - TransparentFX
