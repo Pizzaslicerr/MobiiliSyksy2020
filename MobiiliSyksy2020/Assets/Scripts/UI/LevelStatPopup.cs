@@ -18,6 +18,10 @@ public class LevelStatPopup : MonoBehaviour
     [SerializeField] private GameObject popupPanelPrefab = null;
     [SerializeField] private GameObject popupArrowPrefab = null;
 
+    private int appleCount = 0;
+    public int AppleCount { get => appleCount;
+                            set => appleCount = value; }
+
     public void ToggleLevelStats(GameObject currentButton)
     {
         //does a popup not yet exist in the scene?
@@ -46,6 +50,7 @@ public class LevelStatPopup : MonoBehaviour
         previousLevelButton = currentButton;
     }
 
+    //instantiates the popup and offsets it from the edge of the screen if it is too close.
     private void InstantiatePopup(GameObject currentButton)
     {
         var buttonPositionX = currentButton.GetComponent<RectTransform>().localPosition.x;

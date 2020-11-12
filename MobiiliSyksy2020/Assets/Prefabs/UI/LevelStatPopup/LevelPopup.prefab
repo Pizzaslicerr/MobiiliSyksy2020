@@ -91,7 +91,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8479569427034157340
 RectTransform:
   m_ObjectHideFlags: 0
@@ -106,9 +106,9 @@ RectTransform:
   m_Father: {fileID: 8479569427194199311}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 387.5, y: -50}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8479569427034157338
@@ -161,7 +161,6 @@ GameObject:
   - component: {fileID: 8479569427165987485}
   - component: {fileID: 8479569427165987484}
   - component: {fileID: 8479569427165987487}
-  - component: {fileID: 6527270451302062920}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -269,7 +268,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6527270451302062920}
+      - m_Target: {fileID: 0}
         m_MethodName: PressLevelLoadButton
         m_Mode: 1
         m_Arguments:
@@ -280,18 +279,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6527270451302062920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8479569427165987473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6cadcb2141fb694ca8fb5e9944ff68f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8479569427194199310
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8479569427880353713
 RectTransform:
   m_ObjectHideFlags: 0
@@ -521,9 +508,9 @@ RectTransform:
   m_Father: {fileID: 8479569427194199311}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 242.5, y: -50}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8479569427880353727
@@ -581,7 +568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8479569428233107933
 RectTransform:
   m_ObjectHideFlags: 0
@@ -596,9 +583,9 @@ RectTransform:
   m_Father: {fileID: 8479569427194199311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 97.5, y: -50}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8479569428233107931
@@ -781,6 +768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8479569428524209215}
+  - component: {fileID: 3362843476261289933}
   m_Layer: 5
   m_Name: LevelPopup
   m_TagString: Untagged
@@ -811,3 +799,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 475, y: 550}
   m_Pivot: {x: 0.5, y: -0.22}
+--- !u!114 &3362843476261289933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8479569428524209214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cadcb2141fb694ca8fb5e9944ff68f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apples:
+  - {fileID: 8479569428233107932}
+  - {fileID: 8479569427880353712}
+  - {fileID: 8479569427034157343}
