@@ -12,13 +12,15 @@ public class AppleHandler : MonoBehaviour
 
     void Start()
     {
-        //Checks how many paws are in the scene
+        //Counts how many paws are in the scene by tags
         pawCount = GameObject.FindGameObjectsWithTag("Paw").Length;
    
     }
 
+    //Plays when Endscreen pops up
     public void ApplesAcheived()
     {
+        //Counts how many paws are left in scene
         int pawsLost = GameObject.FindGameObjectsWithTag("Paw").Length;
 
         if (pawsLost == 1)
