@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class PawHandler : MonoBehaviour
 {
+    public static PawHandler instance;
+
     [Tooltip("Essentially player health. Deducted if a bridge is too long or if it falls off.")]
     public int paws;
-    private int pawsUsed = 0;
+    [HideInInspector] public int pawsUsed = 0;
 
     [SerializeField] private GameObject pawRoot = null;
     [SerializeField] private GameObject pawPrefab = null;
@@ -17,6 +19,7 @@ public class PawHandler : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         UIpaws = new GameObject[paws];
         SpawnPaws();
     }

@@ -12,7 +12,7 @@ public class EndScreen : MonoBehaviour
         if (other.gameObject.tag == "Fox")
         { 
             Endscrn.gameObject.SetActive(true);
-            GetComponent<AppleHandler>().ApplesAcheived(); //Starts to play ApplesAcheived in AppleHandler
+            GetComponent<AppleHandler>().ApplesAchieved(); //Starts to play ApplesAcheived in AppleHandler
         }
     }
 }

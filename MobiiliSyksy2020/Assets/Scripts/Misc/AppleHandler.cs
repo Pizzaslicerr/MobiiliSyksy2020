@@ -6,50 +6,39 @@ using UnityEngine;
 
 public class AppleHandler : MonoBehaviour
 {
-
     public GameObject[] apples;
-    private int pawCount;
-
-    void Start()
-    {
-        //Counts how many paws are in the scene by tags
-        pawCount = GameObject.FindGameObjectsWithTag("Paw").Length;
-   
-    }
 
     //Plays when Endscreen pops up
-    public void ApplesAcheived()
+    public void ApplesAchieved()
     {
-        //Counts how many paws are left in scene
-        int pawsLost = GameObject.FindGameObjectsWithTag("Paw").Length;
+        int pawsUsed = PawHandler.instance.pawsUsed;
 
-        if (pawsLost == 1)
-        {
-            //One apple
-            apples[0].SetActive(true);
-    
-        }
-        
-        else if (pawsLost == 2)
-        {
-            //Two apples
-            apples[0].SetActive(true);
-            apples[1].SetActive(true);
-        }
-        else if (pawsLost == 3)
-        {
-            //Two apples
-            apples[0].SetActive(true);
-            apples[1].SetActive(true);
-        }
-
-        else if (pawsLost == 4)
+        switch (pawsUsed)
         {
             //Three apples
-            apples[0].SetActive(true);
-            apples[1].SetActive(true);
-            apples[2].SetActive(true);
-        }
+            case 0:
+                foreach (GameObject apple in apples)
+                {
+                    apple.SetActive(true);
+                }
+                break;
 
+            //Two apples
+            case 1:
+                apples[0].SetActive(true);
+                apples[1].SetActive(true);
+                break;
+
+            //One apple, two cases
+            case 2:
+            case 3:
+                apples[0].SetActive(true);
+                break;
+
+            //This shouldn't activate
+            default:
+                Debug.LogError("Too many paws lost ( " + pawsUsed + " ), yet player won anyway!");
+                break;
+        }
     }
 }
