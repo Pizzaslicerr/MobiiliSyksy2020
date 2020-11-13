@@ -22,7 +22,7 @@ public class LevelPopup : MonoBehaviour
     private void Start()
     {
         //Gets the apple count of the level corresponding to the sibling index.
-        appleCount = MapData.instance.Data.LevelApples[transform.parent.parent.transform.GetSiblingIndex()];
+        appleCount = MapData.instance.Data.LevelData[transform.parent.parent.transform.GetSiblingIndex()].AppleScore;
         Debug.Log(transform.parent.transform.GetSiblingIndex());
         for (int i = 0; i < appleCount; i++)
         {

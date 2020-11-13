@@ -8,11 +8,11 @@ using UnityEngine;
 [System.Serializable]
 public class SaveData
 {
+    private LevelData[] levelData = new LevelData[40];
+    public LevelData[] LevelData { get => levelData;
+                                   set => levelData = value; }
+
     private int latestCompletedLevel = 0;
     public int LatestCompletedLevel { get => latestCompletedLevel;
                                       set => latestCompletedLevel = value; }
-
-    //levels should only have values between 0 and 3.
-    private int[] levelApples = new int[40];
-    public int[] LevelApples { get => levelApples; set => levelApples = value; }
 }

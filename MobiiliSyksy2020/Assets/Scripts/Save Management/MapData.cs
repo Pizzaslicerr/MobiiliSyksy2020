@@ -9,8 +9,6 @@ public class MapData : MonoBehaviour
 {
     public static MapData instance;
 
-    public GameObject levelButtons;
-
     private SaveData data;
     public SaveData Data { get => data;
                            set => data = value; }
@@ -25,10 +23,14 @@ public class MapData : MonoBehaviour
     //actually inserts the values and game progress into the map screen before anything loads.
     private void SetGameProgress()
     {
+        SaveData testsavedata = data;
+        LevelData[] testleveldata = data.LevelData;
+
         //debug
-        for (int i = 0; i < data.LevelApples.Length; i++)
+        for (int i = 0; i < data.LevelData.Length; i++)
         {
-            data.LevelApples[i] = Random.Range(0, 4);
+            data.LevelData[i].AppleScore = Random.Range(0, 4);
+            Debug.Log("data.LevelData[" + i + "].AppleScore. =" + data.LevelData[i].AppleScore);
         }
     }
 }

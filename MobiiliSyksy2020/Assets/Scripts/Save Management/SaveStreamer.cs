@@ -38,7 +38,12 @@ public static class SaveStreamer
 
     private static SaveData LoadDefaults()
     {
+        //creates dummy SaveData file and provides it as the default save file.
         SaveData dummyData = new SaveData();
+        for (int i = 0; i < dummyData.LevelData.Length; i++)
+        {
+            dummyData.LevelData[i] = new LevelData();
+        }
         return dummyData;
     }
 }

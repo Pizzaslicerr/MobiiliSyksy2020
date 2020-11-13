@@ -2624,7 +2624,6 @@ GameObject:
   - component: {fileID: 1914749385}
   - component: {fileID: 1914749388}
   - component: {fileID: 1914749389}
-  - component: {fileID: 1914749390}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2709,21 +2708,6 @@ MonoBehaviour:
     type: 3}
   popupArrowPrefab: {fileID: 684415212850037069, guid: c5465aaaf6bae5c498b4cf8038a7a995,
     type: 3}
---- !u!114 &1914749390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914749384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3601ecb2f600f9446993ecdc32a7cdc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelButtons: {fileID: 217714971}
-  levelApples: 
-  latestCompletedLevel: 0
 --- !u!1 &1926638608
 GameObject:
   m_ObjectHideFlags: 0
