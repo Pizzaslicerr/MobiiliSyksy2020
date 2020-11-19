@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class CorrectBridgeLength : MonoBehaviour
 {
-
+    private GameObject Fox;
     void Start()
     {
+        Fox = GameObject.FindWithTag("Fox");
         Player.FoxMoving = false;
     }
 

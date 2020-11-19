@@ -39,8 +39,9 @@ public class FoxDetector : MonoBehaviour
 
             //Stop fox movement
             Player.FoxMoving = false;
-
+            
             fox.GetComponent<PawHandler>().BridgeReset();
+            
 
             //Deactivate old detectors
             LongBridgeDetector.SetActive(false);
