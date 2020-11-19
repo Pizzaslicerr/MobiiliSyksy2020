@@ -28,15 +28,18 @@ public class MovingPlatform : MonoBehaviour
     }
     void Update()
     {
+        //Move the bridge while it's empty
         if (PlatformMoving)
         {
             this.transform.position = Vector2.MoveTowards(this.transform.position, CurrentTarget.position, MovingSpeed * Time.deltaTime);
         }
+        //Move the bridge while the fox is on it
         if (FoxOnPlatform && !Bridge.BridgeGrown)
         {
+            //Keep the fox moving along with the platform
             FoxTpPoint = GameObject.FindWithTag("FoxTpTarget");
-            Fox.transform.position = FoxTpPoint.transform.position;
-            Fox.transform.rotation = gameObject.transform.rotation;
+            Fox.transform.position = Vector2.MoveTowards(Fox.transform.position, FoxTpPoint.transform.position, MovingSpeed * Time.deltaTime);
+            //Keep the bridge moving along with the platform
             NewBridgeSpawnpoint = GameObject.FindWithTag("BridgeSpawnPoint");
             bridge.transform.position = NewBridgeSpawnpoint.transform.position;
             this.transform.position = Vector2.MoveTowards(this.transform.position, CurrentTarget.position, MovingSpeed * Time.deltaTime);

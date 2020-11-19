@@ -9,13 +9,13 @@ public class Player : MonoBehaviour
 
     private bool screenPressed = false;
 
-    public float bridgeGrowthRate;
+    public float BridgeGrowthRate;
     public static GameObject BridgeO;
     public static Rigidbody2D BridgeRB;
     public static GameObject BridgeSpawnPoint;
     public float BridgeMaxLength;
 
-    public LayerMask layerMask;
+    public LayerMask LayerMask;
 
     private Rigidbody2D FoxRB;
     public Animator anim;
@@ -40,7 +40,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-
         //Finding objects with tags so there's no need to fiddle around with public game objects
         FoxMovementTarget = GameObject.FindWithTag("MovementTarget");
         //BridgeO = GameObject.FindWithTag("Bridge");
@@ -49,7 +48,7 @@ public class Player : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
-        RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, LayerMask);
 
         if (Input.GetMouseButton(0) && hit.collider != null && hit.collider.tag == "PressDetector")
         {
@@ -59,7 +58,7 @@ public class Player : MonoBehaviour
                 //Growing the bridge while pressing and holding the screen
                 v = BridgeO.transform.localScale;
                 temp = v;
-                v.y = v.y + bridgeGrowthRate * Time.deltaTime;
+                v.y = v.y + BridgeGrowthRate * Time.deltaTime;
                 BridgeO.transform.localScale = v;
                 screenPressed = true;
 

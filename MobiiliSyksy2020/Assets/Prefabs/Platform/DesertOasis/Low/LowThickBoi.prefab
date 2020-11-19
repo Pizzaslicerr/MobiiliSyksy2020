@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790781565894965690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.75, y: 1.46, z: 0}
+  m_LocalPosition: {x: 1.65, y: 1.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5746664546943257469}
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 5746664546943257470}
   - component: {fileID: 5909870791489342194}
   m_Layer: 10
-  m_Name: ThickBoi
+  m_Name: LowThickBoi
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

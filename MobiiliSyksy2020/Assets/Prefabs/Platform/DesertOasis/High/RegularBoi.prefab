@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 1325415693043906744}
   - component: {fileID: 1126047610555316532}
   m_Layer: 10
-  m_Name: RegularBoi (1)
+  m_Name: RegularBoi
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,7 +389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6295462582830942844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.185, y: 3.686, z: 0}
+  m_LocalPosition: {x: 1.16, y: 3.686, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1325415693043906747}
