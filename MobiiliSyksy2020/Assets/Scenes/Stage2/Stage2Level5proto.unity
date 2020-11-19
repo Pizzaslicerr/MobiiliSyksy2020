@@ -3931,7 +3931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80cd5cfe9fa66a147b79ca01574fba3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0, y: 0}
+  parallaxEffectMultiplier: {x: -0.2, y: 0}
   infiniteHorizontal: 0
   infiniteVertical: 0
 --- !u!4 &1654331044 stripped
@@ -6143,7 +6143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80cd5cfe9fa66a147b79ca01574fba3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.1, y: 0}
+  parallaxEffectMultiplier: {x: -0.1, y: 0}
   infiniteHorizontal: 0
   infiniteVertical: 0
 --- !u!4 &1896242096 stripped
