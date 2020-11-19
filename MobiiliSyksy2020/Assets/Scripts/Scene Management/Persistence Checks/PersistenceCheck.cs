@@ -8,7 +8,9 @@ using UnityEngine.SceneManagement;
 
 public class PersistenceCheck : MonoBehaviour
 {
-    List<AsyncOperation> operations = new List<AsyncOperation>();
+    private List<AsyncOperation> operations = new List<AsyncOperation>();
+    private bool isSceneLoading = false;
+
     private void Awake()
     {
         //loads SceneManager if it has not yet been loaded
@@ -26,11 +28,14 @@ public class PersistenceCheck : MonoBehaviour
             }
             StartCoroutine(LoadPersistentScene());
         }
+        StartCoroutine(ChangeLoadedSceneReference());
     }
 
     //This makes sure all required scenes are loaded
     private IEnumerator LoadPersistentScene()
     {
+        isSceneLoading = true;
+
         for (int i = 0; i < operations.Count; i++)
         {
             while (!operations[i].isDone)
@@ -41,11 +46,25 @@ public class PersistenceCheck : MonoBehaviour
         operations.Clear();
         SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(0));
 
+        isSceneLoading = false;
+        yield break;
+    }
+
+    //This changes the LoadedScene values in SceneHandler whenever a new scene has been loaded.
+    private IEnumerator ChangeLoadedSceneReference()
+    {
+        while (isSceneLoading)
+        {
+            yield return null;
+        }
+
         //makes it so the most recently loaded scene (that isn't for managing game elements) is easily accessible
         if (this.gameObject.scene.buildIndex != 0)
         {
             SceneHandler.instance.LoadedScene = this.gameObject.scene;
             SceneHandler.instance.LoadedSceneIndex = this.gameObject.scene.buildIndex;
+
+            Debug.Log("LoadedSceneIndex = " + SceneHandler.instance.LoadedSceneIndex);
         }
 
         yield break;

@@ -24,13 +24,12 @@ public class MapData : MonoBehaviour
     private void SetGameProgress()
     {
         SaveData testsavedata = data;
-        LevelData[] testleveldata = data.LevelData;
 
         //debug
         for (int i = 0; i < data.LevelData.Length; i++)
         {
             data.LevelData[i].AppleScore = Random.Range(0, 4);
-            Debug.Log("data.LevelData[" + i + "].AppleScore. =" + data.LevelData[i].AppleScore);
+            //Debug.Log("data.LevelData[" + i + "].AppleScore. =" + data.LevelData[i].AppleScore);
         }
     }
 }
