@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4159997599566987044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.91, y: 1.5199997, z: 0}
+  m_LocalPosition: {x: 0.85, y: 1.5199997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8971852803963096547}
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 8971852803963096544}
   - component: {fileID: 7009351777801702508}
   m_Layer: 10
-  m_Name: ThinBoi
+  m_Name: LowThinBoi
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

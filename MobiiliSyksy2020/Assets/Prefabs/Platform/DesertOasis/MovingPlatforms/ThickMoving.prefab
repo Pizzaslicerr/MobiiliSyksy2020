@@ -307,7 +307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1970924030865001044}
   m_Layer: 0
-  m_Name: RegularMoving
+  m_Name: ThickMoving
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -546,7 +546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970924031936632453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.56, y: 0.6199999, z: 0}
+  m_LocalPosition: {x: 1.486, y: 0.589, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1970924030485199750}
@@ -576,7 +576,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970924032041564726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: -0.059999943, z: -6.686483}
+  m_LocalPosition: {x: -0.1, y: -0.29, z: -6.686483}
   m_LocalScale: {x: 2.173913, y: 2.173913, z: 33.756344}
   m_Children: []
   m_Father: {fileID: 1970924030485199750}

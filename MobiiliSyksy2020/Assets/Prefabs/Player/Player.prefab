@@ -2014,6 +2014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paws: 4
+  pawsUsed: 0
   pawRoot: {fileID: 1349995283357109479, guid: a633cb8ce6265c94686ecb24d50a279f, type: 3}
   pawPrefab: {fileID: 7514769633777815121, guid: e1ab086d9bcde0f45bda41e1bbcdb5ce,
     type: 3}
@@ -2031,11 +2032,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78de016de57db15469db130a02b365f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bridgeGrowthRate: 700
+  BridgeGrowthRate: 700
   BridgeMaxLength: 410
-  layerMask:
+  LayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
   anim: {fileID: 742603631541809103}
   Speed: 4
   FoxFallTarget: {fileID: 0}
