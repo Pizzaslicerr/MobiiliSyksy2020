@@ -4415,11 +4415,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78de016de57db15469db130a02b365f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BridgeGrowthRate: 700
+  BridgeGrowthRate: 0
   BridgeMaxLength: 585
   LayerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 0
   anim: {fileID: 2101712781}
   Speed: 4
   FoxFallTarget: {fileID: 1831175116}
