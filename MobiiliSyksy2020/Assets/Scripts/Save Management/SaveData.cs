@@ -8,6 +8,10 @@ using UnityEngine;
 [System.Serializable]
 public class SaveData
 {
+    private bool isFirstTimePlaying = true;
+    public bool IsFirstTimePlaying { get => isFirstTimePlaying;
+                                     set => isFirstTimePlaying = value; }
+
     private LevelData[] levelData = new LevelData[40];
     public LevelData[] LevelData { get => levelData;
                                    set => levelData = value; }

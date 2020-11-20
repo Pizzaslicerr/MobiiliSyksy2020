@@ -7,7 +7,10 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveStreamer
 {
+    //file path for save file.
     public static string path = Path.Combine(Application.persistentDataPath, "saveData.ll");
+
+    //saves referenced SaveData file to disk.
     public static void SaveGame(SaveData saveData)
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -17,6 +20,7 @@ public static class SaveStreamer
         stream.Close();
     }
 
+    //loads whatever formatted binary save data is on disk.
     public static SaveData LoadSave()
     {
         if (File.Exists(path))
@@ -36,14 +40,17 @@ public static class SaveStreamer
         }
     }
 
+    //creates dummy SaveData file and provides it as the default save file.
+    //also inserts the default values as a brand new, blank save file to prevent errors.
     private static SaveData LoadDefaults()
     {
-        //creates dummy SaveData file and provides it as the default save file.
         SaveData dummyData = new SaveData();
         for (int i = 0; i < dummyData.LevelData.Length; i++)
         {
             dummyData.LevelData[i] = new LevelData();
         }
+
+        SaveGame(dummyData);
         return dummyData;
     }
 }

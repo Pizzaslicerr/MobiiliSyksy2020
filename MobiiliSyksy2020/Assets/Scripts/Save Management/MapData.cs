@@ -16,20 +16,28 @@ public class MapData : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        Data = SaveStreamer.LoadSave();
+    }
+
+    private void Start()
+    {
+        Data = SaveManager.instance.SaveData;
         SetGameProgress();
+
     }
 
     //actually inserts the values and game progress into the map screen before anything loads.
     private void SetGameProgress()
     {
-        SaveData testsavedata = data;
+        DebugPrintSaveInfo();
+    }
 
-        //debug
+    private void DebugPrintSaveInfo()
+    {
         for (int i = 0; i < data.LevelData.Length; i++)
         {
-            data.LevelData[i].AppleScore = Random.Range(0, 4);
-            //Debug.Log("data.LevelData[" + i + "].AppleScore. =" + data.LevelData[i].AppleScore);
+            Debug.Log("data.LevelData[" + i + "].AppleScore = " + data.LevelData[i].AppleScore);
         }
+        Debug.Log("data.LevelData.LatestCompletedLevel = " + data.LatestCompletedLevel);
+        Debug.Log("data.IsFirstTimePlaying = " + data.IsFirstTimePlaying);
     }
 }
