@@ -8,20 +8,29 @@ using UnityEngine;
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager instance;
+
+    private SaveData saveData = new SaveData();
+    public SaveData SaveData { get => saveData;
+                               set => saveData = value; }
+
+    private int levelIndex = 0;
+    public int LevelIndex { get => levelIndex;
+                            set => levelIndex = value; }
+
+
     private void Awake()
     {
         instance = this;
+        LoadSave();
     }
-
-    public SaveData saveData = new SaveData();
 
     public void SaveGame()
     {
-        SaveStreamer.SaveGame(saveData);
+        SaveStreamer.SaveGame(SaveData);
     }
 
     public void LoadSave()
     {
-        SaveStreamer.LoadSave();
+        SaveData = SaveStreamer.LoadSave();
     }
 }
