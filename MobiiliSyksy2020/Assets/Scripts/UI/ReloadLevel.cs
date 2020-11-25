@@ -13,6 +13,7 @@ public class ReloadLevel : MonoBehaviour
     {
         if (SceneHandler.instance.LoadedScene.IsValid())
         {
+            Time.timeScale = 1; //Unfreezes time
             SceneHandler.instance.SceneReload(SceneHandler.instance.LoadedScene.buildIndex, LoadingScreens.Leaves);
         }
     }

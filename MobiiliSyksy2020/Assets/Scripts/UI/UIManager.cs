@@ -1,5 +1,6 @@
 ﻿//UIManager.cs by Mikko Kyllönen
 //Manages UI menu navigation.
+//Modified by Emilia Leinonen. Added animation stuff.
 
 using System.Collections;
 using System.Collections.Generic;
@@ -31,6 +32,9 @@ public class UIManager : MonoBehaviour
 
     public static UIManager instance;
 
+    public Animator UIanim;
+    public bool isDown = false;
+
     void Awake()
     {
         instance = this;
@@ -39,6 +43,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         currentPauseMenu = mapPauseMenu;
+        UIanim = gameObject.GetComponent<Animator>();
     }
 
     public void LoadPauseButton()
@@ -58,6 +63,9 @@ public class UIManager : MonoBehaviour
                         gamePauseMenu.SetActive(true);
                         isPauseMenuOpen = true;
 
+                        isDown = true;
+                        Time.timeScale = 0; //Freezes time
+
                         currentPauseMenu = gamePauseMenu;
                         break;
                     }
@@ -65,6 +73,9 @@ public class UIManager : MonoBehaviour
                     {
                         mapPauseMenu.SetActive(true);
                         isPauseMenuOpen = true;
+
+                        isDown = true;
+                        Time.timeScale = 0; //Freezes time
 
                         currentPauseMenu = mapPauseMenu;
                         break;
@@ -79,6 +90,7 @@ public class UIManager : MonoBehaviour
         {
             currentPauseMenu.SetActive(false);
             isPauseMenuOpen = false;
+            Time.timeScale = 1; //Unfreezes time
         }
     }
 
@@ -103,6 +115,7 @@ public class UIManager : MonoBehaviour
     public void HidePauseMenu()
     {
         currentPauseMenu.SetActive(false);
+        isDown = false;
     }
 
     //opens submenus (menus inside menus).
