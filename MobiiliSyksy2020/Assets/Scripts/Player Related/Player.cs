@@ -7,6 +7,8 @@ using Utilities;
 public class Player : MonoBehaviour
 {
 
+    public AudioClip walk;
+    public AudioSource playerAS;
     private bool screenPressed = false;
 
     public float BridgeGrowthRate;
@@ -106,6 +108,11 @@ public class Player : MonoBehaviour
 
     void MoveFoxCorrect()
     {
+        if (PlayerAudio.playAudio)
+        {
+            playerAS.PlayOneShot(walk);
+            PlayerAudio.playAudio = false;
+        }
         //Moving the fox correctly to the next platform
         BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
         BridgeRB.freezeRotation = true;
@@ -115,6 +122,11 @@ public class Player : MonoBehaviour
     }
     void MoveFoxTooFar()
     {
+        if (PlayerAudio.playAudio)
+        {
+            playerAS.PlayOneShot(walk);
+            PlayerAudio.playAudio = false;
+        }
         //Moving the fox too far so it falls
         BridgeRB.constraints = RigidbodyConstraints2D.FreezePosition;
         BridgeRB.freezeRotation = true;

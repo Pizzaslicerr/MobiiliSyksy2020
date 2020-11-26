@@ -11,25 +11,22 @@ public class PlayerAudio : MonoBehaviour
     public float fadeDurationUp;
     public float targetVolumeDown;
     public float targetVolumeUp;
+
+    public static bool playAudio;
     void Start()
     {
-        
+        playAudio = true;
     }
 
     void Update()
     {
         if (!Player.FoxMoving)
         {
-            StartCoroutine(AudioFade.StartFade(playerAS, fadeDurationDown, targetVolumeDown));
+            //StartCoroutine(AudioFade.StartFade(playerAS, fadeDurationDown, targetVolumeDown));
         }
         if (Player.FoxMoving)
         {
-            playerAS.volume = 0.1f;
+            //playerAS.volume = 0.1f;
         }
-    }
-
-    void FootStep()
-    {
-        playerAS.PlayOneShot(walk);
     }
 }

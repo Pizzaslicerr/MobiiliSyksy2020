@@ -26,6 +26,8 @@ public class FoxDetector : MonoBehaviour
     {
         if (collision.tag == "Fox")
         {
+            PlayerAudio.playAudio = true;
+
             GameObject.FindWithTag("FoxTpTarget").SetActive(false);
             FoxTPTarget.SetActive(true);
             fox.transform.position = FoxTPTarget.transform.position;
