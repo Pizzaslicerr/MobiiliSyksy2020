@@ -24,10 +24,12 @@ public class LoadingScreenManager : MonoBehaviour
     public void Activate(int loadScreenVariant)
     {
         loadingScreens[loadScreenVariant].SetActive(true);
+        Time.timeScale = 0; //Freezes time
     }
 
     public void Deactivate(int loadScreenVariant)
     {
         loadingScreens[loadScreenVariant].SetActive(false);
+        Time.timeScale = 1; //Unfreezes time
     }
 }
