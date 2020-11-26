@@ -18,6 +18,7 @@ TagManager:
   - MoveNode2
   - Paw
   - CameraTarget
+  - FoxFallTarget
   layers:
   - Default
   - TransparentFX

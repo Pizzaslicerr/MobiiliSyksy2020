@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
         FoxRB = gameObject.GetComponent<Rigidbody2D>();
         BridgeO = GameObject.FindWithTag("Bridge");
         anim = gameObject.GetComponent<Animator>();
+        FoxFallTarget = GameObject.FindWithTag("FoxFallTarget").transform;
         FoxMoving = false;
     }
 

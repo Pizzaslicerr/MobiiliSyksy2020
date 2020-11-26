@@ -556,11 +556,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6901131479395180376, guid: 16bde126b39ae394ba62c071d9485876,
-        type: 3}
-      propertyPath: fadeDurationDown
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7868430825147917461, guid: 16bde126b39ae394ba62c071d9485876,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -2517,7 +2512,7 @@ GameObject:
   - component: {fileID: 1831175116}
   m_Layer: 0
   m_Name: FoxFallTarget
-  m_TagString: Untagged
+  m_TagString: FoxFallTarget
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

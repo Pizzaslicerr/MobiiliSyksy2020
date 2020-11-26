@@ -24,7 +24,7 @@ public class PlayerAudio : MonoBehaviour
         }
         if (Player.FoxMoving)
         {
-            StartCoroutine(AudioFade.StartFade(playerAS, fadeDurationUp, targetVolumeUp));
+            playerAS.volume = 0.1f;
         }
     }
 
