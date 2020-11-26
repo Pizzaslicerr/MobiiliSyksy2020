@@ -17,6 +17,7 @@ TagManager:
   - MoveNode1
   - MoveNode2
   - Paw
+  - CameraTarget
   layers:
   - Default
   - TransparentFX

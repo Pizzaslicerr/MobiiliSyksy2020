@@ -32,7 +32,10 @@ public class CameraFollow : MonoBehaviour
     public bool XMinEnabled = false;
     public float XMinValue = 0;
 
-
+    private void Start()
+    {
+        target = GameObject.FindWithTag("CameraTarget").transform;
+    }
     void FixedUpdate()
     {
         //target position

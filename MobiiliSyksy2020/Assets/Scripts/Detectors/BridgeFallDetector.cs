@@ -6,7 +6,11 @@ using Utilities;
 
 public class BridgeFallDetector : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Fox");
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Fox")
