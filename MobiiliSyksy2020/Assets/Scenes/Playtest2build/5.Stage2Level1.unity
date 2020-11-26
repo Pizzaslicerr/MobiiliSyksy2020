@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1695,6 +1695,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9358b1c46abf648479a1363f8e4c0819, type: 3}
+--- !u!1 &1189812725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1048751069919968859, guid: 9358b1c46abf648479a1363f8e4c0819,
+    type: 3}
+  m_PrefabInstance: {fileID: 1189812724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1189812726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1641672437976544606, guid: 9358b1c46abf648479a1363f8e4c0819,
+    type: 3}
+  m_PrefabInstance: {fileID: 1189812724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1189812727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7861699803841483818, guid: 9358b1c46abf648479a1363f8e4c0819,
+    type: 3}
+  m_PrefabInstance: {fileID: 1189812724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1227993832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,7 +1823,7 @@ GameObject:
   - component: {fileID: 1273822529}
   m_Layer: 9
   m_Name: CameraPoint
-  m_TagString: Untagged
+  m_TagString: CameraTarget
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2495,6 +2513,28 @@ PrefabInstance:
       objectReference: {fileID: 1889387122}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 877d12149f802ea4491ae215272673c3, type: 3}
+--- !u!1 &1694645866 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 808199671355743354, guid: 877d12149f802ea4491ae215272673c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1694645865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1694645867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694645866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322c88d9842aef54ba4bf4762afe9a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apples:
+  - {fileID: 1189812727}
+  - {fileID: 1189812726}
+  - {fileID: 1189812725}
 --- !u!1 &1706846992
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,7 +2642,7 @@ GameObject:
   - component: {fileID: 1831175116}
   m_Layer: 0
   m_Name: FoxFallTarget
-  m_TagString: Untagged
+  m_TagString: FoxFallTarget
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4519,6 +4559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78de016de57db15469db130a02b365f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walk: {fileID: 0}
+  playerAS: {fileID: 0}
   BridgeGrowthRate: 700
   BridgeMaxLength: 585
   LayerMask:

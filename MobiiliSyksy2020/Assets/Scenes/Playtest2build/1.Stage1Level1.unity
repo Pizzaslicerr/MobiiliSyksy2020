@@ -188,6 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78de016de57db15469db130a02b365f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walk: {fileID: 0}
+  playerAS: {fileID: 0}
   BridgeGrowthRate: 700
   BridgeMaxLength: 585
   LayerMask:
@@ -648,7 +650,7 @@ GameObject:
   - component: {fileID: 856512464}
   m_Layer: 0
   m_Name: FoxFallTarget
-  m_TagString: Untagged
+  m_TagString: FoxFallTarget
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3051,7 +3053,7 @@ GameObject:
   - component: {fileID: 1935645744}
   m_Layer: 9
   m_Name: CameraPoint
-  m_TagString: Untagged
+  m_TagString: CameraTarget
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3083,6 +3085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Endscrn: {fileID: 1844828565}
+  UIanim: {fileID: 0}
+  isDown: 0
 --- !u!1 &1984099236
 GameObject:
   m_ObjectHideFlags: 0
