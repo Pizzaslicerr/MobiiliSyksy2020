@@ -2152,7 +2152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walk: {fileID: 8300000, guid: 32649c0a27d4a1e469f563635116ac94, type: 3}
   playerAS: {fileID: 1725658395119512439}
-  fadeDurationDown: 0.8
+  fadeDurationDown: 1
   fadeDurationUp: 0.8
   targetVolumeDown: 0
   targetVolumeUp: 0.1
