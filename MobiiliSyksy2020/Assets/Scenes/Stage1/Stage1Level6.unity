@@ -1395,7 +1395,7 @@ GameObject:
   - component: {fileID: 856512464}
   m_Layer: 0
   m_Name: FoxFallTarget
-  m_TagString: Untagged
+  m_TagString: FoxFallTarget
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4480,7 +4480,7 @@ Transform:
   - {fileID: 1817788505}
   - {fileID: 1420156577}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2126610849
 GameObject:
