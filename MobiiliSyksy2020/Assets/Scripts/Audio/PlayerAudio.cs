@@ -13,20 +13,12 @@ public class PlayerAudio : MonoBehaviour
     public float targetVolumeUp;
 
     public static bool playAudio;
+
+    public static bool playBridgeAudio;
     void Start()
     {
         playAudio = true;
+        playBridgeAudio = true;
     }
 
-    void Update()
-    {
-        if (!Player.FoxMoving)
-        {
-            //StartCoroutine(AudioFade.StartFade(playerAS, fadeDurationDown, targetVolumeDown));
-        }
-        if (Player.FoxMoving)
-        {
-            //playerAS.volume = 0.1f;
-        }
-    }
 }
