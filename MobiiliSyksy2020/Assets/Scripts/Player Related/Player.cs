@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 {
 
     public AudioClip walk;
+    public AudioClip BridgeGrow;
     public AudioSource playerAS;
     private bool screenPressed = false;
 
@@ -43,6 +44,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(PlayerAudio.playBridgeAudio);
         //Finding objects with tags so there's no need to fiddle around with public game objects
         FoxMovementTarget = GameObject.FindWithTag("MovementTarget");
         //BridgeO = GameObject.FindWithTag("Bridge");
@@ -64,13 +66,19 @@ public class Player : MonoBehaviour
                 v.y = v.y + BridgeGrowthRate * Time.deltaTime;
                 BridgeO.transform.localScale = v;
                 screenPressed = true;
-
+                if (PlayerAudio.playBridgeAudio)
+                {
+                    playerAS.PlayOneShot(BridgeGrow);
+                    PlayerAudio.playBridgeAudio = false;
+                }
             }
 
         }
         if (Input.GetMouseButtonUp(0) && screenPressed || BridgeO.transform.localScale.y > BridgeMaxLength && screenPressed)
         {
-            if(BridgeO.transform.localScale.y < 80f)
+            PlayerAudio.playBridgeAudio = true;
+            playerAS.Stop();
+            if (BridgeO.transform.localScale.y < 80f)
             {
                 v.y = 80f;
                 BridgeO.transform.localScale = v;

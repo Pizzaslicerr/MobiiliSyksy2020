@@ -2134,8 +2134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78de016de57db15469db130a02b365f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walk: {fileID: 0}
-  playerAS: {fileID: 0}
+  walk: {fileID: 8300000, guid: 32649c0a27d4a1e469f563635116ac94, type: 3}
+  BridgeGrow: {fileID: 8300000, guid: d297841f929195b4e8bb6a7ff114ffab, type: 3}
+  playerAS: {fileID: 1725658395119512439}
   BridgeGrowthRate: 700
   BridgeMaxLength: 710
   LayerMask:
