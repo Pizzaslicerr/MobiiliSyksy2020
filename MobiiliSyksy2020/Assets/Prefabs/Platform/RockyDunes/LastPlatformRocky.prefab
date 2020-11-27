@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 9144690091220150249}
   - component: {fileID: 6143558698714193706}
   - component: {fileID: 7869773942266632219}
+  - component: {fileID: 5753739655911030474}
   m_Layer: 10
   m_Name: FoxDetector
   m_TagString: Untagged
@@ -439,3 +440,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Endscrn: {fileID: 0}
+  UIanim: {fileID: 0}
+  isDown: 0
+--- !u!114 &5753739655911030474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144690091220150255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322c88d9842aef54ba4bf4762afe9a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apples:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

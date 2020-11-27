@@ -413,7 +413,7 @@ PrefabInstance:
     - target: {fileID: 680188951858296290, guid: ee9c0f7a8e308b142ae993949d42e0d4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 680188951858296290, guid: ee9c0f7a8e308b142ae993949d42e0d4,
         type: 3}
@@ -793,7 +793,7 @@ PrefabInstance:
     - target: {fileID: 278998243554724194, guid: 165226be44566834e8742d4e14e17d01,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 278998243554724194, guid: 165226be44566834e8742d4e14e17d01,
         type: 3}
@@ -2566,30 +2566,23 @@ PrefabInstance:
       propertyPath: Endscrn
       value: 
       objectReference: {fileID: 1889387122}
+    - target: {fileID: 7474433075602998850, guid: 877d12149f802ea4491ae215272673c3,
+        type: 3}
+      propertyPath: apples.Array.data[0]
+      value: 
+      objectReference: {fileID: 1189812727}
+    - target: {fileID: 7474433075602998850, guid: 877d12149f802ea4491ae215272673c3,
+        type: 3}
+      propertyPath: apples.Array.data[1]
+      value: 
+      objectReference: {fileID: 1189812726}
+    - target: {fileID: 7474433075602998850, guid: 877d12149f802ea4491ae215272673c3,
+        type: 3}
+      propertyPath: apples.Array.data[2]
+      value: 
+      objectReference: {fileID: 1189812725}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 877d12149f802ea4491ae215272673c3, type: 3}
---- !u!1 &1694645866 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 808199671355743354, guid: 877d12149f802ea4491ae215272673c3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1694645865}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1694645867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694645866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322c88d9842aef54ba4bf4762afe9a92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  apples:
-  - {fileID: 1189812727}
-  - {fileID: 1189812726}
-  - {fileID: 1189812725}
 --- !u!1 &1760275022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,7 +2622,7 @@ Transform:
   - {fileID: 1164639612}
   - {fileID: 2071559078}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1831175115
 GameObject:
