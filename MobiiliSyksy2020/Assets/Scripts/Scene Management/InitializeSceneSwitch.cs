@@ -33,20 +33,7 @@ namespace Utilities
                 SceneHandler.instance.SceneLoad(sceneToLoad, loadScreenType);
             }
 
-            DetermineSceneType();
-
-            if (!pauseButtonLoaded)
-            {
-                UIManager.instance.LoadPauseButton();
-                pauseButtonLoaded = true;
-            }
-
-        }
-
-        //this changes the SceneType variable, which affects what pause menu is used
-        private void DetermineSceneType()
-        {
-            UIManager.instance.SceneType = sceneType;
+            UniversalSanityChecks();
         }
 
         [Header("Only used in Level Select")]
@@ -59,13 +46,33 @@ namespace Utilities
         {
             if (LevelNumber > 0)
             {
-                SaveManager.instance.SaveData.CurrentLevel = LevelNumber;
-                SceneHandler.instance.SceneLoad(SaveManager.instance.SaveData.LevelData[LevelNumber - 1].BuildIndex, SceneHandler.instance.LoadedScene, loadScreenType);
+                SaveManager.instance.CurrentLevel = LevelNumber;
+                SceneHandler.instance.SceneLoad(sceneToLoad, SceneHandler.instance.LoadedScene, loadScreenType);
             }
             else
             {
                 Debug.LogError("Level number too low!");
             }
+
+            UniversalSanityChecks();
+        }
+
+        //These are strings which all of the different types of functions above should run.
+        private void UniversalSanityChecks()
+        {
+            DetermineSceneType();
+
+            if (!pauseButtonLoaded)
+            {
+                UIManager.instance.LoadPauseButton();
+                pauseButtonLoaded = true;
+            }
+        }
+
+        //this changes the SceneType variable, which affects what pause menu is used
+        private void DetermineSceneType()
+        {
+            UIManager.instance.SceneType = sceneType;
         }
     }
 }

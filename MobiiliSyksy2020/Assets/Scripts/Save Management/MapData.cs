@@ -33,11 +33,11 @@ public class MapData : MonoBehaviour
 
     private void DebugPrintSaveInfo()
     {
-        /*for (int i = 0; i < data.LevelData.Length; i++)
-        {
-            Debug.Log("data.LevelData[" + i + "].AppleScore = " + data.LevelData[i].AppleScore);
-        }
         for (int i = 0; i < data.LevelData.Length; i++)
+        {
+            Debug.Log("data.LevelData[" + i + "].AppleScore (LevelNumber = " + (i + 1) + ") = " + data.LevelData[i].AppleScore);
+        }
+        /*for (int i = 0; i < data.LevelData.Length; i++)
         {
             Debug.Log("data.LevelData[" + i + "].BuildIndex = " + data.LevelData[i].BuildIndex);
         }*/

@@ -21,9 +21,9 @@ public class EndScreen : MonoBehaviour
             Time.timeScale = 0; //Freezes time
             isDown = true;
             Endscrn.gameObject.SetActive(true);
-            if (SaveManager.instance.SaveData.LatestCompletedLevel < SaveManager.instance.LevelIndex)
+            if (SaveManager.instance.SaveData.LatestCompletedLevel < SaveManager.instance.CurrentLevel)
             {
-                SaveManager.instance.SaveData.LatestCompletedLevel = SaveManager.instance.LevelIndex;
+                SaveManager.instance.SaveData.LatestCompletedLevel = SaveManager.instance.CurrentLevel;
             }
             GetComponent<AppleHandler>().ApplesAchieved(); //Starts to play ApplesAcheived in AppleHandler
         }

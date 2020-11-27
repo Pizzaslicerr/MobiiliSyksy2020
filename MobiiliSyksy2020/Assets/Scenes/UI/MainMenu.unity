@@ -540,7 +540,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1128490150}
-        m_MethodName: ChangeScenes
+        m_MethodName: StartIndexedLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -602,6 +602,7 @@ MonoBehaviour:
   loadScreenType: 0
   sceneType: 0
   sceneToLoad:
-    sceneAsset: {fileID: 102900000, guid: fc997c112cf148f40ab9ab240811c09c, type: 3}
-    scenePath: Assets/Scenes/Stage1/Stage1Level1.unity
+    sceneAsset: {fileID: 102900000, guid: 39357a6302c2cbe44bc7cc2b7d37473a, type: 3}
+    scenePath: Assets/Scenes/Playtest2build/1.Stage1Level1.unity
   unloadPreviousScene: 1
+  levelNumber: 1

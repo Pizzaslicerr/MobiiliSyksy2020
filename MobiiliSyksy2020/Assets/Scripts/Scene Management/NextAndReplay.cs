@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class NextAndReplay : MonoBehaviour
 {
-    [SerializeField] private Scene thisScene;
+    private Scene thisScene;
+
     private void Awake()
     {
         thisScene = this.gameObject.scene;
@@ -14,6 +15,7 @@ public class NextAndReplay : MonoBehaviour
     public void nextLevel()
     {
         //Commented the if statement out because Unity is dumb like that and made the statement not work
+
         /*if (SceneManager.GetSceneByBuildIndex(this.gameObject.scene.buildIndex + 1).IsValid())
         {*/
             SceneHandler.instance.LoadedScene = thisScene;

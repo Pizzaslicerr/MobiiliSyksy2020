@@ -15,8 +15,4 @@ public class LevelData
     private int appleScore = 0;
     public int AppleScore { get => appleScore;
                             set => appleScore = value; }
-
-    private int buildIndex = 0;
-    public int BuildIndex { get => buildIndex;
-                            set => buildIndex = value; }
 }

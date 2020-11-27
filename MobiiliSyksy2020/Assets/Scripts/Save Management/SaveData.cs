@@ -20,7 +20,4 @@ public class SaveData
     public int LatestCompletedLevel { get => latestCompletedLevel;
                                       set => latestCompletedLevel = value; }
 
-    private int currentLevel = 0;
-    public int CurrentLevel { get => currentLevel; set => currentLevel = value; }
-
 }

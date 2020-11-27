@@ -13,11 +13,9 @@ public class SaveManager : MonoBehaviour
     public SaveData SaveData { get => saveData;
                                set => saveData = value; }
 
-    //This is the current level's number.
-    private int levelIndex = 0;
-    public int LevelIndex { get => levelIndex;
-                            set => levelIndex = value; }
-
+    //acts as a pointer so the game knows what array index to save scores to.
+    private int currentLevel = 0;
+    public int CurrentLevel { get => currentLevel; set => currentLevel = value; }
 
     private void Awake()
     {

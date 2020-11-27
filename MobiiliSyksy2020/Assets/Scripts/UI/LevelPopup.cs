@@ -22,6 +22,7 @@ public class LevelPopup : MonoBehaviour
     private void Start()
     {
         //Gets the apple count of the level corresponding to the sibling index.
+        Debug.Log(init.LevelNumber - 1);
         appleCount = SaveManager.instance.SaveData.LevelData[init.LevelNumber - 1].AppleScore;
         for (int i = 0; i < appleCount; i++)
         {
