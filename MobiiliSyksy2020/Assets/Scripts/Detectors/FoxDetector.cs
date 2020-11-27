@@ -13,6 +13,8 @@ public class FoxDetector : MonoBehaviour
     public GameObject FoxMovementTargetOld;
     public GameObject FoxMovementTargetNew;
     public GameObject FoxTPTarget;
+
+    private AudioSource playerAS;
     void Start()
     {
         fox = GameObject.FindWithTag("Fox");
@@ -20,6 +22,7 @@ public class FoxDetector : MonoBehaviour
         FoxMovementTargetNew.SetActive(false);
         FoxMovementTargetOld.SetActive(true);
         FoxTPTarget.SetActive(false);
+        playerAS = fox.GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,6 +30,8 @@ public class FoxDetector : MonoBehaviour
         if (collision.tag == "Fox")
         {
             PlayerAudio.playAudio = true;
+            PlayerAudio.playBridgeAudio = true;
+            playerAS.Stop();
 
             GameObject.FindWithTag("FoxTpTarget").SetActive(false);
             FoxTPTarget.SetActive(true);
