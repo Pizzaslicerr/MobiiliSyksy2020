@@ -40,7 +40,6 @@ public class Player : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         FoxFallTarget = GameObject.FindWithTag("FoxFallTarget").transform;
         FoxMoving = false;
-        Debug.Log(BridgeO);
     }
 
     void Update()

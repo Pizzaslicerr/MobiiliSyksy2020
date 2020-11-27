@@ -8,7 +8,7 @@ public class Bridge : MonoBehaviour
     public static bool BridgeGrown;
     public static bool BridgeDown;
 
-    void Start()
+    void Awake()
     {
         //To make sure a new bridge always has these variables set to false
         BridgeGrown = false;
