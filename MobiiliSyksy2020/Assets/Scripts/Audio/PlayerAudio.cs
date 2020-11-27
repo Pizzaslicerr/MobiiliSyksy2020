@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PlayerAudio : MonoBehaviour
 {
-    public AudioClip walk;
-    public AudioSource playerAS;
-
     public float fadeDurationDown;
     public float fadeDurationUp;
     public float targetVolumeDown;

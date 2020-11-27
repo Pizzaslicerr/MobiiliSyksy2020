@@ -32,6 +32,7 @@ public class FoxDetector : MonoBehaviour
             PlayerAudio.playAudio = true;
             PlayerAudio.playBridgeAudio = true;
             playerAS.Stop();
+
             GameObject.FindWithTag("FoxTpTarget").SetActive(false);
             FoxTPTarget.SetActive(true);
             fox.transform.position = FoxTPTarget.transform.position;
