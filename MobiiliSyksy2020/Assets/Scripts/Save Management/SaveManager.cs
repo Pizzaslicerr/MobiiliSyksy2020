@@ -13,6 +13,7 @@ public class SaveManager : MonoBehaviour
     public SaveData SaveData { get => saveData;
                                set => saveData = value; }
 
+    //This is the current level's number.
     private int levelIndex = 0;
     public int LevelIndex { get => levelIndex;
                             set => levelIndex = value; }

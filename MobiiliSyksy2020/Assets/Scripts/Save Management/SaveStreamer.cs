@@ -48,6 +48,7 @@ public static class SaveStreamer
         for (int i = 0; i < dummyData.LevelData.Length; i++)
         {
             dummyData.LevelData[i] = new LevelData();
+            dummyData.LevelData[i].BuildIndex = i + 3;
         }
 
         SaveGame(dummyData);

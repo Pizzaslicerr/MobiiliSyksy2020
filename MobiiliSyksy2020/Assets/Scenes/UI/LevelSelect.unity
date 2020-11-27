@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -402,6 +402,16 @@ PrefabInstance:
       propertyPath: sceneToLoad.sceneName
       value: Scenes/Stage2/Stage2Level4
       objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: sceneToLoad.scenePath
+      value: Assets/Scenes/Stage3/Stage3Level4.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: levelNumber
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7649507055358450517, guid: 79affa96af25a9e4cb872ba44f97c4fd,
         type: 3}
       propertyPath: m_Text
@@ -546,6 +556,16 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneToLoad.sceneName
       value: Scenes/Stage1/Level6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: sceneToLoad.scenePath
+      value: Assets/Scenes/Stage1/Stage1Level6.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: levelNumber
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7649507055358450517, guid: 79affa96af25a9e4cb872ba44f97c4fd,
         type: 3}
@@ -804,8 +824,9 @@ MonoBehaviour:
   sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: 8f5b669e7f33dc5439fcdc2d1bdf686f, type: 3}
-    scenePath: Assets/Scenes/Stage1/Level2.unity
+    scenePath: Assets/Scenes/Stage1/Stage1Level2.unity
   unloadPreviousScene: 1
+  levelNumber: 2
 --- !u!114 &555749219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,6 +1056,16 @@ PrefabInstance:
       propertyPath: sceneToLoad.sceneName
       value: Scenes/Stage1/Level7
       objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: sceneToLoad.scenePath
+      value: Assets/Scenes/Stage1/Stage1Level7.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: levelNumber
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7649507055358450517, guid: 79affa96af25a9e4cb872ba44f97c4fd,
         type: 3}
       propertyPath: m_Text
@@ -1179,6 +1210,16 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneToLoad.sceneName
       value: Scenes/Stage2/Stage2Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: sceneToLoad.scenePath
+      value: Assets/Scenes/Stage3/Stage3Level2.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: levelNumber
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7649507055358450517, guid: 79affa96af25a9e4cb872ba44f97c4fd,
         type: 3}
@@ -1484,6 +1525,16 @@ PrefabInstance:
       propertyPath: sceneToLoad.sceneName
       value: Scenes/Stage2/Stage2Level5
       objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: sceneToLoad.scenePath
+      value: Assets/Scenes/Stage3/Stage3Level5.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: levelNumber
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 7649507055358450517, guid: 79affa96af25a9e4cb872ba44f97c4fd,
         type: 3}
       propertyPath: m_Text
@@ -1716,8 +1767,9 @@ MonoBehaviour:
   sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: fc997c112cf148f40ab9ab240811c09c, type: 3}
-    scenePath: Assets/Scenes/Stage1/Level1.unity
+    scenePath: Assets/Scenes/Stage1/Stage1Level1.unity
   unloadPreviousScene: 1
+  levelNumber: 1
 --- !u!1 &1425861836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,9 +1903,10 @@ MonoBehaviour:
   loadScreenType: 0
   sceneType: 0
   sceneToLoad:
-    sceneAsset: {fileID: 102900000, guid: 8f12fb31adb7be14ea95ef1bc7dcf590, type: 3}
-    scenePath: Assets/Scenes/Stage1/Level3.unity
+    sceneAsset: {fileID: 0}
+    scenePath: 
   unloadPreviousScene: 1
+  levelNumber: 3
 --- !u!114 &1443016902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2001,8 +2054,9 @@ MonoBehaviour:
   sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: 05e3f65c26710f24885bdfb0af56b3d4, type: 3}
-    scenePath: Assets/Scenes/Stage1/Level5.unity
+    scenePath: Assets/Scenes/Stage1/Stage1Level5.unity
   unloadPreviousScene: 1
+  levelNumber: 5
 --- !u!114 &1726162479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2232,6 +2286,16 @@ PrefabInstance:
       propertyPath: sceneToLoad.sceneName
       value: Scenes/Stage2/Stage2Level3
       objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: sceneToLoad.scenePath
+      value: Assets/Scenes/Stage3/Stage3Level3.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: levelNumber
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7649507055358450517, guid: 79affa96af25a9e4cb872ba44f97c4fd,
         type: 3}
       propertyPath: m_Text
@@ -2295,8 +2359,9 @@ MonoBehaviour:
   sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 102900000, guid: c1e47bcc19dcbe0458cf9093d9626a12, type: 3}
-    scenePath: Assets/Scenes/Stage1/Level4.unity
+    scenePath: Assets/Scenes/Stage1/Stage1Level4.unity
   unloadPreviousScene: 1
+  levelNumber: 4
 --- !u!114 &1746975282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2604,6 +2669,16 @@ PrefabInstance:
       propertyPath: sceneToLoad.sceneName
       value: Scenes/Stage2/Stage2Level1
       objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: sceneToLoad.scenePath
+      value: Assets/Scenes/Stage3/Stage3Level1.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582195549568924417, guid: 79affa96af25a9e4cb872ba44f97c4fd,
+        type: 3}
+      propertyPath: levelNumber
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7649507055358450517, guid: 79affa96af25a9e4cb872ba44f97c4fd,
         type: 3}
       propertyPath: m_Text
@@ -2624,6 +2699,7 @@ GameObject:
   - component: {fileID: 1914749385}
   - component: {fileID: 1914749388}
   - component: {fileID: 1914749389}
+  - component: {fileID: 1914749390}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2708,6 +2784,18 @@ MonoBehaviour:
     type: 3}
   popupArrowPrefab: {fileID: 684415212850037069, guid: c5465aaaf6bae5c498b4cf8038a7a995,
     type: 3}
+--- !u!114 &1914749390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914749384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3601ecb2f600f9446993ecdc32a7cdc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1926638608
 GameObject:
   m_ObjectHideFlags: 0
