@@ -16,8 +16,7 @@ public class LevelData
     public int AppleScore { get => appleScore;
                             set => appleScore = value; }
 
-    //First is level name, second is build index
-    private Dictionary<int, int> level;
-    public Dictionary<int, int> Level { get => level;
-                                        set => level = value; }
+    private int buildIndex = 0;
+    public int BuildIndex { get => buildIndex;
+                            set => buildIndex = value; }
 }

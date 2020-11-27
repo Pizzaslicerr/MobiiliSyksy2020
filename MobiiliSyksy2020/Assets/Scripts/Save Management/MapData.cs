@@ -33,11 +33,15 @@ public class MapData : MonoBehaviour
 
     private void DebugPrintSaveInfo()
     {
-        for (int i = 0; i < data.LevelData.Length; i++)
+        /*for (int i = 0; i < data.LevelData.Length; i++)
         {
             Debug.Log("data.LevelData[" + i + "].AppleScore = " + data.LevelData[i].AppleScore);
         }
+        for (int i = 0; i < data.LevelData.Length; i++)
+        {
+            Debug.Log("data.LevelData[" + i + "].BuildIndex = " + data.LevelData[i].BuildIndex);
+        }*/
         Debug.Log("data.LevelData.LatestCompletedLevel = " + data.LatestCompletedLevel);
-        Debug.Log("data.IsFirstTimePlaying = " + data.IsFirstTimePlaying);
+        //Debug.Log("data.IsFirstTimePlaying = " + data.IsFirstTimePlaying);
     }
 }

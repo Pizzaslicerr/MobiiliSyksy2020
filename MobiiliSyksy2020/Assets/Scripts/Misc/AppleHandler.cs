@@ -12,6 +12,7 @@ public class AppleHandler : MonoBehaviour
     public void ApplesAchieved()
     {
         int pawsUsed = PawHandler.instance.pawsUsed;
+        var currentLevel = SaveManager.instance.SaveData.CurrentLevel;
 
         switch (pawsUsed)
         {
@@ -19,12 +20,23 @@ public class AppleHandler : MonoBehaviour
             case 0:
                 foreach (GameObject apple in apples)
                 {
+                    if (SaveManager.instance.SaveData.LevelData[currentLevel].AppleScore < 3)
+                    {
+                        SaveManager.instance.SaveData.LevelData[currentLevel].AppleScore = 3;
+                        SaveManager.instance.SaveGame();
+                    }
                     apple.SetActive(true);
                 }
                 break;
 
             //Two apples
             case 1:
+                if (SaveManager.instance.SaveData.LevelData[currentLevel].AppleScore < 2)
+                {
+                    SaveManager.instance.SaveData.LevelData[currentLevel].AppleScore = 2;
+                    SaveManager.instance.SaveGame();
+                }
+
                 apples[0].SetActive(true);
                 apples[1].SetActive(true);
                 break;
@@ -32,6 +44,12 @@ public class AppleHandler : MonoBehaviour
             //One apple, two cases
             case 2:
             case 3:
+                if (SaveManager.instance.SaveData.LevelData[currentLevel].AppleScore < 1)
+                {
+                    SaveManager.instance.SaveData.LevelData[currentLevel].AppleScore = 1;
+                    SaveManager.instance.SaveGame();
+                }
+
                 apples[0].SetActive(true);
                 break;
 

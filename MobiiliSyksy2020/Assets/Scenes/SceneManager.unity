@@ -804,6 +804,7 @@ MonoBehaviour:
     sceneAsset: {fileID: 102900000, guid: bf9513cf0e83caa4fb981bd454f89b05, type: 3}
     scenePath: Assets/Scenes/UI/LevelSelect.unity
   unloadPreviousScene: 1
+  levelNumber: 0
 --- !u!114 &332777670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2427,7 +2428,6 @@ GameObject:
   - component: {fileID: 1856453684}
   - component: {fileID: 1856453683}
   - component: {fileID: 1856453686}
-  - component: {fileID: 1856453687}
   - component: {fileID: 1856453688}
   m_Layer: 0
   m_Name: GameManager
@@ -2496,18 +2496,6 @@ MonoBehaviour:
   pauseButton: {fileID: 1380902237}
   UIanim: {fileID: 2144826100}
   isDown: 0
---- !u!114 &1856453687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856453682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3601ecb2f600f9446993ecdc32a7cdc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1856453688
 MonoBehaviour:
   m_ObjectHideFlags: 0
