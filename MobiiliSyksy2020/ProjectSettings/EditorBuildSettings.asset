@@ -92,4 +92,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Playtest2build/9.Stage3Level1.unity
     guid: 61e48e8079622bf48930d497a0bf8246
+  - enabled: 1
+    path: Assets/Scenes/Playtest2build/12.Stage3Level5.unity
+    guid: 090c0386633c7614fb97cd7b84506aae
+  - enabled: 1
+    path: Assets/Scenes/Playtest2build/10.Stage3Level3.unity
+    guid: 6781548764da54746926107936c5bc95
+  - enabled: 1
+    path: Assets/Scenes/Playtest2build/11.Stage3Level4.unity
+    guid: d20ce59c25d5670438221387a6c28116
+  - enabled: 1
+    path: Assets/Scenes/Playtest2build/13.Stage4Level1.unity
+    guid: a8a42996baa9e27469a79b8f14de95c2
+  - enabled: 1
+    path: Assets/Scenes/Playtest2build/14.Stage4Level2.unity
+    guid: 1c33f93c7e9379a45baa10ef0100b225
+  - enabled: 1
+    path: Assets/Scenes/Playtest2build/15.Stage4Level3.unity
+    guid: 78c98321f8be6574eb76dbeae73ddbec
+  - enabled: 1
+    path: Assets/Scenes/Playtest2build/16.Stage4Level4.unity
+    guid: b9d348f074125c945b22c6c9b9479115
   m_configObjects: {}
