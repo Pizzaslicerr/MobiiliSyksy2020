@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         FoxFallTarget = GameObject.FindWithTag("FoxFallTarget").transform;
         FoxMoving = false;
+        Debug.Log(BridgeO);
     }
 
     void Update()
@@ -65,6 +66,7 @@ public class Player : MonoBehaviour
                 v.y = v.y + BridgeGrowthRate * Time.deltaTime;
                 BridgeO.transform.localScale = v;
                 screenPressed = true;
+                //Play bridge growing audio only once
                 if (PlayerAudio.playBridgeAudio)
                 {
                     playerAS.PlayOneShot(BridgeGrow);
@@ -75,6 +77,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0) && screenPressed || BridgeO.transform.localScale.y > BridgeMaxLength && screenPressed)
         {
+            //Stop playing bridge growing audio once the player releases the screen
             PlayerAudio.playBridgeAudio = true;
             playerAS.Stop();
             if (BridgeO.transform.localScale.y < 80f)

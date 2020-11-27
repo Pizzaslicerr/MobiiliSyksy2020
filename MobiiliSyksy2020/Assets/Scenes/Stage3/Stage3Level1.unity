@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1515,6 +1515,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SinkingPlatformThicc
       objectReference: {fileID: 0}
+    - target: {fileID: 7544198397672585619, guid: de6cfefc68f4dbe49a8515b4d8cd3aa3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7544198397672585623, guid: de6cfefc68f4dbe49a8515b4d8cd3aa3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2160,7 +2165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1560831680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16, y: -4, z: -0.64404297}
+  m_LocalPosition: {x: 16.04, y: -4, z: -0.64404297}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1357253660}
@@ -4019,7 +4024,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.026170254, y: 4.176776}
+  m_Offset: {x: 0.085113764, y: 4.1531987}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4030,7 +4035,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.1911306, y: 0.8237028}
+  m_Size: {x: 5.0732436, y: 0.7765484}
   m_EdgeRadius: 0
 --- !u!1 &7071802904354477878
 GameObject:
@@ -4072,7 +4077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7071802904820318053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: -4, z: -0.64404297}
+  m_LocalPosition: {x: 4.92, y: -4, z: -0.64404297}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 7071802905087298384}
@@ -4136,7 +4141,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7071802905087298387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.08, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7071802904820318049}
