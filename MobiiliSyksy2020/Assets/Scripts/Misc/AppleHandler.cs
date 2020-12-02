@@ -12,7 +12,7 @@ public class AppleHandler : MonoBehaviour
     public void ApplesAchieved()
     {
         int pawsUsed = PawHandler.instance.pawsUsed;
-        var currentLevel = SaveManager.instance.CurrentLevel;
+        var currentLevel = SaveManager.instance.CurrentLevel - 1;
 
         switch (pawsUsed)
         {
