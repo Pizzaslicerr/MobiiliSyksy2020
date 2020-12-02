@@ -29,6 +29,8 @@ public class PersistenceCheck : MonoBehaviour
             StartCoroutine(LoadPersistentScene());
         }
         StartCoroutine(ChangeLoadedSceneReference());
+
+        Time.timeScale = 1; //Unfreezes time
     }
 
     //This makes sure all required scenes are loaded

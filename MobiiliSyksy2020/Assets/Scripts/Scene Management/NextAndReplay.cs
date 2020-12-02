@@ -20,12 +20,10 @@ public class NextAndReplay : MonoBehaviour
         {*/
             SceneHandler.instance.LoadedScene = thisScene;
             SceneHandler.instance.SceneLoad(this.gameObject.scene.buildIndex + 1, thisScene, LoadingScreens.Leaves);
-        Time.timeScale = 1; //Unfreezes time
         //}
     }
     public void reloadLevel()
     {
         SceneHandler.instance.SceneReload(this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
-        Time.timeScale = 1; //Unfreezes time
     }
 }
