@@ -19,6 +19,7 @@ TagManager:
   - Paw
   - CameraTarget
   - FoxFallTarget
+  - BridgeCollider
   layers:
   - Default
   - TransparentFX

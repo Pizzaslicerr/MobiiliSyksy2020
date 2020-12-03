@@ -15,7 +15,7 @@ public class LongBridgeDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Bridge")
+        if (collision.tag == "BridgeCollider")
         {
             SinkingDetector.sinking = false;
             Bridge.BridgeDown = true;

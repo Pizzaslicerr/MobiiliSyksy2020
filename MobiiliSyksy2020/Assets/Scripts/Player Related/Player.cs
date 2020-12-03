@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     {
         FoxRB = gameObject.GetComponent<Rigidbody2D>();
         BridgeO = GameObject.FindWithTag("Bridge");
+        BridgeRB = GameObject.FindWithTag("Bridge").GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         FoxFallTarget = GameObject.FindWithTag("FoxFallTarget").transform;
         FoxMoving = false;
@@ -46,8 +47,6 @@ public class Player : MonoBehaviour
     {
         //Finding objects with tags so there's no need to fiddle around with public game objects
         FoxMovementTarget = GameObject.FindWithTag("MovementTarget");
-        //BridgeO = GameObject.FindWithTag("Bridge");
-        BridgeRB = BridgeO.GetComponent<Rigidbody2D>();
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
@@ -56,39 +55,11 @@ public class Player : MonoBehaviour
 
         if (Input.GetMouseButton(0) && hit.collider != null && hit.collider.tag == "PressDetector")
         {
-
-            if (!Bridge.BridgeGrown)
-            {
-                //Growing the bridge while pressing and holding the screen
-                v = BridgeO.transform.localScale;
-                temp = v;
-                v.y = v.y + BridgeGrowthRate * Time.deltaTime;
-                BridgeO.transform.localScale = v;
-                screenPressed = true;
-                //Play bridge growing audio only once
-                if (PlayerAudio.playBridgeAudio)
-                {
-                    playerAS.PlayOneShot(BridgeGrow);
-                    PlayerAudio.playBridgeAudio = false;
-                }
-            }
-
+            GrowBridge();
         }
         if (Input.GetMouseButtonUp(0) && screenPressed || BridgeO.transform.localScale.y > BridgeMaxLength && screenPressed)
         {
-            //Stop playing bridge growing audio once the player releases the screen
-            PlayerAudio.playBridgeAudio = true;
-            playerAS.Stop();
-            if (BridgeO.transform.localScale.y < 80f)
-            {
-                v.y = 80f;
-                BridgeO.transform.localScale = v;
-            }
-            v.y = temp.y;
-            //Make the bridge's rigidbody simulated so it will fall when you let go of the screen
-            BridgeRB.simulated = true;
-            Bridge.BridgeGrown = true;
-            screenPressed = false;
+            MakeBridgeFall();
         }
 
         if (FoxMoving)
@@ -113,6 +84,42 @@ public class Player : MonoBehaviour
             anim.SetFloat("MoveX", 0f);
    
         }
+    }
+
+    void GrowBridge()
+    {
+        if (!Bridge.BridgeGrown)
+        {
+            //Growing the bridge while pressing and holding the screen
+            v = BridgeO.transform.localScale;
+            temp = v;
+            v.y = v.y + BridgeGrowthRate * Time.deltaTime;
+            BridgeO.transform.localScale = v;
+            screenPressed = true;
+            //Play bridge growing audio only once
+            if (PlayerAudio.playBridgeAudio)
+            {
+                playerAS.PlayOneShot(BridgeGrow);
+                PlayerAudio.playBridgeAudio = false;
+            }
+        }
+    }
+
+    void MakeBridgeFall()
+    {
+        //Stop playing bridge growing audio once the player releases the screen
+        PlayerAudio.playBridgeAudio = true;
+        playerAS.Stop();
+        if (BridgeO.transform.localScale.y < 80f)
+        {
+            v.y = 80f;
+            BridgeO.transform.localScale = v;
+        }
+        v.y = temp.y;
+        //Make the bridge's rigidbody simulated so it will fall when you let go of the screen
+        BridgeRB.simulated = true;
+        Bridge.BridgeGrown = true;
+        screenPressed = false;
     }
 
     void MoveFoxCorrect()

@@ -17,7 +17,7 @@ public class BridgeFallDetector : MonoBehaviour
         {
             SceneHandler.instance.SceneReload(this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
         }
-        else if (collision.tag == "Bridge")
+        else if (collision.tag == "BridgeCollider")
         {
             player.GetComponent<PawHandler>().BridgeReset();
         }
