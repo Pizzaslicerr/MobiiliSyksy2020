@@ -72,7 +72,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage2/Stage2Level9.unity
     guid: f8405aaa47a44714b95577aae7041dfd
   - enabled: 1
-    path: Assets/Scenes/Stage2/Stage2Level10proto.unity
+    path: Assets/Scenes/Stage2/Stage2Level10.unity
     guid: d55667c67749cb340bac4845c5abd94e
   - enabled: 1
     path: Assets/Scenes/Stage3/Stage3Level1.unity
