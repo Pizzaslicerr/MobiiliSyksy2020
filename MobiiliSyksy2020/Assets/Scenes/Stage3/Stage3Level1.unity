@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &28691521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7861699803841483818, guid: 9358b1c46abf648479a1363f8e4c0819,
+    type: 3}
+  m_PrefabInstance: {fileID: 5363018310062306589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &116093746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1048751069919968859, guid: 9358b1c46abf648479a1363f8e4c0819,
+    type: 3}
+  m_PrefabInstance: {fileID: 5363018310062306589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &184259307
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1192,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.82325035, y: 1.3443313}
   m_EdgeRadius: 0
+--- !u!1 &823349304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1641672437976544606, guid: 9358b1c46abf648479a1363f8e4c0819,
+    type: 3}
+  m_PrefabInstance: {fileID: 5363018310062306589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &842642552
 GameObject:
   m_ObjectHideFlags: 0
@@ -3425,6 +3443,7 @@ GameObject:
   - component: {fileID: 1383480189307115638}
   - component: {fileID: 4078329279351890101}
   - component: {fileID: 66535285649532804}
+  - component: {fileID: 1383480189307115633}
   m_Layer: 10
   m_Name: FoxDetector
   m_TagString: Untagged
@@ -3432,6 +3451,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1383480189307115633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383480189307115632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322c88d9842aef54ba4bf4762afe9a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apples:
+  - {fileID: 28691521}
+  - {fileID: 823349304}
+  - {fileID: 116093746}
 --- !u!61 &1383480189307115638
 BoxCollider2D:
   m_ObjectHideFlags: 0

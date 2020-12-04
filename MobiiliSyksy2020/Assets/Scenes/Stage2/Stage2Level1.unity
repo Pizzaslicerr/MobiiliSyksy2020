@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &32819957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7861699803841483818, guid: 9358b1c46abf648479a1363f8e4c0819,
+    type: 3}
+  m_PrefabInstance: {fileID: 1189812724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &128293804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1982,6 +1988,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 238709c46bb3d3b4b9a6289ae45b1995, type: 3}
+--- !u!1 &1537640677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1048751069919968859, guid: 9358b1c46abf648479a1363f8e4c0819,
+    type: 3}
+  m_PrefabInstance: {fileID: 1189812724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1540189789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 145915849750672839, guid: 0df5fea3e49830a41a3b78a6eaca7b89,
@@ -2191,6 +2203,21 @@ PrefabInstance:
       propertyPath: Endscrn
       value: 
       objectReference: {fileID: 1889387122}
+    - target: {fileID: 7474433075602998850, guid: 877d12149f802ea4491ae215272673c3,
+        type: 3}
+      propertyPath: apples.Array.data[0]
+      value: 
+      objectReference: {fileID: 32819957}
+    - target: {fileID: 7474433075602998850, guid: 877d12149f802ea4491ae215272673c3,
+        type: 3}
+      propertyPath: apples.Array.data[1]
+      value: 
+      objectReference: {fileID: 1947291359}
+    - target: {fileID: 7474433075602998850, guid: 877d12149f802ea4491ae215272673c3,
+        type: 3}
+      propertyPath: apples.Array.data[2]
+      value: 
+      objectReference: {fileID: 1537640677}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 877d12149f802ea4491ae215272673c3, type: 3}
 --- !u!1 &1756473384 stripped
@@ -2410,6 +2437,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6059927346281204485, guid: e30c1aff37ca3d44ba7283ba89a0d1ac,
     type: 3}
   m_PrefabInstance: {fileID: 1172588588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1947291359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1641672437976544606, guid: 9358b1c46abf648479a1363f8e4c0819,
+    type: 3}
+  m_PrefabInstance: {fileID: 1189812724}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1959610188
 PrefabInstance:
