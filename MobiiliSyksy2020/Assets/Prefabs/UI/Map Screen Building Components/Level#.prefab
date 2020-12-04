@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8874038179274704759}
   - component: {fileID: 765604433966296057}
   - component: {fileID: 7582195549568924417}
+  - component: {fileID: 1942324657507031103}
   m_Layer: 5
   m_Name: Level#
   m_TagString: Untagged
@@ -147,8 +148,21 @@ MonoBehaviour:
   sceneType: 0
   sceneToLoad:
     sceneAsset: {fileID: 0}
-    sceneName: Scenes/Test scenes/Level1
+    scenePath: 
   unloadPreviousScene: 1
+  levelNumber: 0
+--- !u!114 &1942324657507031103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2329851956988758007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf0a84430a873545b0a26c67e269216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7510243924736628819
 GameObject:
   m_ObjectHideFlags: 0
