@@ -8,19 +8,28 @@ public class PawHandler : MonoBehaviour
     public static PawHandler instance;
 
     [Tooltip("Essentially player health. Deducted if a bridge is too long or if it falls off.")]
-    public int paws;
+    public int paws = 4;
     [HideInInspector] public int pawsUsed = 0;
 
-    [SerializeField] private GameObject pawRoot = null;
+    [Header("Sprites")]
+    [SerializeField] private Sprite[] unspentPawSprites = new Sprite[4];
+    [SerializeField] private Sprite[] spentPawSprites = new Sprite[4];
+
+    [Header("Prefabs")]
     [SerializeField] private GameObject pawPrefab = null;
+    [SerializeField] private GameObject pawRoot = null;
     [SerializeField] private GameObject BridgePrefab = null;
-    private GameObject[] UIpaws;
+
+    private int[] pawSpriteIndex;
+    [SerializeField] private GameObject[] UIPaws;
 
 
     private void Awake()
     {
         instance = this;
-        UIpaws = new GameObject[paws];
+        UIPaws = new GameObject[paws];
+
+        pawSpriteIndex = new int[paws];
         SpawnPaws();
     }
 
@@ -28,7 +37,11 @@ public class PawHandler : MonoBehaviour
     {
         for (int i = 0; i < paws; i++)
         {
-            UIpaws[i] = Instantiate(pawPrefab, pawRoot.transform);
+            UIPaws[i] = Instantiate(pawPrefab, pawRoot.transform);
+
+            //sets a random value for each paw so the game knows to switch to an appropriate sprite when it's used
+            pawSpriteIndex[i] = Random.Range(0, 4);
+            UIPaws[i].GetComponent<Image>().sprite = unspentPawSprites[pawSpriteIndex[i]];
         }
     }
 
@@ -36,13 +49,11 @@ public class PawHandler : MonoBehaviour
     {
         if (!Bridge.BridgeDown)
         {
-            //object cannot be set inactive, otherwise the paw meter will jump all over the place. Instead, the sprite's alpha value is used.
-            Color pawSpriteColor = UIpaws[paws - pawsUsed - 1].GetComponent<Image>().color;
-            UIpaws[paws - pawsUsed - 1].GetComponent<Image>().color = new Color(pawSpriteColor.r, pawSpriteColor.g, pawSpriteColor.b, 0);
-
+            //Changes the specific paw sprite to its spent counterpart
+            UIPaws[paws - pawsUsed - 1].GetComponent<Image>().sprite = spentPawSprites[pawSpriteIndex[paws - pawsUsed - 1]];
             pawsUsed++;
         }
-        if (pawsUsed == UIpaws.Length)
+        if (pawsUsed == UIPaws.Length)
         {
             SceneHandler.instance.SceneReload(this.gameObject.scene.buildIndex, LoadingScreens.Leaves);
         }
