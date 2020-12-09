@@ -102,13 +102,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage3/Stage3Level7.unity
     guid: 56230540c69429f49874650759ed7e10
   - enabled: 1
-    path: Assets/Scenes/Stage3/Stage3Level8Proto.unity
+    path: Assets/Scenes/Stage3/Stage3Level8.unity
     guid: 83d913258db26ea49ae96a2e598e32b8
   - enabled: 1
-    path: Assets/Scenes/Stage3/Stage3Level9Proto.unity
-    guid: 756f3b3917f9c3442a6566c385f4237a
+    path: Assets/Scenes/Stage3/Stage3Level9.unity
+    guid: 354de394ad916c84cb34cfafa28ca4eb
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Stage3/Stage3Level10proto.unity
+    path: Assets/Scenes/Stage3/Stage3Level10.unity
     guid: c8af4ecb790b7134e96fc04a821f2d26
   - enabled: 1
     path: Assets/Scenes/Stage4/Stage4Level1.unity
@@ -123,10 +126,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage4/Stage4Level4.unity
     guid: 43c5a0893ffa59b46857e525ef9bf7d9
   - enabled: 1
-    path: Assets/Scenes/Stage4/Stage4Level5proto.unity
+    path: Assets/Scenes/Stage4/Stage4Level5.unity
     guid: 1e6348b49b38a854da3270d395f935b6
   - enabled: 1
-    path: Assets/Scenes/Stage4/Stage4Level6proto.unity
+    path: Assets/Scenes/Stage4/Stage4Level6.unity
     guid: 22ebea82675394143bb643d881b63ce5
   - enabled: 1
     path: Assets/Scenes/Stage4/Stage4Level7proto.unity
