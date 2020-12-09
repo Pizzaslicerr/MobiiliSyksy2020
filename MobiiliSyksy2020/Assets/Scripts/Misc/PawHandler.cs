@@ -20,7 +20,6 @@ public class PawHandler : MonoBehaviour
     [SerializeField] private GameObject pawRoot = null;
     [SerializeField] private GameObject BridgePrefab = null;
 
-    private int[] pawSpriteIndex;
     [SerializeField] private GameObject[] UIPaws;
 
 
@@ -29,7 +28,6 @@ public class PawHandler : MonoBehaviour
         instance = this;
         UIPaws = new GameObject[paws];
 
-        pawSpriteIndex = new int[paws];
         SpawnPaws();
     }
 
@@ -39,9 +37,7 @@ public class PawHandler : MonoBehaviour
         {
             UIPaws[i] = Instantiate(pawPrefab, pawRoot.transform);
 
-            //sets a random value for each paw so the game knows to switch to an appropriate sprite when it's used
-            pawSpriteIndex[i] = Random.Range(0, 4);
-            UIPaws[i].GetComponent<Image>().sprite = unspentPawSprites[pawSpriteIndex[i]];
+            UIPaws[i].GetComponent<Image>().sprite = unspentPawSprites[i];
         }
     }
 
@@ -50,7 +46,7 @@ public class PawHandler : MonoBehaviour
         if (!Bridge.BridgeDown)
         {
             //Changes the specific paw sprite to its spent counterpart
-            UIPaws[paws - pawsUsed - 1].GetComponent<Image>().sprite = spentPawSprites[pawSpriteIndex[paws - pawsUsed - 1]];
+            UIPaws[paws - pawsUsed - 1].GetComponent<Image>().sprite = spentPawSprites[paws - pawsUsed - 1];
             pawsUsed++;
         }
         if (pawsUsed == UIPaws.Length)

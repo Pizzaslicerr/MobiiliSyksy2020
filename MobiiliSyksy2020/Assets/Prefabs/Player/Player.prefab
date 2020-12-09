@@ -2118,20 +2118,21 @@ MonoBehaviour:
   paws: 4
   pawsUsed: 0
   unspentPawSprites:
-  - {fileID: -4048663171354839127, guid: b3c55c569b937e442906f21207144ba1, type: 3}
+  - {fileID: -725169079382352095, guid: b3c55c569b937e442906f21207144ba1, type: 3}
   - {fileID: -2874389780073088968, guid: b3c55c569b937e442906f21207144ba1, type: 3}
   - {fileID: -8238944605780271849, guid: b3c55c569b937e442906f21207144ba1, type: 3}
-  - {fileID: -725169079382352095, guid: b3c55c569b937e442906f21207144ba1, type: 3}
+  - {fileID: -4048663171354839127, guid: b3c55c569b937e442906f21207144ba1, type: 3}
   spentPawSprites:
-  - {fileID: 428621915060429653, guid: 069faabe7c89f6e4994893caced99238, type: 3}
+  - {fileID: 7889155136610519849, guid: 069faabe7c89f6e4994893caced99238, type: 3}
   - {fileID: 3022317399356554099, guid: 069faabe7c89f6e4994893caced99238, type: 3}
   - {fileID: 5849342386606503493, guid: 069faabe7c89f6e4994893caced99238, type: 3}
-  - {fileID: 7889155136610519849, guid: 069faabe7c89f6e4994893caced99238, type: 3}
+  - {fileID: 428621915060429653, guid: 069faabe7c89f6e4994893caced99238, type: 3}
   pawPrefab: {fileID: 7514769633777815121, guid: e1ab086d9bcde0f45bda41e1bbcdb5ce,
     type: 3}
   pawRoot: {fileID: 599287444593973961}
   BridgePrefab: {fileID: 278998243554724193, guid: 165226be44566834e8742d4e14e17d01,
     type: 3}
+  UIPaws: []
 --- !u!114 &742603631541809096
 MonoBehaviour:
   m_ObjectHideFlags: 0
