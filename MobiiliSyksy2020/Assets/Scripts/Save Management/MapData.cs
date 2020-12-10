@@ -1,5 +1,6 @@
 ﻿//MapData.cs by Mikko Kyllönen
 //Gets the game save progress and edits the map screen accordingly.
+//Also tallies the number of apples collected.
 
 using System.Collections;
 using System.Collections.Generic;
@@ -12,6 +13,8 @@ public class MapData : MonoBehaviour
     private SaveData data;
     public SaveData Data { get => data;
                            set => data = value; }
+
+    //------------------------------------------------------------------------------------------------------------
 
     private void Awake()
     {
